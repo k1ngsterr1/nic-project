@@ -1,0 +1,119 @@
+@import "../variables/variables"
+
+*
+    margin: 0
+    padding: 0
+
+    body
+        background-color: $white
+        font-family: 'Lato', sans-serif
+        box-sizing: border-box
+        -webkit-font-smoothing: antialiased
+        -moz-osx-font-smoothing: grayscale
+        text-rendering: optimizeLegibility
+
+        header
+            width: 100%
+            display: flex
+            align-items: center
+            justify-content: space-between
+
+        footer
+            width: 100%
+            height: auto
+            background-color: $footer_blue
+            display: flex
+            flex-direction: column
+
+            .footer-row-one
+                display: flex
+
+            .footer-row-two
+                display: flex
+
+        .screen
+            width: 100%
+            height: auto
+
+        .container
+            width: 90%
+            height: auto
+            display: flex
+            flex-direction: column
+
+        .category-heading
+            color: $white
+            font-feature-settings: 'clig' off, 'liga' off
+            font-family: Lato
+            font-size: $font24mob
+            font-style: normal
+            font-weight: 800
+            line-height: 191.667%
+
+        .sub-category-text
+            color: $white
+            font-feature-settings: 'clig' off, 'liga' off
+            font-family: Lato
+            font-size: $font18mob
+            font-style: normal
+            font-weight: 400
+            line-height: 200%
+
+        .heading
+            color: $black
+            font-feature-settings: 'clig' off, 'liga' off
+            font-family: Lato
+            font-size: $font20mob
+            font-style: normal
+            font-weight: 500
+            line-height: 100%
+
+        .product-name
+            color: $primary_gray
+            font-family: Lato
+            font-size: $font16mob
+            font-style: normal
+            font-weight: 700
+            line-height: 156.25%
+
+        .product-description, .star-quantity
+            color: $secondary_text
+            font-family: Lato
+            font-size: $font12mob
+            font-style: normal
+            font-weight: 400
+            line-height: 208.333%
+
+        .discount-price
+            color: $discount
+            font-family: Lato
+            font-size: $font14mob
+            font-style: normal
+            font-weight: 700
+            line-height: 142.857%
+
+        .old-price
+            color: $secondary_text
+            font-family: Lato
+            font-size: $font12mob
+            font-style: normal
+            font-weight: 400
+            line-height: 166.667%
+            text-decoration-line: strikethrough
+
+        .explore
+            color: $white
+            font-feature-settings: 'clig' off, 'liga' off
+            font-family: Lato
+            font-size: $font18mob
+            font-style: normal
+            font-weight: 400
+            line-height: 200%
+            text-decoration: underline
+
+        .card
+            width: clamp(190px,88.7832vw,760px)
+            height: auto
+            display: flex
+            flex-direction: column
+            align-items: center
