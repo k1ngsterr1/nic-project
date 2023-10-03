@@ -3,4 +3,5 @@
   position: relative;
   width: clamp(10.5px, 4.90644vw, 42px);
   height: clamp(7px, 3.27096vw, 28px);
+  display: flex;
 }/*# sourceMappingURL=burger.css.map */

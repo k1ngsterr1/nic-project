@@ -1,1 +1,1 @@
-{"version":3,"sources":["../../../../styles/variables/variables.sass","burger.sass","burger.css"],"names":[],"mappings":"AAAQ,+IAAA;ACER;EACI,kBAAA;EACA,qCAAA;EACA,mCAAA;ACAJ","file":"burger.css"}
+{"version":3,"sources":["../../../../styles/variables/variables.sass","burger.sass","burger.css"],"names":[],"mappings":"AAAQ,+IAAA;ACER;EACI,kBAAA;EACA,qCAAA;EACA,mCAAA;EACA,aAAA;ACAJ","file":"burger.css"}
