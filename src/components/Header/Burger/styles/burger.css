@@ -1,7 +1,0 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
-.burger-menu {
-  position: relative;
-  width: clamp(10.5px, 4.90644vw, 42px);
-  height: clamp(7px, 3.27096vw, 28px);
-  display: flex;
-}/*# sourceMappingURL=burger.css.map */

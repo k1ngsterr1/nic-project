@@ -4,15 +4,18 @@ import {
   Route,
   Routes,
   useLocation,
+  BrowserRouter,
 } from "react-router-dom";
 import MainPage from "./pages/MainPage/MainPage";
 
 function App() {
   return (
     <div>
-      <Routes>
-        <Route path="/" element={<MainPage />}></Route>
-      </Routes>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<MainPage />}></Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

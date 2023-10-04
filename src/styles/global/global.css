@@ -35,6 +35,7 @@
 * body .container {
   width: 90%;
   height: auto;
+  margin: auto;
   display: flex;
   flex-direction: column;
 }
