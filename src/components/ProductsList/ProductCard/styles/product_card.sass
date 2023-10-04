@@ -1,3 +1,113 @@
 @import "../../../../styles/variables/variables"
 
 .product-card
+    width: clamp(100px,46.727999999999994vw,400px)
+    height: auto
+    display: flex
+    align-items: center
+    text-align: center
+    flex-direction: column
+    background: $white
+    border-radius: 8px
+    box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.10)
+
+    .deal
+        color: $light_text
+        text-align: center
+        font-family: Lato
+        font-size: $font14mob
+        font-style: normal
+        font-weight: 800
+        line-height: 142.857%
+        letter-spacing: 0.5px
+        text-transform: uppercase
+        margin-bottom: $m16mob
+
+    .product-image
+        width: clamp(85px,39.718799999999995vw,340px)
+        height: clamp(85px,39.718799999999995vw,340px)
+
+    .product-card-content
+        width: 90%
+        height: auto
+        margin: auto
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+
+        .product-name
+            color: $gray_dark
+            font-family: Lato
+            font-size: $font16mob
+            font-style: normal
+            font-weight: 700
+            line-height: 156.25%
+            margin-top: $m16mob
+
+        .description
+            color: $secondary_text
+            font-family: Lato
+            font-size: $font12mob
+            font-style: normal
+            font-weight: 400
+            line-height: 208.333%
+
+        .rating-container
+            display: flex
+            align-items: center
+
+            .rating
+                color: $star
+                font-size: $font10mob
+
+            .rating-quantity
+                color: $secondary_text
+                text-align: center
+                font-family: Lato
+                font-size: $font12mob
+                font-style: normal
+                font-weight: 400
+                line-height: 208.333%
+                margin-left: $m8mob
+
+        .price-container
+            width: 100%
+            display: flex
+            align-items: center
+            justify-content: space-between
+            margin-bottom: clamp(6px,2.80368vw,24px)
+
+            .current-price
+                color: $discount
+                font-family: Lato
+                font-size: $font14mob
+                font-style: normal
+                font-weight: 700
+                line-height: 142.857%
+
+            .original-price
+                color: $secondary_text
+                font-family: Lato
+                font-size: $font12mob
+                font-style: normal
+                font-weight: 400
+                line-height: 166.667%
+                text-decoration-line: strikethrough
+
+            .discount
+                width: clamp(16.5px,7.71012vw,66px)
+                height: auto
+                background-color: $discount
+                display: flex
+                align-items: center
+                justify-content: center
+                border-radius: 2.057px
+
+                .percentage
+                    color: $white
+                    font-family: Inter
+                    font-size: $m8mob
+                    font-style: normal
+                    font-weight: 600
+                    line-height: normal
+                    padding: clamp(2px,0.93456vw,8px)

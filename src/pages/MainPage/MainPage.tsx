@@ -1,6 +1,8 @@
 import React from "react";
 import Header from "../../components/Header/Header";
 import ProductSpotlight from "../../components/Spotlight/ProductSpotlight";
+import ProductsList from "../../components/ProductsList/ProductsList";
+import TrendingList from "../../components/TrendingList/TrendingList";
 
 const spotlightImage01 = require("../../assets/category_01.jpg");
 const spotlightImage02 = require("../../assets/category_02.jpg");
@@ -27,6 +29,8 @@ const MainPage = () => {
             marginTop="clamp(10px,4.6728vw,40px)"
           />
         </main>
+        <ProductsList />
+        <TrendingList />
       </div>
     </div>
   );

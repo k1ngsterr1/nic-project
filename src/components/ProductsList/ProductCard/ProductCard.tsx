@@ -1,34 +1,43 @@
 import React from "react";
 
+import "./styles/product_card.css";
+
 interface ProductCardProps {
-  title: string;
-  time: string;
+  time?: string;
   imageUrl: string;
   productName: string;
   description: string;
-  rating: number;
-  ratingQuantity: number;
-  currentPrice: number;
-  originalPrice: number;
-  discount: number;
+  rating?: any;
+  ratingQuantity?: number;
+  currentPrice?: number;
+  originalPrice?: number;
+  discount?: number;
 }
 
 const ProductCard: React.FC<ProductCardProps> = (props) => {
   return (
     <div className="product-card">
-      <span className="deal">{props.title}</span>
+      <span className="deal">Deal of the day</span>
       <div className="time">{props.time}</div>
-      <img src={props.imageUrl} alt={props.productName} />
-      <h5 className="product-name">{props.productName}</h5>
-      <p className="description">{props.description}</p>
-      <div className="rating-container">
-        <div className="rating">{props.rating}</div>
-        <span className="rating-quanitity">{props.ratingQuantity}</span>
-      </div>
-      <div className="price-container">
-        <span className="current-price">${props.currentPrice}</span>
-        <span className="original-price">{props.originalPrice}</span>
-        <div className="discount">{props.discount}</div>
+      <img
+        className="product-image"
+        src={props.imageUrl}
+        alt={props.productName}
+      />
+      <div className="product-card-content">
+        <h5 className="product-name">{props.productName}</h5>
+        <p className="description">{props.description}</p>
+        <div className="rating-container">
+          <div className="rating">{props.rating}</div>
+          <span className="rating-quantity">({props.ratingQuantity})</span>
+        </div>
+        <div className="price-container">
+          <span className="current-price">${props.currentPrice}</span>
+          <span className="original-price">$129.99</span>
+          <div className="discount">
+            <span className="percentage">-40%</span>
+          </div>
+        </div>
       </div>
     </div>
   );
