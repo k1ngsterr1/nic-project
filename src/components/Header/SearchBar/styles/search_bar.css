@@ -16,14 +16,28 @@
   color: #9D9D9D;
   font-feature-settings: "clig" off, "liga" off;
   font-family: Lato;
-  font-size: clamp(7px, 3.27096vw, 28px);
+  font-size: clamp(8px, 3.73824vw, 32px);
   font-style: normal;
   font-weight: 400;
   line-height: 142.857%;
   border: none;
   padding-left: clamp(8px, 3.73824vw, 32px);
 }
-.search-bar .select-list {
+.search-bar .search-bar-input:active {
+  border: none;
+  outline: none;
+}
+.search-bar .search-bar-input:focus {
+  border: none;
+  outline: none;
+}
+.search-bar .select-search-container {
+  width: auto;
+  display: flex;
+  align-items: center;
+  margin-right: clamp(8px, 3.73824vw, 32px);
+}
+.search-bar .select-search-container .select-list {
   width: auto;
   height: auto;
   color: #262626;
@@ -33,5 +47,33 @@
   font-style: normal;
   font-weight: 400;
   line-height: 142.857%;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+.search-bar .select-search-container .select-list:focus {
+  outline: none !important;
+}
+.search-bar .select-search-container .select-list:active {
+  outline: none !important;
+}
+.search-bar .select-search-container .separator {
+  width: 1px;
+  height: clamp(16px, 7.47648vw, 64px);
+  margin-right: clamp(6px, 2.80368vw, 24px);
+  margin-left: clamp(6px, 2.80368vw, 24px);
+  background-color: #9D9D9D;
+}
+.search-bar .select-search-container .search-button {
+  font-size: clamp(9px, 4.20552vw, 36px);
+  color: #262626;
+  background-color: transparent;
   border: none;
+}
+
+.search-bar:focus-within {
+  border: 1px solid #262626;
+}
+.search-bar .search-bar-input {
+  color: #262626;
 }/*# sourceMappingURL=search_bar.css.map */

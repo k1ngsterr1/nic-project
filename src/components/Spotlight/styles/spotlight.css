@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+.spotlight {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.spotlight .spotlight-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.spotlight .spotlight-content {
+  width: clamp(109.5px, 51.16716vw, 438px);
+  height: 100%;
+  margin-left: 20px;
+}
+.spotlight .spotlight-content .spotlight-button {
+  display: flex;
+  align-items: flex-start;
+  font-size: clamp(9px, 4.20552vw, 36px);
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 200%;
+  color: white;
+  text-decoration-line: underline;
+  background-color: transparent;
+  border: none;
+  margin-top: clamp(4px, 1.86912vw, 16px);
+}
+.spotlight .spotlight-image {
+  width: 50%;
+}
+
+.red {
+  background-color: #BF2E3B;
+}
+
+.blue {
+  background-color: #0186C4;
+}/*# sourceMappingURL=spotlight.css.map */

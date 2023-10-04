@@ -28,6 +28,9 @@
 * body footer .footer-row-two {
   display: flex;
 }
+* body button, * body a, * body input {
+  cursor: pointer;
+}
 * body .screen {
   width: 100%;
   height: auto;
@@ -38,6 +41,13 @@
   margin: auto;
   display: flex;
   flex-direction: column;
+}
+* body .main-content {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: clamp(24px, 11.21472vw, 96px);
 }
 * body .category-heading {
   color: white;
@@ -56,6 +66,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: 200%;
+  margin-top: clamp(4px, 1.86912vw, 16px);
 }
 * body .heading {
   color: black;

@@ -29,6 +29,9 @@
             .footer-row-two
                 display: flex
 
+        button, a, input
+            cursor: pointer
+
         .screen
             width: 100%
             height: auto
@@ -39,6 +42,13 @@
             margin: auto
             display: flex
             flex-direction: column
+
+        .main-content
+            width: 100%
+            height: auto
+            display: flex
+            flex-direction: column
+            margin-top: clamp(24px,11.21472vw,96px)
 
         .category-heading
             color: $white
@@ -57,6 +67,7 @@
             font-style: normal
             font-weight: 400
             line-height: 200%
+            margin-top: $m8mob
 
         .heading
             color: $black

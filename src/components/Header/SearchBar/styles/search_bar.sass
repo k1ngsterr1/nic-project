@@ -17,21 +17,63 @@
         color: $light_text
         font-feature-settings: 'clig' off, 'liga' off
         font-family: Lato
-        font-size: $font14mob
+        font-size: $font16mob
         font-style: normal
         font-weight: 400
         line-height: 142.857%
         border: none
         padding-left: $m16mob
+        &:active
+            border: none
+            outline: none
 
-    .select-list
+    .search-bar-input
+        &:focus
+            border: none
+            outline: none
+
+    .select-search-container
         width: auto
-        height: auto
+        display: flex
+        align-items: center
+        margin-right: $m16mob
+
+        .select-list
+            width: auto
+            height: auto
+            color: $primary_gray
+            font-feature-settings: 'clig' off, 'liga' off
+            font-family: Lato
+            font-size: $font14mob
+            font-style: normal
+            font-weight: 400
+            line-height: 142.857%
+            border: none !important
+            outline: none !important
+            box-shadow: none !important
+            &:focus
+                outline: none !important
+
+        .select-list
+            &:active
+                outline: none !important
+
+        .separator
+            width: 1px
+            height: clamp(16px,7.47648vw,64px)
+            margin-right: clamp(6px,2.80368vw,24px)
+            margin-left: clamp(6px,2.80368vw,24px)
+            background-color: $light_text
+
+        .search-button
+            font-size: $font18mob
+            color: $primary_gray
+            background-color: transparent
+            border: none
+
+.search-bar
+    &:focus-within
+        border: 1px solid $primary_gray
+
+    .search-bar-input
         color: $primary_gray
-        font-feature-settings: 'clig' off, 'liga' off
-        font-family: Lato
-        font-size: $font14mob
-        font-style: normal
-        font-weight: 400
-        line-height: 142.857%
-        border: none
