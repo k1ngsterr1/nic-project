@@ -1,1 +1,37 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");/*# sourceMappingURL=search_bar.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+.search-bar {
+  width: 100%;
+  height: clamp(27px, 12.61656vw, 108px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 4px;
+  border: 1px solid #9D9D9D;
+  background: white;
+  margin-top: clamp(16px, 7.47648vw, 64px);
+}
+.search-bar .search-bar-input {
+  width: 55.9360730594%;
+  height: 100%;
+  color: #9D9D9D;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Lato;
+  font-size: clamp(7px, 3.27096vw, 28px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 142.857%;
+  border: none;
+  padding-left: clamp(8px, 3.73824vw, 32px);
+}
+.search-bar .select-list {
+  width: auto;
+  height: auto;
+  color: #262626;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Lato;
+  font-size: clamp(7px, 3.27096vw, 28px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 142.857%;
+  border: none;
+}/*# sourceMappingURL=search_bar.css.map */

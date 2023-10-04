@@ -13,4 +13,9 @@ body header .upper-content {
 body header .upper-content .logo {
   width: clamp(66.5px, 31.07412vw, 266px);
   height: clamp(13.5px, 6.30828vw, 54px);
+}
+body header .lower-content {
+  width: 100%;
+  display: flex;
+  align-items: center;
 }/*# sourceMappingURL=header.css.map */
