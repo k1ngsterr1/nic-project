@@ -1,1 +1,122 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");/*# sourceMappingURL=trending_card.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+.trending-card {
+  position: relative;
+  width: clamp(178.5px, 83.40948vw, 714px);
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+.trending-card .label {
+  position: absolute;
+  top: clamp(5px, 2.3364vw, 20px);
+  left: clamp(5px, 2.3364vw, 20px);
+  width: clamp(45px, 21.0276vw, 180px);
+  height: auto;
+  background-color: #00A95D;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+.trending-card .label .label-content {
+  width: 85.8823529412%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: clamp(2px, 0.93456vw, 8px);
+  margin-bottom: clamp(2px, 0.93456vw, 8px);
+}
+.trending-card .label .label-content .dolly-icon {
+  color: white;
+  font-size: clamp(8px, 3.73824vw, 32px);
+  margin-left: 4px;
+}
+.trending-card .label .label-content .label-text {
+  color: white;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Lato;
+  font-size: clamp(5px, 2.3364vw, 20px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 200%;
+}
+.trending-card .card-image {
+  width: 100%;
+  height: clamp(211.5px, 98.82972vw, 846px);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.trending-card .card-lower-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  background-color: #262626;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.trending-card .card-lower-container .lower-content {
+  width: 90%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: clamp(8px, 3.73824vw, 32px);
+  margin-bottom: clamp(8px, 3.73824vw, 32px);
+}
+.trending-card .card-lower-container .lower-content .title-description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.trending-card .card-lower-container .lower-content .title-description .title {
+  color: white;
+  font-family: Lato;
+  font-size: clamp(7px, 3.27096vw, 28px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 178.571%;
+}
+.trending-card .card-lower-container .lower-content .title-description .description {
+  color: #C4C4C4;
+  font-family: Lato;
+  font-size: clamp(7px, 3.27096vw, 28px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 142.857%;
+}
+.trending-card .card-lower-container .lower-content .shop-btn {
+  width: clamp(73px, 34.11144vw, 292px);
+  height: clamp(22px, 10.28016vw, 88px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
+  border-radius: 8px;
+  background-color: transparent;
+}
+.trending-card .card-lower-container .lower-content .shop-btn .btn-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.trending-card .card-lower-container .lower-content .shop-btn .btn-content .price {
+  color: white;
+  font-family: Lato;
+  font-size: clamp(7px, 3.27096vw, 28px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 142.857%;
+}
+.trending-card .card-lower-container .lower-content .shop-btn .btn-content .text {
+  color: #FFF;
+  text-align: right;
+  font-family: Lato;
+  font-size: clamp(7px, 3.27096vw, 28px);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 142.857%;
+  margin-left: clamp(4px, 1.86912vw, 16px);
+}/*# sourceMappingURL=trending_card.css.map */

@@ -3,6 +3,7 @@ import Header from "../../components/Header/Header";
 import ProductSpotlight from "../../components/Spotlight/ProductSpotlight";
 import ProductsList from "../../components/ProductsList/ProductsList";
 import TrendingList from "../../components/TrendingList/TrendingList";
+import Footer from "../../components/Footer/Footer";
 
 const spotlightImage01 = require("../../assets/category_01.jpg");
 const spotlightImage02 = require("../../assets/category_02.jpg");
@@ -32,6 +33,7 @@ const MainPage = () => {
         <ProductsList />
         <TrendingList />
       </div>
+      <Footer></Footer>
     </div>
   );
 };
