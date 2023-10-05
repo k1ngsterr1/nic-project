@@ -94,7 +94,7 @@
 }
 .screen .container .main-content .form .form-button {
   width: 100%;
-  height: 56px;
+  height: clamp(28px, 13.08384vw, 112px);
   color: white;
   text-align: center;
   font-feature-settings: "clig" off, "liga" off;
@@ -111,7 +111,28 @@
   transition: 0.3s all;
 }
 .screen .container .main-content .form .form-button:hover {
+  background-color: #434343;
+}
+.screen .container .main-content .form .form-button-active {
+  width: 100%;
+  height: clamp(28px, 13.08384vw, 112px);
+  color: white;
+  text-align: center;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Lato;
+  font-size: clamp(8px, 3.73824vw, 32px);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 142.857%;
+  text-transform: uppercase;
   background-color: #4172DC;
+  border: none;
+  border-radius: 4px;
+  margin-top: clamp(16px, 7.47648vw, 64px);
+  transition: 0.3s all;
+}
+.screen .container .main-content .form .form-button-active:hover {
+  background-color: #265BCF;
 }
 .screen .container .main-content .form .divider-container {
   width: 100%;
@@ -120,7 +141,6 @@
   justify-content: space-between;
   align-items: center;
   margin-top: clamp(8px, 3.73824vw, 32px);
-  margin-bottom: clamp(8px, 3.73824vw, 32px);
 }
 .screen .container .main-content .form .divider-container .divider {
   width: 42%;
@@ -135,4 +155,54 @@
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
+}
+.screen .container .main-content .form .google-button {
+  width: 100%;
+  height: clamp(28px, 13.08384vw, 112px);
+  color: white;
+  text-align: center;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Lato;
+  font-size: clamp(8px, 3.73824vw, 32px);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 142.857%;
+  background-color: #434343;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 4px;
+  margin-top: clamp(8px, 3.73824vw, 32px);
+  transition: 0.3s all;
+}
+.screen .container .main-content .form .google-button:hover {
+  background-color: #4172DC;
+}
+.screen .container .main-content .form .google-button .google-icon {
+  margin-right: clamp(4px, 1.86912vw, 16px);
+}
+.screen .container .main-content .form .text-container {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  margin-top: clamp(16px, 7.47648vw, 64px);
+}
+.screen .container .main-content .form .text-container .link-text {
+  color: #262626;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Lato;
+  font-size: clamp(7px, 3.27096vw, 28px);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 142.857%;
+}
+.screen .container .main-content .form .text-container .link-text .sign-up-link {
+  color: #FF7A00;
+  font-size: clamp(7px, 3.27096vw, 28px);
+  font-style: normal;
+  font-weight: 900;
+  line-height: 142.857%;
+  text-decoration: none;
+  margin-left: clamp(2px, 0.93456vw, 8px);
 }/*# sourceMappingURL=registration.css.map */

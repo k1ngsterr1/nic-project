@@ -21,7 +21,8 @@ import "firebase/compat/auth";
 import "./styles/registration.css";
 
 const Registration = () => {
-  const [fullForm, setFullForm] = useState(false);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const formik = useFormik({
     initialValues: {
@@ -44,6 +45,16 @@ const Registration = () => {
       }
     },
   });
+
+  function emailChange(e: any) {
+    formik.handleChange(e);
+    setEmail(e.target.value);
+  }
+
+  function passwordChange(e: any) {
+    formik.handleChange(e);
+    setPassword(e.target.value);
+  }
 
   return (
     <div className="screen">
@@ -68,7 +79,7 @@ const Registration = () => {
                 className={
                   formik.errors.email ? "email-input-error" : "email-input"
                 }
-                onChange={formik.handleChange}
+                onChange={emailChange}
                 onBlur={formik.handleBlur}
                 value={formik.values.email}
               />
@@ -90,7 +101,7 @@ const Registration = () => {
                     ? "password-input-error"
                     : "password-input"
                 }
-                onChange={formik.handleChange}
+                onChange={passwordChange}
                 onBlur={formik.handleBlur}
                 value={formik.values.password}
               />
@@ -109,7 +120,13 @@ const Registration = () => {
                 Forgot password
               </Link>
             </div>
-            <button className="form-button" type="submit">
+
+            <button
+              className={
+                email && password !== "" ? "form-button-active" : "form-button"
+              }
+              type="submit"
+            >
               Sign In
             </button>
             <div className="divider-container">
