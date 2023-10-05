@@ -1,1 +1,143 @@
 @import "../../../styles/variables/variables"
+
+.screen
+
+    .container
+
+        .main-content
+
+            .heading-container
+
+            .form
+                width: 100%
+                height: auto
+                display: flex
+                flex-direction: column
+                margin-top: $m32mob
+
+                .email-input-container, .password-input-container
+                    width: 100%
+                    height: auto
+                    display: flex
+                    flex-direction: column
+
+                    .label
+                        color: $primary_gray
+                        font-family: Lato
+                        font-size: clamp(7px,3.2709599999999996vw,28px)
+                        font-style: normal
+                        font-weight: 400
+                        line-height: normal
+
+                        .required
+                            color: $spotlight_red
+
+                    .email-input, .password-input
+                        width: 100%
+                        height: clamp(20px,9.3456vw,80px)
+                        padding-left: clamp(5px,2.3364vw,20px)
+                        border: 1px solid $gray
+                        border-radius: 4px
+                        margin-top: clamp(4px,1.86912vw,16px)
+                        &:focus
+                            outline: none
+                            border: 1px solid $primary_gray
+
+                    .email-input-error, .password-input-error
+                        width: 100%
+                        height: clamp(20px,9.3456vw,80px)
+                        padding-left: clamp(5px,2.3364vw,20px)
+                        border: 1px solid #FF2E00
+                        border-radius: 4px
+                        margin-top: clamp(4px,1.86912vw,16px)
+                        &:focus
+                            outline: none
+                            border: 1px solid $primary_gray
+
+                    .error
+                        color: #FF2E00
+                        font-family: Lato
+                        font-size: $font12mob
+                        font-style: normal
+                        font-weight: 400
+                        line-height: 83.333%
+                        margin-top: $m8mob
+
+                .password-input-container
+                    margin-top: $m32mob
+
+                .lower-container
+                    width: 100%
+                    display: flex
+                    justify-content: space-between
+                    align-items: center
+                    margin-top: $m32mob
+
+                    .checkbox-container
+                        display: flex
+                        align-items: center
+
+                        .checkbox
+                            width: clamp(10px,4.6728vw,40px)
+                            height: clamp(10px,4.6728vw,40px)
+
+                        .checkbox-label
+                            color: $primary_gray
+                            font-family: Lato
+                            font-size: $font14mob
+                            font-style: normal
+                            font-weight: 400
+                            line-height: normal
+                            margin-left: $m8mob
+
+                    .password-link
+                        color: $button_blue
+                        font-family: Lato
+                        font-size: $font14mob
+                        font-style: normal
+                        font-weight: 400
+                        line-height: normal
+                        text-decoration-line: underline
+
+                .form-button
+                    width: 100%
+                    height: 56px
+                    color: $white
+                    text-align: center
+                    font-feature-settings: 'clig' off, 'liga' off
+                    font-family: Lato
+                    font-size: $font16mob
+                    font-style: normal
+                    font-weight: 500
+                    line-height: 142.857%
+                    text-transform: uppercase
+                    background-color: $gray
+                    border: none
+                    border-radius: 4px
+                    margin-top: $m32mob
+                    transition: 0.3s all
+                    &:hover
+                        background-color: $button_blue
+
+                .divider-container
+                    width: 100%
+                    height: auto
+                    display: flex
+                    justify-content: space-between
+                    align-items: center
+                    margin-top: $m16mob
+                    margin-bottom: $m16mob
+
+                    .divider
+                        width: 42%
+                        height: 1px
+                        background-color: $light_text
+
+                    .text
+                        color: $light_text
+                        text-align: center
+                        font-feature-settings: 'clig' off, 'liga' off
+                        font-family: Lato
+                        font-size: 14px
+                        font-style: normal
+                        font-weight: 500

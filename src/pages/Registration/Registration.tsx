@@ -18,6 +18,8 @@ import { faGoogle } from "@fortawesome/free-brands-svg-icons";
 
 import "firebase/compat/auth";
 
+import "./styles/registration.css";
+
 const Registration = () => {
   const [fullForm, setFullForm] = useState(false);
 
@@ -28,7 +30,7 @@ const Registration = () => {
     },
     validationSchema: Yup.object({
       email: Yup.string()
-        .email("Invalid email address")
+        .email("Wrong email address")
         .required("Email is required"),
       password: Yup.string().required("Password is required"),
     }),
@@ -49,42 +51,55 @@ const Registration = () => {
         <Header />
         <main className="main-content">
           <div className="heading-container">
-            <h2 className="section-heading">Sign in</h2>
+            <h2 className="section-heading">
+              <strong>Sign in</strong>
+            </h2>
           </div>
-          <form onSubmit={formik.handleSubmit}>
+          <form onSubmit={formik.handleSubmit} className="form">
             <div className="email-input-container">
               <label htmlFor="email" className="label">
-                Email
+                Email <span className="required">*</span>
               </label>
               <input
                 id="email"
                 name="email"
                 type="email"
-                className="email-input"
+                placeholder="Email Adress"
+                className={
+                  formik.errors.email ? "email-input-error" : "email-input"
+                }
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 value={formik.values.email}
               />
-              {formik.touched.email && formik.errors.email ? (
-                <div>{formik.errors.email}</div>
+              {formik.errors.email ? (
+                <div className="error">{formik.errors.email}</div>
               ) : null}
             </div>
-            <div className="password-input">
+            <div className="password-input-container">
+              <label htmlFor="email" className="label">
+                Password <span className="required">*</span>
+              </label>
               <input
                 id="password"
                 name="password"
                 type="password"
-                className="password-input"
+                placeholder="Password"
+                className={
+                  formik.errors.password
+                    ? "password-input-error"
+                    : "password-input"
+                }
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 value={formik.values.password}
               />
-              {formik.touched.password && formik.errors.password ? (
-                <div>{formik.errors.password}</div>
+              {formik.errors.password ? (
+                <div className="error">{formik.errors.password}</div>
               ) : null}
             </div>
             <div className="lower-container">
-              <div className="checkbox">
+              <div className="checkbox-container">
                 <input type="checkbox" className="checkbox" />
                 <label htmlFor="checkbox" className="checkbox-label">
                   Remember for 30 days
