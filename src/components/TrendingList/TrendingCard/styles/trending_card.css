@@ -96,6 +96,13 @@
   border: 2px solid white;
   border-radius: 8px;
   background-color: transparent;
+  transition: 0.3s all;
+}
+.trending-card .card-lower-container .lower-content .shop-btn:hover {
+  background-color: white;
+}
+.trending-card .card-lower-container .lower-content .shop-btn:hover .btn-content .price, .trending-card .card-lower-container .lower-content .shop-btn:hover .btn-content .text {
+  color: #262626;
 }
 .trending-card .card-lower-container .lower-content .shop-btn .btn-content {
   display: flex;

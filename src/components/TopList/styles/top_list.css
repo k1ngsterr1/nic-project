@@ -13,4 +13,8 @@
   flex-direction: row;
   align-items: center;
   margin-top: clamp(12px, 5.60736vw, 48px);
+}
+.top-list .top-swiper .swiper-wrapper {
+  display: flex;
+  flex-direction: row;
 }/*# sourceMappingURL=top_list.css.map */
