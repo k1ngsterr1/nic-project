@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+.top-card {
+  width: 280px;
+  height: auto;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+}
+.top-card .top-image {
+  width: 100%;
+  height: auto;
+}
+.top-card .top-card-container {
+  width: 78.5714285714%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: auto;
+  margin-top: clamp(10px, 4.6728vw, 40px);
+  margin-bottom: clamp(10px, 4.6728vw, 40px);
+}
+.top-card .top-card-container .upper-content {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.top-card .top-card-container .upper-content .text-content {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.top-card .top-card-container .upper-content .text-content .top-name {
+  color: #262626;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Lato;
+  font-size: clamp(6px, 2.80368vw, 24px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 166.667%;
+}
+.top-card .top-card-container .upper-content .text-content .description {
+  color: #555555;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Lato;
+  font-size: clamp(5px, 2.3364vw, 20px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 200%;
+}
+.top-card .top-card-container .upper-content .heart-button {
+  font-size: clamp(12px, 5.60736vw, 48px);
+  color: #28303F;
+  border: none;
+  background-color: transparent;
+}
+.top-card .top-card-container .upper-content .heart-button-active {
+  font-size: clamp(12px, 5.60736vw, 48px);
+  color: #FF477E;
+  border: none;
+  background-color: transparent;
+}
+.top-card .top-card-container .rating-container {
+  display: flex;
+  align-items: center;
+  margin-top: clamp(6px, 2.80368vw, 24px);
+}
+.top-card .top-card-container .rating-container .rating {
+  color: #FFC000;
+  font-size: clamp(10px, 4.6728vw, 40px);
+}
+.top-card .top-card-container .rating-container .rating-quantity {
+  color: #555555;
+  text-align: center;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Lato;
+  font-size: clamp(6px, 2.80368vw, 24px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 208.333%;
+  margin-left: clamp(6px, 2.80368vw, 24px);
+}
+.top-card .top-card-container .price-container {
+  display: flex;
+  align-items: center;
+  margin-top: clamp(6px, 2.80368vw, 24px);
+  margin-bottom: clamp(6px, 2.80368vw, 24px);
+}
+.top-card .top-card-container .price-container .current-price {
+  color: #FF2E00;
+  font-family: Lato;
+  font-size: clamp(7px, 3.27096vw, 28px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 142.857%;
+}
+.top-card .top-card-container .price-container .original-price {
+  color: #555555;
+  font-family: Lato;
+  font-size: clamp(6px, 2.80368vw, 24px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 166.667%;
+  text-decoration: line-through;
+  text-decoration-line: strikethrough;
+  margin-left: clamp(6px, 2.80368vw, 24px);
+}
+.top-card .top-card-container .price-container .discount {
+  color: #FF2E00;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Lato;
+  font-size: clamp(6px, 2.80368vw, 24px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 166.667%;
+  margin-left: clamp(6px, 2.80368vw, 24px);
+}/*# sourceMappingURL=top_card.css.map */

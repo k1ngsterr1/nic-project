@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+.top-list {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: clamp(24px, 11.21472vw, 96px);
+}
+.top-list .top-swiper {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: clamp(12px, 5.60736vw, 48px);
+}/*# sourceMappingURL=top_list.css.map */

@@ -12,6 +12,21 @@
   flex-direction: column;
   margin: auto;
 }
+.footer .logotypes {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer .logotypes .content-container {
+  width: 47.0711297071%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: clamp(8px, 3.73824vw, 32px);
+  margin-bottom: clamp(16px, 7.47648vw, 64px);
+}
 .footer .row {
   width: 100%;
   height: auto;

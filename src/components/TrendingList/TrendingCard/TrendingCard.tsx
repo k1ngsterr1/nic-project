@@ -34,7 +34,7 @@ const TrendingCard: React.FC<TrendingCardProps> = (props) => {
           </div>
           <button className="shop-btn">
             <div className="btn-content">
-              <span className="price">${props.price}</span>
+              <span className="price">{props.price}</span>
               <span className="text">Shop Now</span>
             </div>
           </button>

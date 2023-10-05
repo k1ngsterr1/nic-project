@@ -8,6 +8,7 @@ import {
   faStarHalfStroke,
 } from "@fortawesome/free-solid-svg-icons";
 import { faStar as faEmptyStar } from "@fortawesome/free-regular-svg-icons";
+import { fetchProductsFromFirestore } from "../../api/productsAPI/productsAPI";
 
 import Axios from "axios";
 import SwiperCore from "swiper";
@@ -28,16 +29,16 @@ const ProductsList = () => {
   const swiperRef = React.useRef<Swiper | null>(null);
 
   useEffect(() => {
-    const fetchProducts = async () => {
+    const getProducts = async () => {
       try {
-        const response = await Axios.get("https://fakestoreapi.com/products");
-        setProducts(response.data);
+        const productsData = await fetchProductsFromFirestore();
+        setProducts(productsData);
       } catch (error) {
         console.error("Error fetching products:", error);
       }
     };
 
-    fetchProducts();
+    getProducts();
   }, []);
 
   const renderRating = (rate: number) => {
@@ -87,30 +88,34 @@ const ProductsList = () => {
       <Swiper
         className="product-swiper"
         direction="horizontal"
-        slidesPerView={2}
-        spaceBetween={64}
+        slidesPerView={1}
+        spaceBetween={-158}
       >
-        {products.map((product) => (
-          <SwiperSlide key={product.id}>
-            <ProductCard
-              productName={
-                product.title.length > maxLengthTitle
-                  ? product.title.substring(0, maxLengthTitle - 3) + "..."
-                  : product.title
-              }
-              imageUrl={product.image}
-              rating={renderRating(product.rating.rate)}
-              ratingQuantity={product.rating.count}
-              description={
-                product.description.length > maxLengthDescription
-                  ? product.description.substring(0, maxLengthDescription - 3) +
-                    "..."
-                  : product.description
-              }
-              currentPrice={product.price}
-            />
-          </SwiperSlide>
-        ))}
+        {products
+          .filter((product) => product.title !== "")
+          .map((product) => (
+            <SwiperSlide key={product.id}>
+              <ProductCard
+                productName={
+                  product.title.length > maxLengthTitle
+                    ? product.title.substring(0, maxLengthTitle - 3) + "..."
+                    : product.title
+                }
+                imageUrl={product.image}
+                rating={renderRating(product.rating.rate)}
+                ratingQuantity={product.rating.count}
+                description={
+                  product.description.length > maxLengthDescription
+                    ? product.description.substring(
+                        0,
+                        maxLengthDescription - 3
+                      ) + "..."
+                    : product.description
+                }
+                currentPrice={product.price}
+              />
+            </SwiperSlide>
+          ))}
       </Swiper>
     </div>
   );

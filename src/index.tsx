@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
+import app from "./api/firebase/firebase";
 
 import "./styles/global/global.css";
 

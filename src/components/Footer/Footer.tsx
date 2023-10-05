@@ -3,6 +3,10 @@ import { Link } from "react-router-dom";
 
 import "./styles/footer.css";
 
+const paypal = require("../../assets/paypal.jpg");
+const visa = require("../../assets/visa.jpg");
+const mastercard = require("../../assets/mastercard.jpg");
+
 const Footer = () => {
   return (
     <footer className="footer">
@@ -74,6 +78,13 @@ const Footer = () => {
               </Link>
             </nav>
           </div>
+        </div>
+      </div>
+      <div className="logotypes">
+        <div className="content-container">
+          <img src={visa} alt="visa" />
+          <img src={mastercard} alt="mastercard" />
+          <img src={paypal} alt="paypal" />
         </div>
       </div>
     </footer>
