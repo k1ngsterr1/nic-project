@@ -4,6 +4,7 @@ import app from "../../api/firebase/firebase";
 import * as Yup from "yup";
 import { useFormik } from "formik";
 import { Link } from "react-router-dom";
+import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import Footer from "../../components/Footer/Footer";
 import {
   Formik,
@@ -15,7 +16,6 @@ import {
 } from "formik";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGoogle } from "@fortawesome/free-brands-svg-icons";
-
 import "firebase/compat/auth";
 
 import "./styles/registration.css";
@@ -45,6 +45,15 @@ const Registration = () => {
       }
     },
   });
+
+  const signInWithGoogle = async () => {
+    try {
+      const provider = new GoogleAuthProvider();
+      await app.auth().signInWithPopup(provider);
+    } catch (error: any) {
+      console.error("Error signing in with Google:", error.message);
+    }
+  };
 
   function emailChange(e: any) {
     formik.handleChange(e);
