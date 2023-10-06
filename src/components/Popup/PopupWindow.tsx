@@ -3,9 +3,9 @@ import Popup from "reactjs-popup";
 
 import "./styles/popup.css";
 
-const confetti = require("../../assets/confetti.svg").default;
-
 interface PopupProps {
+  vector: string;
+  paragraph: string;
   email: string;
   display: boolean;
 }
@@ -22,12 +22,9 @@ const PopupWindow: React.FC<PopupProps> = (props) => {
       className="popup-window"
     >
       <div className="window-container">
-        <img className="vector" src={confetti} alt="confetti" />
+        <img className="vector" src={props.vector} alt="confetti" />
         <strong className="window-heading">Check Your Email</strong>
-        <p className="window-paragraph">
-          We have just sent you your new confirmation email to complete your
-          registration to
-        </p>
+        <p className="window-paragraph">{props.paragraph}</p>
         <strong className="email-text">{props.email}</strong>
       </div>
     </Popup>

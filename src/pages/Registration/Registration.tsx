@@ -28,6 +28,8 @@ import "firebase/compat/auth";
 import "./styles/registration.css";
 import PopupWindow from "../../components/Popup/PopupWindow";
 
+const confetti = require("../../assets/confetti.svg").default;
+
 const Registration = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -245,7 +247,12 @@ const Registration = () => {
           </button>
         </main>
       </div>
-      <PopupWindow email={userEmail} display={popupOpen} />
+      <PopupWindow
+        vector={confetti}
+        paragraph="We have just sent you your new confirmation email to complete  your registration to "
+        email={userEmail}
+        display={popupOpen}
+      />
       <Footer />
     </div>
   );
