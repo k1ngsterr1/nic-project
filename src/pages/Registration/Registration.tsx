@@ -31,6 +31,16 @@ const Registration = () => {
   const [password, setPassword] = useState("");
   const [checked, setChecked] = useState(false);
 
+  const auth = getAuth(app);
+
+  const signUpWithEmail = async () => {
+    try {
+      await createUserWithEmailAndPassword(auth, email, password);
+    } catch (error: any) {
+      console.error("Error signing up with email and password:", error.message);
+    }
+  };
+
   const formik = useFormik({
     initialValues: {
       name: "",
@@ -47,25 +57,9 @@ const Registration = () => {
       checkbox: Yup.boolean().oneOf([true], "Must accept terms and conditions"),
     }),
     onSubmit: async (values) => {
-      try {
-        await app
-          .auth()
-          .signInWithEmailAndPassword(values.email, values.password);
-      } catch (error: any) {
-        console.error("Error signing in:", error.message);
-      }
+      signUpWithEmail();
     },
   });
-
-  const auth = getAuth(app);
-
-  const signUpWithEmail = async () => {
-    try {
-      await createUserWithEmailAndPassword(auth, email, password);
-    } catch (error: any) {
-      console.error("Error signing up with email and password:", error.message);
-    }
-  };
 
   const signUpWithGoogle = async () => {
     try {
@@ -102,7 +96,7 @@ const Registration = () => {
         <main className="main-content">
           <div className="heading-container">
             <h2 className="section-heading">
-              <strong>Sign in</strong>
+              <strong>Sign up</strong>
             </h2>
           </div>
           <form onSubmit={formik.handleSubmit} className="form">
@@ -134,6 +128,7 @@ const Registration = () => {
                 id="email"
                 name="email"
                 type="email"
+                autoComplete="false"
                 placeholder="Email Adress"
                 className={
                   formik.errors.email ? "email-input-error" : "email-input"
@@ -153,6 +148,7 @@ const Registration = () => {
               <input
                 id="password"
                 name="password"
+                autoComplete="false"
                 type="password"
                 placeholder="Password"
                 className={
@@ -172,8 +168,13 @@ const Registration = () => {
               <div className="checkbox-container">
                 <input
                   type="checkbox"
+                  name="checkbox"
+                  id="checkbox"
                   className="checkbox"
                   onClick={checkboxChecked}
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                  checked={formik.values.checkbox}
                 />
                 <label
                   htmlFor="checkbox"
@@ -195,7 +196,6 @@ const Registration = () => {
                   : "form-button"
               }
               type="submit"
-              onClick={signUpWithEmail}
             >
               Sign Up
             </button>

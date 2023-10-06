@@ -11,23 +11,16 @@ async function saveProductsToFirestore() {
     const response = await Axios.get("https://fakestoreapi.com/products");
     const products = response.data;
 
-    console.log(products);
-
     products.forEach(async (product: any) => {
       for (const product of products) {
-        console.log(`Saving product with ID ${product.id}`);
         try {
           await db
             .collection("products")
             .doc(product.id.toString())
             .set(product);
-          console.log(`Saved product with ID ${product.id}`);
-        } catch (error) {
-          console.error(`Error saving product ${product.id}:`, error);
-        }
+        } catch (error) {}
       }
     });
-    console.log("Products saved to Firestore successfully");
   } catch (error) {
     console.error("Error fetching/saving products:", error);
   }
