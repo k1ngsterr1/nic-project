@@ -15,6 +15,7 @@ import {
   FieldProps,
 } from "formik";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEye, faEyeSlash } from "@fortawesome/free-regular-svg-icons";
 import { faGoogle } from "@fortawesome/free-brands-svg-icons";
 import "firebase/compat/auth";
 
@@ -23,6 +24,7 @@ import "./styles/login.css";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [isPasswordShown, setPasswordShown] = useState(false);
 
   const formik = useFormik({
     initialValues: {
@@ -40,6 +42,7 @@ const Login = () => {
         await app
           .auth()
           .signInWithEmailAndPassword(values.email, values.password);
+        console.log("Successful Login");
       } catch (error: any) {
         console.error("Error signing in:", error.message);
       }
@@ -65,6 +68,10 @@ const Login = () => {
     setPassword(e.target.value);
   }
 
+  function showPassword() {
+    setPasswordShown(!isPasswordShown);
+  }
+
   return (
     <div className="screen">
       <div className="container">
@@ -76,7 +83,7 @@ const Login = () => {
             </h2>
           </div>
           <form onSubmit={formik.handleSubmit} className="form">
-            <div className="email-input-container">
+            <div className="email-input-container-l">
               <label htmlFor="email" className="label">
                 Email <span className="required">*</span>
               </label>
@@ -97,28 +104,37 @@ const Login = () => {
               ) : null}
             </div>
             <div className="password-input-container">
-              <label htmlFor="email" className="label">
+              <label htmlFor="password" className="label">
                 Password <span className="required">*</span>
               </label>
-              <input
-                id="password"
-                name="password"
-                type="password"
-                placeholder="Password"
-                className={
-                  formik.errors.password
-                    ? "password-input-error"
-                    : "password-input"
-                }
-                onChange={passwordChange}
-                onBlur={formik.handleBlur}
-                value={formik.values.password}
-              />
+              <div className="password-show-container">
+                <input
+                  id="password"
+                  name="password"
+                  autoComplete="false"
+                  type={isPasswordShown ? "text" : "password"}
+                  placeholder="Password"
+                  className={
+                    formik.errors.password
+                      ? "password-input-error"
+                      : "password-input"
+                  }
+                  onChange={passwordChange}
+                  onBlur={formik.handleBlur}
+                  value={formik.values.password}
+                />
+                <span className="eye-btn" onClick={showPassword}>
+                  <FontAwesomeIcon
+                    className="eye-icon"
+                    icon={isPasswordShown ? faEyeSlash : faEye}
+                  ></FontAwesomeIcon>
+                </span>
+              </div>
               {formik.errors.password && formik.touched.password ? (
                 <div className="error">{formik.errors.password}</div>
               ) : null}
             </div>
-            <div className="lower-container">
+            <div className="lower-container-l">
               <div className="checkbox-container">
                 <input type="checkbox" className="checkbox" />
                 <label htmlFor="checkbox" className="checkbox-label">
@@ -153,7 +169,7 @@ const Login = () => {
             <div className="text-container">
               <span className="link-text">
                 Don't have an account?{" "}
-                <Link className="sign-up-link" to="/Login">
+                <Link className="sign-up-link" to="/login">
                   <strong>Sign up</strong>
                 </Link>
               </span>

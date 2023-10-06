@@ -47,6 +47,25 @@
   outline: none;
   border: 1px solid #262626;
 }
+.screen .container .main-content .form .email-input-container .password-show-container, .screen .container .main-content .form .password-input-container .password-show-container, .screen .container .main-content .form .name-input-container .password-show-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  flex-direction: row;
+  align-items: center;
+}
+.screen .container .main-content .form .email-input-container .password-show-container .eye-btn, .screen .container .main-content .form .password-input-container .password-show-container .eye-btn, .screen .container .main-content .form .name-input-container .password-show-container .eye-btn {
+  position: absolute;
+  cursor: pointer;
+  top: clamp(9px, 4.20552vw, 36px);
+  right: 0;
+  background-color: transparent;
+  border: none;
+}
+.screen .container .main-content .form .email-input-container .password-show-container .eye-btn .eye-icon, .screen .container .main-content .form .password-input-container .password-show-container .eye-btn .eye-icon, .screen .container .main-content .form .name-input-container .password-show-container .eye-btn .eye-icon {
+  color: #C4C4C4;
+  font-size: clamp(8.5px, 3.97188vw, 34px);
+}
 .screen .container .main-content .form .email-input-container .error, .screen .container .main-content .form .password-input-container .error, .screen .container .main-content .form .name-input-container .error {
   color: #FF2E00;
   font-family: Lato;
@@ -172,7 +191,7 @@
   font-style: normal;
   font-weight: 500;
 }
-.screen .container .main-content .form .google-button {
+.screen .container .main-content .google-button {
   width: 100%;
   height: clamp(28px, 13.08384vw, 112px);
   color: white;
@@ -192,33 +211,9 @@
   margin-top: clamp(8px, 3.73824vw, 32px);
   transition: 0.3s all;
 }
-.screen .container .main-content .form .google-button:hover {
+.screen .container .main-content .google-button:hover {
   background-color: #4172DC;
 }
-.screen .container .main-content .form .google-button .google-icon {
+.screen .container .main-content .google-button .google-icon {
   margin-right: clamp(4px, 1.86912vw, 16px);
-}
-.screen .container .main-content .form .text-container {
-  width: 100%;
-  height: auto;
-  text-align: center;
-  margin-top: clamp(16px, 7.47648vw, 64px);
-}
-.screen .container .main-content .form .text-container .link-text {
-  color: #262626;
-  font-feature-settings: "clig" off, "liga" off;
-  font-family: Lato;
-  font-size: clamp(7px, 3.27096vw, 28px);
-  font-style: normal;
-  font-weight: 500;
-  line-height: 142.857%;
-}
-.screen .container .main-content .form .text-container .link-text .sign-up-link {
-  color: #FF7A00;
-  font-size: clamp(7px, 3.27096vw, 28px);
-  font-style: normal;
-  font-weight: 900;
-  line-height: 142.857%;
-  text-decoration: none;
-  margin-left: clamp(2px, 0.93456vw, 8px);
 }/*# sourceMappingURL=registration.css.map */

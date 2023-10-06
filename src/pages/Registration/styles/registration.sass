@@ -54,6 +54,25 @@
                             outline: none
                             border: 1px solid $primary_gray
 
+                    .password-show-container
+                        position: relative
+                        width: 100%
+                        height: auto
+                        flex-direction: row
+                        align-items: center
+
+                        .eye-btn
+                            position: absolute
+                            cursor: pointer
+                            top: clamp(9px,4.20552vw,36px)
+                            right: 0
+                            background-color: transparent
+                            border: none
+
+                            .eye-icon
+                                color: $gray
+                                font-size: clamp(8.5px,3.9718799999999996vw,34px)
+
                     .error
                         color: #FF2E00
                         font-family: Lato
@@ -177,51 +196,26 @@
                         font-style: normal
                         font-weight: 500
 
-                .google-button
-                    width: 100%
-                    height: clamp(28px,13.083839999999999vw,112px)
-                    color: $white
-                    text-align: center
-                    font-feature-settings: 'clig' off, 'liga' off
-                    font-family: Lato
-                    font-size: $font16mob
-                    font-style: normal
-                    font-weight: 500
-                    line-height: 142.857%
-                    background-color: $gray_dark
-                    display: flex
-                    align-items: center
-                    justify-content: center
-                    border: none
-                    border-radius: 4px
-                    margin-top: $m16mob
-                    transition: 0.3s all
-                    &:hover
-                        background-color: $button_blue
-
-                    .google-icon
-                        margin-right: $m8mob
-
-                .text-container
-                    width: 100%
-                    height: auto
-                    text-align: center
-                    margin-top: $m32mob
-
-                    .link-text
-                        color: $primary_gray
-                        font-feature-settings: 'clig' off, 'liga' off
-                        font-family: Lato
-                        font-size: $font14mob
-                        font-style: normal
-                        font-weight: 500
-                        line-height: 142.857%
-
-                        .sign-up-link
-                            color: $selected
-                            font-size: $font14mob
-                            font-style: normal
-                            font-weight: 900
-                            line-height: 142.857%
-                            text-decoration: none
-                            margin-left: clamp(2px,0.93456vw,8px)
+            .google-button
+                width: 100%
+                height: clamp(28px,13.083839999999999vw,112px)
+                color: $white
+                text-align: center
+                font-feature-settings: 'clig' off, 'liga' off
+                font-family: Lato
+                font-size: $font16mob
+                font-style: normal
+                font-weight: 500
+                line-height: 142.857%
+                background-color: $gray_dark
+                display: flex
+                align-items: center
+                justify-content: center
+                border: none
+                border-radius: 4px
+                margin-top: $m16mob
+                transition: 0.3s all
+                &:hover
+                    background-color: $button_blue
+                .google-icon
+                    margin-right: $m8mob

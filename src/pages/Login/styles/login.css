@@ -6,13 +6,13 @@
   flex-direction: column;
   margin-top: clamp(16px, 7.47648vw, 64px);
 }
-.screen .container .main-content .form .email-input-container, .screen .container .main-content .form .password-input-container {
+.screen .container .main-content .form .email-input-container-l, .screen .container .main-content .form .password-input-container {
   width: 100%;
   height: auto;
   display: flex;
   flex-direction: column;
 }
-.screen .container .main-content .form .email-input-container .label, .screen .container .main-content .form .password-input-container .label {
+.screen .container .main-content .form .email-input-container-l .label, .screen .container .main-content .form .password-input-container .label {
   color: #262626;
   font-family: Lato;
   font-size: clamp(7px, 3.27096vw, 28px);
@@ -20,10 +20,10 @@
   font-weight: 400;
   line-height: normal;
 }
-.screen .container .main-content .form .email-input-container .label .required, .screen .container .main-content .form .password-input-container .label .required {
+.screen .container .main-content .form .email-input-container-l .label .required, .screen .container .main-content .form .password-input-container .label .required {
   color: #BF2E3B;
 }
-.screen .container .main-content .form .email-input-container .email-input, .screen .container .main-content .form .email-input-container .password-input, .screen .container .main-content .form .password-input-container .email-input, .screen .container .main-content .form .password-input-container .password-input {
+.screen .container .main-content .form .email-input-container-l .email-input, .screen .container .main-content .form .email-input-container-l .password-input, .screen .container .main-content .form .password-input-container .email-input, .screen .container .main-content .form .password-input-container .password-input {
   width: 100%;
   height: clamp(20px, 9.3456vw, 80px);
   padding-left: clamp(5px, 2.3364vw, 20px);
@@ -31,11 +31,11 @@
   border-radius: 4px;
   margin-top: clamp(4px, 1.86912vw, 16px);
 }
-.screen .container .main-content .form .email-input-container .email-input:focus, .screen .container .main-content .form .email-input-container .password-input:focus, .screen .container .main-content .form .password-input-container .email-input:focus, .screen .container .main-content .form .password-input-container .password-input:focus {
+.screen .container .main-content .form .email-input-container-l .email-input:focus, .screen .container .main-content .form .email-input-container-l .password-input:focus, .screen .container .main-content .form .password-input-container .email-input:focus, .screen .container .main-content .form .password-input-container .password-input:focus {
   outline: none;
   border: 1px solid #262626;
 }
-.screen .container .main-content .form .email-input-container .email-input-error, .screen .container .main-content .form .email-input-container .password-input-error, .screen .container .main-content .form .password-input-container .email-input-error, .screen .container .main-content .form .password-input-container .password-input-error {
+.screen .container .main-content .form .email-input-container-l .email-input-error, .screen .container .main-content .form .email-input-container-l .password-input-error, .screen .container .main-content .form .password-input-container .email-input-error, .screen .container .main-content .form .password-input-container .password-input-error {
   width: 100%;
   height: clamp(20px, 9.3456vw, 80px);
   padding-left: clamp(5px, 2.3364vw, 20px);
@@ -43,11 +43,11 @@
   border-radius: 4px;
   margin-top: clamp(4px, 1.86912vw, 16px);
 }
-.screen .container .main-content .form .email-input-container .email-input-error:focus, .screen .container .main-content .form .email-input-container .password-input-error:focus, .screen .container .main-content .form .password-input-container .email-input-error:focus, .screen .container .main-content .form .password-input-container .password-input-error:focus {
+.screen .container .main-content .form .email-input-container-l .email-input-error:focus, .screen .container .main-content .form .email-input-container-l .password-input-error:focus, .screen .container .main-content .form .password-input-container .email-input-error:focus, .screen .container .main-content .form .password-input-container .password-input-error:focus {
   outline: none;
   border: 1px solid #262626;
 }
-.screen .container .main-content .form .email-input-container .error, .screen .container .main-content .form .password-input-container .error {
+.screen .container .main-content .form .email-input-container-l .error, .screen .container .main-content .form .password-input-container .error {
   color: #FF2E00;
   font-family: Lato;
   font-size: clamp(6px, 2.80368vw, 24px);
@@ -59,22 +59,22 @@
 .screen .container .main-content .form .password-input-container {
   margin-top: clamp(16px, 7.47648vw, 64px);
 }
-.screen .container .main-content .form .lower-container {
+.screen .container .main-content .form .lower-container-l {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: clamp(16px, 7.47648vw, 64px);
 }
-.screen .container .main-content .form .lower-container .checkbox-container {
+.screen .container .main-content .form .lower-container-l .checkbox-container {
   display: flex;
   align-items: center;
 }
-.screen .container .main-content .form .lower-container .checkbox-container .checkbox {
+.screen .container .main-content .form .lower-container-l .checkbox-container .checkbox {
   width: clamp(10px, 4.6728vw, 40px);
   height: clamp(10px, 4.6728vw, 40px);
 }
-.screen .container .main-content .form .lower-container .checkbox-container .checkbox-label {
+.screen .container .main-content .form .lower-container-l .checkbox-container .checkbox-label {
   color: #262626;
   font-family: Lato;
   font-size: clamp(7px, 3.27096vw, 28px);
@@ -83,7 +83,7 @@
   line-height: normal;
   margin-left: clamp(4px, 1.86912vw, 16px);
 }
-.screen .container .main-content .form .lower-container .password-link {
+.screen .container .main-content .form .lower-container-l .password-link {
   color: #4172DC;
   font-family: Lato;
   font-size: clamp(7px, 3.27096vw, 28px);

@@ -9,6 +9,7 @@ import {
   getAuth,
   createUserWithEmailAndPassword,
   signInWithPopup,
+  sendEmailVerification,
 } from "firebase/auth";
 import Footer from "../../components/Footer/Footer";
 import {
@@ -20,24 +21,51 @@ import {
   FieldProps,
 } from "formik";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEye, faEyeSlash } from "@fortawesome/free-regular-svg-icons";
 import { faGoogle } from "@fortawesome/free-brands-svg-icons";
 import "firebase/compat/auth";
 
 import "./styles/registration.css";
+import PopupWindow from "../../components/Popup/PopupWindow";
 
 const Registration = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [checked, setChecked] = useState(false);
+  const [isPasswordShown, setPasswordShown] = useState(false);
+  const [userEmail, setUserEmail] = useState("");
+  const [popupOpen, setPopupOpen] = useState(false);
 
   const auth = getAuth(app);
 
   const signUpWithEmail = async () => {
     try {
-      await createUserWithEmailAndPassword(auth, email, password);
+      const userCredential = await createUserWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
+      const user = userCredential.user;
+      if (user) {
+        sendEmailVerification(user).then(() => {
+          if (user.email) {
+            setUserEmail(user.email);
+            setPopupOpen(true);
+          }
+        });
+      }
     } catch (error: any) {
       console.error("Error signing up with email and password:", error.message);
+    }
+  };
+
+  const signUpWithGoogle = async () => {
+    try {
+      const provider = new GoogleAuthProvider();
+      await signInWithPopup(auth, provider);
+    } catch (error: any) {
+      console.error("Error signing up with Google:", error.message);
     }
   };
 
@@ -61,15 +89,6 @@ const Registration = () => {
     },
   });
 
-  const signUpWithGoogle = async () => {
-    try {
-      const provider = new GoogleAuthProvider();
-      await signInWithPopup(auth, provider);
-    } catch (error: any) {
-      console.error("Error signing up with Google:", error.message);
-    }
-  };
-
   function nameChange(e: any) {
     formik.handleChange(e);
     setName(e.target.value);
@@ -87,6 +106,10 @@ const Registration = () => {
 
   function checkboxChecked(e: any) {
     setChecked(true);
+  }
+
+  function showPassword() {
+    setPasswordShown(!isPasswordShown);
   }
 
   return (
@@ -145,21 +168,29 @@ const Registration = () => {
               <label htmlFor="email" className="label">
                 Password <span className="required">*</span>
               </label>
-              <input
-                id="password"
-                name="password"
-                autoComplete="false"
-                type="password"
-                placeholder="Password"
-                className={
-                  formik.errors.password
-                    ? "password-input-error"
-                    : "password-input"
-                }
-                onChange={passwordChange}
-                onBlur={formik.handleBlur}
-                value={formik.values.password}
-              />
+              <div className="password-show-container">
+                <input
+                  id="password"
+                  name="password"
+                  autoComplete="false"
+                  type={isPasswordShown ? "text" : "password"}
+                  placeholder="Password"
+                  className={
+                    formik.errors.password
+                      ? "password-input-error"
+                      : "password-input"
+                  }
+                  onChange={passwordChange}
+                  onBlur={formik.handleBlur}
+                  value={formik.values.password}
+                />
+                <span className="eye-btn" onClick={showPassword}>
+                  <FontAwesomeIcon
+                    className="eye-icon"
+                    icon={isPasswordShown ? faEyeSlash : faEye}
+                  ></FontAwesomeIcon>
+                </span>
+              </div>
               {formik.errors.password && formik.touched.password ? (
                 <div className="error">{formik.errors.password}</div>
               ) : null}
@@ -204,16 +235,17 @@ const Registration = () => {
               <span className="text">OR</span>
               <div className="divider"></div>
             </div>
-            <button className="google-button">
-              <FontAwesomeIcon
-                className="google-icon"
-                icon={faGoogle}
-              ></FontAwesomeIcon>
-              Sign up by Google
-            </button>
           </form>
+          <button className="google-button" onClick={signUpWithGoogle}>
+            <FontAwesomeIcon
+              className="google-icon"
+              icon={faGoogle}
+            ></FontAwesomeIcon>
+            Sign up by Google
+          </button>
         </main>
       </div>
+      <PopupWindow email={userEmail} display={popupOpen} />
       <Footer />
     </div>
   );
