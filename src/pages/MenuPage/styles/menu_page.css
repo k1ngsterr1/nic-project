@@ -20,10 +20,28 @@
   flex-direction: row;
   align-items: center;
   margin-top: clamp(16px, 7.47648vw, 64px);
+  margin-bottom: clamp(16px, 7.47648vw, 64px);
 }
 .menu .menu-header-container .menu-header .burger {
   float: left;
 }
 .menu .menu-header-container .menu-header .menu-heading {
   margin: auto;
+}
+.menu .container .tab-heading-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+}
+.menu .container .tab-heading-container .tab-heading {
+  color: #FF7A00;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Lato;
+  font-size: clamp(7px, 3.27096vw, 28px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 142.857%;
+  margin-top: clamp(8px, 3.73824vw, 32px);
+  margin-bottom: clamp(8px, 3.73824vw, 32px);
 }/*# sourceMappingURL=menu_page.css.map */

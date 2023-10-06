@@ -7,6 +7,7 @@ import "./styles/menu_page.css";
 
 const MenuPage = () => {
   const navigate = useNavigate();
+  const [tab, setTab] = useState("Woman");
   const [isOpen, setOpen] = useState(true);
 
   const handleToggle = () => {
@@ -33,7 +34,19 @@ const MenuPage = () => {
           <h2 className="menu-heading">Menu</h2>
         </header>
       </div>
-      <div className="container"></div>
+      <div className="container">
+        <div className="tab-heading-container">
+          <div className="tab-heading">{tab}</div>
+        </div>
+        <main className="main-menu-content">
+          <div className="menu-row"></div>
+          <div className="menu-row next"></div>
+          <div className="menu-columns">
+            <div className="column first"></div>
+            <div className="column second"></div>
+          </div>
+        </main>
+      </div>
     </div>
   );
 };
