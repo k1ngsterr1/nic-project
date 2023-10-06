@@ -10,6 +10,7 @@ import MainPage from "./pages/MainPage/MainPage";
 import Login from "./pages/Login/Login";
 import Registration from "./pages/Registration/Registration";
 import ForgotPassword from "./pages/ForgotPassword/ForgotPassword";
+import MenuPage from "./pages/MenuPage/MenuPage";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/login" element={<Login />}></Route>
           <Route path="/registration" element={<Registration />}></Route>
           <Route path="/forgot-password" element={<ForgotPassword />}></Route>
+          <Route path="/menu" element={<MenuPage />}></Route>
         </Routes>
       </BrowserRouter>
     </div>
