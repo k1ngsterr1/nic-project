@@ -4,12 +4,7 @@ import app from "../../api/firebase/firebase";
 import * as Yup from "yup";
 import { useFormik } from "formik";
 import { Link } from "react-router-dom";
-import {
-  GoogleAuthProvider,
-  getAuth,
-  createUserWithEmailAndPassword,
-  signInWithPopup,
-} from "firebase/auth";
+import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import Footer from "../../components/Footer/Footer";
 import {
   Formik,
@@ -23,28 +18,22 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGoogle } from "@fortawesome/free-brands-svg-icons";
 import "firebase/compat/auth";
 
-import "./styles/registration.css";
+import "./styles/login.css";
 
-const Registration = () => {
-  const [name, setName] = useState("");
+const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [checked, setChecked] = useState(false);
 
   const formik = useFormik({
     initialValues: {
-      name: "",
       email: "",
       password: "",
-      checkbox: false,
     },
     validationSchema: Yup.object({
-      name: Yup.string().required("Name is required"),
       email: Yup.string()
         .email("Wrong email address")
         .required("Email is required"),
       password: Yup.string().required("Password is required"),
-      checkbox: Yup.boolean().oneOf([true], "Must accept terms and conditions"),
     }),
     onSubmit: async (values) => {
       try {
@@ -57,29 +46,14 @@ const Registration = () => {
     },
   });
 
-  const auth = getAuth(app);
-
-  const signUpWithEmail = async () => {
-    try {
-      await createUserWithEmailAndPassword(auth, email, password);
-    } catch (error: any) {
-      console.error("Error signing up with email and password:", error.message);
-    }
-  };
-
-  const signUpWithGoogle = async () => {
+  const signInWithGoogle = async () => {
     try {
       const provider = new GoogleAuthProvider();
-      await signInWithPopup(auth, provider);
+      await app.auth().signInWithPopup(provider);
     } catch (error: any) {
-      console.error("Error signing up with Google:", error.message);
+      console.error("Error signing in with Google:", error.message);
     }
   };
-
-  function nameChange(e: any) {
-    formik.handleChange(e);
-    setName(e.target.value);
-  }
 
   function emailChange(e: any) {
     formik.handleChange(e);
@@ -89,10 +63,6 @@ const Registration = () => {
   function passwordChange(e: any) {
     formik.handleChange(e);
     setPassword(e.target.value);
-  }
-
-  function checkboxChecked(e: any) {
-    setChecked(true);
   }
 
   return (
@@ -106,26 +76,6 @@ const Registration = () => {
             </h2>
           </div>
           <form onSubmit={formik.handleSubmit} className="form">
-            <div className="name-input-container">
-              <label htmlFor="name" className="label">
-                Name <span className="required">*</span>
-              </label>
-              <input
-                id="name"
-                name="name"
-                type="text"
-                placeholder="Name"
-                className={
-                  formik.errors.name ? "name-input-error" : "name-input"
-                }
-                onChange={nameChange}
-                onBlur={formik.handleBlur}
-                value={formik.values.name}
-              />
-              {formik.errors.name && formik.touched.name ? (
-                <div className="error">{formik.errors.name}</div>
-              ) : null}
-            </div>
             <div className="email-input-container">
               <label htmlFor="email" className="label">
                 Email <span className="required">*</span>
@@ -170,34 +120,23 @@ const Registration = () => {
             </div>
             <div className="lower-container">
               <div className="checkbox-container">
-                <input
-                  type="checkbox"
-                  className="checkbox"
-                  onClick={checkboxChecked}
-                />
-                <label
-                  htmlFor="checkbox"
-                  className={
-                    formik.errors.name
-                      ? "checkbox-label-error"
-                      : "checkbox-label"
-                  }
-                >
-                  Begin with an intro to acknowledge this is a terms and
-                  conditions agreement.
+                <input type="checkbox" className="checkbox" />
+                <label htmlFor="checkbox" className="checkbox-label">
+                  Remember for 30 days
                 </label>
               </div>
+              <Link to="/password" className="password-link">
+                Forgot password
+              </Link>
             </div>
+
             <button
               className={
-                email && password && name !== "" && checked !== false
-                  ? "form-button-active"
-                  : "form-button"
+                email && password !== "" ? "form-button-active" : "form-button"
               }
               type="submit"
-              onClick={signUpWithEmail}
             >
-              Sign Up
+              Sign In
             </button>
             <div className="divider-container">
               <div className="divider"></div>
@@ -209,8 +148,16 @@ const Registration = () => {
                 className="google-icon"
                 icon={faGoogle}
               ></FontAwesomeIcon>
-              Sign up by Google
+              Sign in by Google
             </button>
+            <div className="text-container">
+              <span className="link-text">
+                Don't have an account?{" "}
+                <Link className="sign-up-link" to="/Login">
+                  <strong>Sign up</strong>
+                </Link>
+              </span>
+            </div>
           </form>
         </main>
       </div>
@@ -219,4 +166,4 @@ const Registration = () => {
   );
 };
 
-export default Registration;
+export default Login;
