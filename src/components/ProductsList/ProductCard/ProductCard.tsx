@@ -5,6 +5,8 @@ import "./styles/product_card.css";
 
 interface ProductCardProps {
   time?: string;
+  id: any;
+  fullProductName: string;
   imageUrl: string;
   productName: string;
   description: string;
@@ -18,7 +20,7 @@ interface ProductCardProps {
 const ProductCard: React.FC<ProductCardProps> = (props) => {
   const navigate = useNavigate();
   const handleRedirection = () => {
-    navigate(`/product/${props.productName}`);
+    navigate(`/product/${props.id}`);
   };
 
   return (

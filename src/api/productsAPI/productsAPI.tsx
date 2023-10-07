@@ -42,9 +42,9 @@ async function fetchProductsFromFirestore() {
   }
 }
 
-async function fetchSpecificProduct(productName: string) {
+async function fetchSpecificProduct(productId: any) {
   try {
-    const productDoc = await db.collection("products").doc(productName).get();
+    const productDoc = await db.collection("products").doc(productId).get();
     if (!productDoc.exists) {
       throw new Error("Product not found");
     }

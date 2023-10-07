@@ -101,6 +101,7 @@ const ProductsList = () => {
                     ? product.title.substring(0, maxLengthTitle - 3) + "..."
                     : product.title
                 }
+                fullProductName={product.title}
                 imageUrl={product.image}
                 rating={renderRating(product.rating.rate)}
                 ratingQuantity={product.rating.count}
@@ -113,6 +114,7 @@ const ProductsList = () => {
                     : product.description
                 }
                 currentPrice={product.price}
+                id={product.id}
               />
             </SwiperSlide>
           ))}

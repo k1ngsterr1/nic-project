@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+.product-gallery {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: clamp(16px, 7.47648vw, 64px);
+}
+.product-gallery .image {
+  width: 100%;
+  height: clamp(210px, 98.1288vw, 840px);
+}
+.product-gallery .favorite {
+  position: absolute;
+  top: clamp(8px, 3.73824vw, 32px);
+  right: clamp(8px, 3.73824vw, 32px);
+  width: clamp(20px, 9.3456vw, 80px);
+  height: clamp(20px, 9.3456vw, 80px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #FF2E00;
+  border-radius: 50px;
+  border: none;
+}
+.product-gallery .favorite .heart {
+  color: white;
+  font-size: clamp(8px, 3.73824vw, 32px);
+}
+.product-gallery .product-thumbs {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  margin-top: clamp(8px, 3.73824vw, 32px);
+}
+.product-gallery .product-thumbs .image-thumbs {
+  width: clamp(40px, 18.6912vw, 160px);
+  height: clamp(45px, 21.0276vw, 180px);
+}
+
+.product-container {
+  width: 90%;
+  height: auto;
+  display: flex;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+.product-container .title-heading-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: clamp(16px, 7.47648vw, 64px);
+}
+.product-container .title-heading-container .product-heading {
+  width: 200%;
+  color: #262626;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Lato;
+  font-size: clamp(12px, 5.60736vw, 48px);
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
+.product-container .title-heading-container .price {
+  color: #262626;
+  font-family: Lato;
+  font-size: clamp(12px, 5.60736vw, 48px);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 137.939%;
+  margin-top: clamp(4px, 1.86912vw, 16px);
+}
+.product-container .sizes-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: clamp(16px, 7.47648vw, 64px);
+}
+.product-container .sizes-container .size {
+  color: #262626;
+  font-family: Lato;
+  font-size: clamp(8px, 3.73824vw, 32px);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 206.908%;
+}
+.product-container .sizes-container .size-buttons {
+  width: 85%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.product-container .sizes-container .size-buttons .size-button-active {
+  width: clamp(29.5px, 13.78476vw, 118px);
+  height: clamp(21px, 9.81288vw, 84px);
+  flex-direction: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid #434343;
+}
+.product-container .sizes-container .size-buttons .size-button-inactive {
+  width: clamp(29.5px, 13.78476vw, 118px);
+  height: clamp(21px, 9.81288vw, 84px);
+  flex-direction: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid #C4C4C4;
+}
+.product-container .sizes-container .size-buttons .size-button-choosen {
+  width: clamp(29.5px, 13.78476vw, 118px);
+  height: clamp(21px, 9.81288vw, 84px);
+  flex-direction: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  background-color: #FF7A00;
+  border: none;
+  border-radius: 4px;
+}
+
+.loading-screen {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loading-screen .loading-container {
+  width: 90%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.loading-screen .loading-container .spinner-icon {
+  color: #FF7A00;
+  font-size: clamp(16px, 7.47648vw, 64px);
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}/*# sourceMappingURL=product_details.css.map */
