@@ -216,6 +216,10 @@
   line-height: 125%;
   margin-left: clamp(8px, 3.73824vw, 32px);
 }
+.product-container .product-details .shipping-container .chevron {
+  font-size: clamp(7px, 3.27096vw, 28px);
+  margin-left: clamp(4px, 1.86912vw, 16px);
+}
 
 .loading-screen {
   width: 100%;
