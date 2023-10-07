@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import app from "./api/firebase/firebase";
 
+import "swiper/css";
 import "./styles/global/global.css";
 
 const root = ReactDOM.createRoot(

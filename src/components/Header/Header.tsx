@@ -14,6 +14,10 @@ const Header = () => {
   const navigate = useNavigate();
   const [isOpen, setOpen] = useState(false);
 
+  function mainNavigate() {
+    navigate("/");
+  }
+
   const categories = [
     { value: "all", label: "All categories" },
     { value: "electronics", label: "Electronics" },
@@ -35,7 +39,12 @@ const Header = () => {
           toggled={isOpen}
           onToggle={() => navigate("/menu")}
         ></Hamburger>
-        <img className="logo" src={logo} alt="logo"></img>
+        <img
+          className="logo"
+          src={logo}
+          alt="logo"
+          onClick={mainNavigate}
+        ></img>
         <Cart></Cart>
       </div>
       <div className="lower-content">

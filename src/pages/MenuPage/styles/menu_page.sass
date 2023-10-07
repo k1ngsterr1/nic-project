@@ -65,6 +65,7 @@
                 margin-top: $m32mob
 
                 .menu-section
+                    width: clamp(72.5px,33.8778vw,290px)
                     display: flex
                     flex-direction: column
 
@@ -110,6 +111,7 @@
                     align-items: flex-start
 
                     .menu-section
+                        width: clamp(72.5px,33.8778vw,290px)
                         display: flex
                         flex-direction: column
 
@@ -141,3 +143,58 @@
 
                     .under
                         margin-top: $m32mob
+
+        .tabs-container
+            width: 100%
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+            margin-top: $m32mob
+
+            .tab
+                color: $secondary_text
+                font-feature-settings: 'clig' off, 'liga' off
+                font-family: Lato
+                font-size: $font14mob
+                font-style: normal
+                font-weight: 400
+                line-height: 142.857%
+                background-color: transparent
+                border: none
+                transition: 0.3s all
+                &:hover
+                    color: $selected
+
+            .next
+                margin-top: $m16mob
+
+    .buttons-container
+        width: 100%
+        height: 100%
+        display: flex
+        flex-direction: column
+        align-items: center
+        background-color: $white
+        margin-top: $m32mob
+
+        .menu-btn
+            width: 90%
+            color: $primary_gray
+            font-feature-settings: 'clig' off, 'liga' off
+            font-family: Lato
+            font-size: $font16mob
+            font-style: normal
+            font-weight: 600
+            line-height: 125%
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+            background-color: transparent
+            border: none
+            margin-top: $m32mob
+            transition: 0.3s all
+            &:hover
+                color: $selected
+
+        .last
+            margin-bottom: $m32mob

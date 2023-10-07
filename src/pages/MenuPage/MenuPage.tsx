@@ -10,6 +10,10 @@ const MenuPage = () => {
   const [tab, setTab] = useState("Woman");
   const [isOpen, setOpen] = useState(true);
 
+  function registrationNavigate() {
+    navigate("/registration");
+  }
+
   const handleToggle = () => {
     if (isOpen) {
       window.history.back();
@@ -196,6 +200,25 @@ const MenuPage = () => {
             </div>
           </div>
         </main>
+        <div className="tabs-container">
+          <button className="tab">Male</button>
+          <button className="tab next">Mother-Child</button>
+          <button className="tab next">Home & Furniture</button>
+          <button className="tab next">Super market</button>
+          <button className="tab next">Cosmetics</button>
+          <button className="tab next">Shoe & Bag</button>
+          <button className="tab next">Electronic</button>
+          <button className="tab next">Sport & Outdoor</button>
+          <button className="tab next">Best seller</button>
+        </div>
+      </div>
+      <div className="buttons-container">
+        <button className="menu-btn first" onClick={registrationNavigate}>
+          Login/Register
+        </button>
+        <button className="menu-btn">Help & Support</button>
+        <button className="menu-btn">About us</button>
+        <button className="menu-btn last">Blog</button>
       </div>
       <Footer />
     </menu>

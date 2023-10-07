@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 import "./styles/product_card.css";
 
@@ -15,8 +16,13 @@ interface ProductCardProps {
 }
 
 const ProductCard: React.FC<ProductCardProps> = (props) => {
+  const navigate = useNavigate();
+  const handleRedirection = () => {
+    navigate(`/product/${props.productName}`);
+  };
+
   return (
-    <div className="product-card">
+    <div className="product-card" onClick={handleRedirection}>
       <span className="deal">Deal of the day</span>
       <div className="time">{props.time}</div>
       <img

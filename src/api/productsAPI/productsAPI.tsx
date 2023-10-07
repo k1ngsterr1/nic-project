@@ -42,4 +42,21 @@ async function fetchProductsFromFirestore() {
   }
 }
 
-export { saveProductsToFirestore, fetchProductsFromFirestore };
+async function fetchSpecificProduct(productName: string) {
+  try {
+    const productDoc = await db.collection("products").doc(productName).get();
+    if (!productDoc.exists) {
+      throw new Error("Product not found");
+    }
+    return productDoc.data();
+  } catch (error) {
+    console.error("Error fetching product from Firestore:", error);
+    throw error;
+  }
+}
+
+export {
+  saveProductsToFirestore,
+  fetchProductsFromFirestore,
+  fetchSpecificProduct,
+};

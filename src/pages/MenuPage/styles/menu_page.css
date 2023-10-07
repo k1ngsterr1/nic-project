@@ -62,6 +62,7 @@
   margin-top: clamp(16px, 7.47648vw, 64px);
 }
 .menu .container .main-menu-content .menu-row .menu-section {
+  width: clamp(72.5px, 33.8778vw, 290px);
   display: flex;
   flex-direction: column;
 }
@@ -108,6 +109,7 @@
   align-items: flex-start;
 }
 .menu .container .main-menu-content .menu-columns .column .menu-section {
+  width: clamp(72.5px, 33.8778vw, 290px);
   display: flex;
   flex-direction: column;
 }
@@ -141,4 +143,61 @@
 }
 .menu .container .main-menu-content .menu-columns .column .under {
   margin-top: clamp(16px, 7.47648vw, 64px);
+}
+.menu .container .tabs-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: clamp(16px, 7.47648vw, 64px);
+}
+.menu .container .tabs-container .tab {
+  color: #555555;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Lato;
+  font-size: clamp(7px, 3.27096vw, 28px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 142.857%;
+  background-color: transparent;
+  border: none;
+  transition: 0.3s all;
+}
+.menu .container .tabs-container .tab:hover {
+  color: #FF7A00;
+}
+.menu .container .tabs-container .next {
+  margin-top: clamp(8px, 3.73824vw, 32px);
+}
+.menu .buttons-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  margin-top: clamp(16px, 7.47648vw, 64px);
+}
+.menu .buttons-container .menu-btn {
+  width: 90%;
+  color: #262626;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Lato;
+  font-size: clamp(8px, 3.73824vw, 32px);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 125%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: transparent;
+  border: none;
+  margin-top: clamp(16px, 7.47648vw, 64px);
+  transition: 0.3s all;
+}
+.menu .buttons-container .menu-btn:hover {
+  color: #FF7A00;
+}
+.menu .buttons-container .last {
+  margin-bottom: clamp(16px, 7.47648vw, 64px);
 }/*# sourceMappingURL=menu_page.css.map */
