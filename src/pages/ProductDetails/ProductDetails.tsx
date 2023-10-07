@@ -17,6 +17,7 @@ import {
   faMinus,
   faChevronUp,
   faCirclePlus,
+  faBagShopping,
 } from "@fortawesome/free-solid-svg-icons";
 
 SwiperCore.use([Thumbs]);
@@ -277,10 +278,17 @@ const ProductDetails = () => {
                 </span>
               </span>
             </div>
-            <div className="buttons">
-              <button></button>
-            </div>
           </div>
+        </div>
+        <div className="buttons">
+          <button className="button shop">SHOP NOW</button>
+          <button className="button basket">
+            <FontAwesomeIcon
+              className="basket-icon"
+              icon={faBagShopping}
+            ></FontAwesomeIcon>
+            ADD TO BASKET
+          </button>
         </div>
       </div>
       <Footer />

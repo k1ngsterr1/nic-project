@@ -460,6 +460,53 @@
 .product-details-container .price-tab .price-tab-content .price-tab-lower .text .small {
   font: clamp(5px, 2.3364vw, 20px);
 }
+.product-details-container .buttons {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  margin-top: clamp(16px, 7.47648vw, 64px);
+}
+.product-details-container .buttons .button {
+  width: clamp(90px, 42.0552vw, 360px);
+  height: clamp(28px, 13.08384vw, 112px);
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Lato;
+  font-size: clamp(7px, 3.27096vw, 28px);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 142.857%;
+  text-transform: uppercase;
+  background-color: #4172DC;
+  border-radius: 6px;
+  border: none;
+}
+.product-details-container .buttons .basket {
+  width: clamp(90px, 42.0552vw, 360px);
+  height: clamp(28px, 13.08384vw, 112px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #555555;
+  text-align: right;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Lato;
+  font-size: clamp(7px, 3.27096vw, 28px);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 142.857%;
+  text-transform: uppercase;
+  border: 1px solid #555555;
+  background-color: transparent;
+}
+.product-details-container .buttons .basket .basket-icon {
+  margin-right: clamp(4px, 1.86912vw, 16px);
+}
 
 .loading-screen {
   width: 100%;
