@@ -8,7 +8,11 @@ import SwiperCore from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "./styles/product_details.css";
-import { faHeart, faSpinner } from "@fortawesome/free-solid-svg-icons";
+import {
+  faHeart,
+  faSpinner,
+  faChevronDown,
+} from "@fortawesome/free-solid-svg-icons";
 
 SwiperCore.use([Thumbs]);
 
@@ -55,7 +59,7 @@ const ProductDetails = () => {
         <Header />
       </div>
       <div className="product-gallery">
-        <img src={product.image} alt={product.name} className="image" />
+        <img src={product.image} alt={product.title} className="image" />
         <button className="favorite">
           <FontAwesomeIcon icon={faHeart} className="heart"></FontAwesomeIcon>
         </button>
@@ -89,7 +93,7 @@ const ProductDetails = () => {
       </div>
       <div className="product-container">
         <div className="title-heading-container">
-          <h1 className="product-heading">{product.name}</h1>
+          <h1 className="product-heading">{product.title}</h1>
           <span className="price">{product.price}$</span>
         </div>
         <div className="sizes-container">
@@ -127,6 +131,28 @@ const ProductDetails = () => {
               L
             </button>
             <button className="size-button-inactive">XL</button>
+          </div>
+        </div>
+        <h3 className="guideline">Size guideline</h3>
+        <div className="product-details">
+          <div className="colors-container">
+            <span className="color">Color</span>
+            <div className="colors">
+              <button className="color-btn red"></button>
+              <button className="color-btn green"></button>
+              <button className="color-btn blue"></button>
+              <button className="color-btn orange"></button>
+            </div>
+          </div>
+          <div className="shipping-container">
+            <span className="shipping-text">Shipping</span>
+            <span className="shipping-selector">
+              Free Shipping to Victoria teritory{" "}
+              <FontAwesomeIcon
+                className="chevron"
+                icon={faChevronDown}
+              ></FontAwesomeIcon>
+            </span>
           </div>
         </div>
       </div>

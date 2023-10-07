@@ -58,7 +58,7 @@
   margin-top: clamp(16px, 7.47648vw, 64px);
 }
 .product-container .title-heading-container .product-heading {
-  width: 200%;
+  width: auto;
   color: #262626;
   font-feature-settings: "clig" off, "liga" off;
   font-family: Lato;
@@ -129,6 +129,92 @@
   background-color: #FF7A00;
   border: none;
   border-radius: 4px;
+}
+.product-container .guideline {
+  width: 100%;
+  height: auto;
+  color: #FF7A00;
+  font-family: Lato;
+  font-size: clamp(8px, 3.73824vw, 32px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 206.908%;
+  text-align: left;
+  margin-top: clamp(8px, 3.73824vw, 32px);
+  margin-bottom: clamp(8px, 3.73824vw, 32px);
+}
+.product-container .product-details {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.product-container .product-details .colors-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+}
+.product-container .product-details .colors-container .color {
+  color: #262626;
+  font-family: Lato;
+  font-size: clamp(8px, 3.73824vw, 32px);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 206.908%;
+}
+.product-container .product-details .colors-container .colors {
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  margin-left: clamp(16px, 7.47648vw, 64px);
+}
+.product-container .product-details .colors-container .colors .color-btn {
+  width: clamp(8px, 3.73824vw, 32px);
+  height: clamp(8px, 3.73824vw, 32px);
+  border-radius: 50px;
+  border: none;
+}
+.product-container .product-details .colors-container .colors .red {
+  background-color: #750430;
+  margin-right: clamp(6px, 2.80368vw, 24px);
+}
+.product-container .product-details .colors-container .colors .green {
+  background-color: #00A95D;
+  margin-right: clamp(6px, 2.80368vw, 24px);
+}
+.product-container .product-details .colors-container .colors .blue {
+  background-color: #A2D2FC;
+  margin-right: clamp(6px, 2.80368vw, 24px);
+}
+.product-container .product-details .colors-container .colors .orange {
+  background-color: #FF7A00;
+}
+.product-container .product-details .shipping-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  margin-top: clamp(8px, 3.73824vw, 32px);
+}
+.product-container .product-details .shipping-container .shipping-text {
+  color: #262626;
+  font-family: Lato;
+  font-size: clamp(8px, 3.73824vw, 32px);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 206.908%;
+}
+.product-container .product-details .shipping-container .shipping-selector {
+  color: #262626;
+  font-family: Lato;
+  font-size: clamp(8px, 3.73824vw, 32px);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 125%;
+  margin-left: clamp(8px, 3.73824vw, 32px);
 }
 
 .loading-screen {
