@@ -1,8 +1,14 @@
 import React, { useState } from "react";
 import { useCart } from "../../contexts/CartContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlus, faMinus, faTrash } from "@fortawesome/free-solid-svg-icons";
+import {
+  faPlus,
+  faMinus,
+  faTrash,
+  faShoppingBag,
+} from "@fortawesome/free-solid-svg-icons";
 import Header from "../../components/Header/Header";
+import Footer from "../../components/Footer/Footer";
 
 import "./styles/cart_page.css";
 
@@ -86,15 +92,54 @@ const CartPage = () => {
                   onClick={() => removeFromCart(product.id)}
                 ></FontAwesomeIcon>
               </div>
-              {/* <button onClick={() => removeFromCart(product.id)}>Remove</button> */}
             </div>
           ))}
         </div>
-        <div>
-          {/* <strong>Total: </strong>$
-          {cart.reduce((total, product) => total + product.price, 0)} */}
-        </div>
       </div>
+      <div className="summary">
+        <div className="summary-container">
+          <div className="summary-heading">Order Summary</div>
+          <div className="price-row">
+            <span className="price-text">Price:</span>
+            <span className="price">$99.23</span>
+          </div>
+          <div className="shipping-row">
+            <span className="shipping-text">Shipping</span>
+            <span className="price">$0</span>
+          </div>
+          <div className="tax-row">
+            <span className="tax-text">Tax:</span>
+            <span className="price">$0</span>
+          </div>
+          <div className="gift-row">
+            <div className="checkbox-container">
+              <input type="checkbox" name="checkbox" className="checkbox" />
+              <label htmlFor="checkbox" className="checkbox-label">
+                Pack in a Gift Box
+              </label>
+            </div>
+            <span className="price">$10.90</span>
+          </div>
+          <figure className="separator"></figure>
+          <div className="total-row">
+            <span className="total-text-bold">Total Price</span>
+            <span className="bold-price">$110.13</span>
+          </div>
+        </div>
+        <button className="checkout-btn">
+          <FontAwesomeIcon className="bag-icon" icon={faShoppingBag} />
+          CHECKOUT
+        </button>
+      </div>
+      <div className="coupon-container">
+        <input
+          type="text"
+          className="coupon-input"
+          placeholder="Enter coupon code"
+        />
+        <button className="apply-btn">Login And Apply Code</button>
+      </div>
+      <Footer />
     </div>
   );
 };
