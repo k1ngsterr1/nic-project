@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBagShopping } from "@fortawesome/free-solid-svg-icons";
 import { useCart } from "../../../contexts/CartContext";
-
+import { useNavigate } from "react-router-dom";
 import "./styles/cart.css";
 
 interface QuantityProps {
@@ -15,10 +15,15 @@ const CartQuantity: React.FC<QuantityProps> = ({ quantity }) => {
 
 const Cart = () => {
   const [cartQuantity, setCartQuantity] = useState(0);
+  const navigate = useNavigate();
   const { cart } = useCart();
 
+  function navigateToCart() {
+    navigate("/cart");
+  }
+
   return (
-    <div className="cart-container">
+    <div className="cart-container" onClick={navigateToCart}>
       <FontAwesomeIcon
         className="bag-icon"
         icon={faBagShopping}

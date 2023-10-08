@@ -13,6 +13,7 @@ import ForgotPassword from "./pages/ForgotPassword/ForgotPassword";
 import MenuPage from "./pages/MenuPage/MenuPage";
 import ProductDetails from "./pages/ProductDetails/ProductDetails";
 import SearchResult from "./pages/SearchResult/SearchResult";
+import CartPage from "./pages/CartPage/CartPage";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
             element={<ProductDetails />}
           ></Route>
           <Route path="/search" element={<SearchResult />}></Route>
+          <Route path="/cart" element={<CartPage />}></Route>
         </Routes>
       </BrowserRouter>
     </div>
