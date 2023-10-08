@@ -55,6 +55,24 @@ async function fetchSpecificProduct(productId: any) {
   }
 }
 
+// async function fetchAnotherProduct(anotherProductId: any, productId: any) {
+//   try {
+//     if (anotherProductId != productId) {
+//       const productDoc = await db
+//         .collection("products")
+//         .doc(anotherProductId)
+//         .get();
+//       if (!productDoc.exists) {
+//         throw new Error("Product not found");
+//       }
+//       return productDoc.data();
+//     }
+//   } catch (error) {
+//     console.error("Error fetching product from Firestore:", error);
+//     throw error;
+//   }
+// }
+
 export {
   saveProductsToFirestore,
   fetchProductsFromFirestore,

@@ -505,6 +505,173 @@
             .basket-icon
                 margin-right: $m8mob
 
+    .also-like
+        width: 100%
+        height: auto
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        margin-top: $m32mob
+
+        .heading-buttons-container
+            width: 100%
+            height: auto
+            display: flex
+            align-items: center
+            justify-content: space-between
+
+            .section-heading-like
+                color: $primary_gray
+                font-family: Lato
+                font-size: $font14mob
+                font-style: normal
+                font-weight: 700
+                line-height: 142.857%
+                letter-spacing: 0.5px
+                text-transform: uppercase
+
+            .arrow-buttons
+                width: auto
+                height: auto
+                display: flex
+                align-items: center
+                border: 1px solid $light_text
+                border-radius: 4px
+
+                .left-btn, .right-btn
+                    border: none
+                    background-color: transparent
+
+                .left-btn
+                    width: clamp(10px,4.6728vw,40px)
+                    margin-top: $m8mob
+                    margin-left: $m16mob
+                    margin-right: $m8mob
+                    margin-bottom: $m8mob
+                    color: $light_text
+
+                .right-btn
+                    width: clamp(10px,4.6728vw,40px)
+                    margin-top: $m8mob
+                    margin-right: $m16mob
+                    margin-left: $m8mob
+                    margin-bottom: $m8mob
+
+                .separator-btn
+                    width: 1px
+                    height: clamp(8px,3.73824vw,32px)
+                    background: $light_text
+
+        .similar-products
+            width: 100%
+            height: auto
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+            margin-top: $m16mob
+
+            .specific-card
+                width: 100%
+                height: auto
+                display: flex
+                align-items: flex-start
+                margin-top: $m16mob
+
+                .specific-card-img
+                    width: clamp(45px,21.0276vw,180px)
+                    height: clamp(55px,25.7004vw,220px)
+
+                .card-container
+                    width: auto
+                    height: auto
+                    display: flex
+                    flex-direction: column
+                    margin-left: $m32mob
+
+                    .specific-card-heading
+                        color: $primary_gray
+                        font-family: Lato
+                        font-size: $font14mob
+                        font-style: normal
+                        font-weight: 400
+                        line-height: 142.857%
+                        margin-top: $m8mob
+
+                    .prices-container
+                        display: flex
+                        align-items: center
+                        margin-top: clamp(6px,2.80368vw,24px)
+
+                        .price
+                            color: $discount
+                            font-family: Lato
+                            font-size: $font14mob
+                            font-style: normal
+                            font-weight: 700
+                            line-height: 142.857%
+
+                        .original-price
+                            color: $secondary_text
+                            font-family: Lato
+                            font-size: $font12mob
+                            font-style: normal
+                            font-weight: 400
+                            line-height: 166.667%
+                            text-decoration: line-through
+                            text-decoration-line: strikethrough
+                            margin-left: $m8mob
+
+                        .discount
+                            width: auto
+                            height: auto
+                            display: flex
+                            align-items: center
+                            justify-content: center
+                            background-color: $discount
+                            border-radius: 2px
+                            margin-left: clamp(6px,2.80368vw,24px)
+
+                            .discount-percent
+                                color: $white
+                                font-family: Inter
+                                font-size: $m8mob
+                                font-style: normal
+                                font-weight: 600
+                                line-height: normal
+                                margin-top: clamp(2px,0.93456vw,8px)
+                                margin-bottom: clamp(2px,0.93456vw,8px)
+                                margin-left: clamp(2px,0.93456vw,8px)
+                                margin-right: clamp(2px,0.93456vw,8px)
+
+                    .specific-card-btn
+                        width: auto
+                        height: auto
+                        display: flex
+                        justify-content: center
+                        align-items: center
+                        color: $secondary_text
+                        font-family: Lato
+                        font-size: $font14mob
+                        font-style: normal
+                        font-weight: 400
+                        line-height: 142.857%
+                        background-color: transparent
+                        border: 1px solid $secondary_text
+                        border-radius: 4px
+                        margin-top: clamp(6px,2.80368vw,24px)
+                        margin-bottom: clamp(6px,2.80368vw,24px)
+
+                        .price-btn
+                            margin-top: $m8mob
+                            margin-bottom: $m8mob
+                            margin-left: $m32mob
+
+                        .btn-text
+                            margin-top: $m8mob
+                            margin-left: $m8mob
+                            margin-bottom: $m8mob
+                            margin-right: $m32mob
+
 .loading-screen
     width: 100%
     height: 100vh

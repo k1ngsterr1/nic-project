@@ -18,16 +18,48 @@ import {
   faChevronUp,
   faCirclePlus,
   faBagShopping,
+  faCaretRight,
+  faCaretLeft,
 } from "@fortawesome/free-solid-svg-icons";
 
 SwiperCore.use([Thumbs]);
 
+interface CardProps {
+  image: string;
+  title: string;
+  price: string;
+}
+
+const SimilarCard: React.FC<CardProps> = ({ image, title, price }) => {
+  return (
+    <div className="specific-card">
+      <img src={image} alt={title} className="specific-card-img" />
+      <div className="card-container">
+        <h6 className="specific-card-heading">{title}</h6>
+        <div className="prices-container">
+          <span className="price">${price}</span>
+          <span className="original-price">$129.99</span>
+          <div className="discount">
+            <span className="discount-percent">-40%</span>
+          </div>
+        </div>
+        <button className="specific-card-btn">
+          <span className="price-btn">${price}</span>
+          <span className="btn-text">Add to cart</span>
+        </button>
+      </div>
+    </div>
+  );
+};
+
 const ProductDetails = () => {
+  const maxLengthTitle = 20;
+
   const { productId } = useParams<{ productId: any }>();
   const [product, setProduct] = useState<any | null>(null);
+  const [specificProducts, setSpecificProducts] = useState<any | null>(null);
   const [selectedSize, setSelectedSize] = useState<string | null>(null);
   const [quantity, setQuantity] = useState(1);
-
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperCore | null>(null);
 
   function selectSize(size: string) {
@@ -56,10 +88,29 @@ const ProductDetails = () => {
       }
     };
 
+    const fetchAnotherProduct = async () => {
+      const maxCardQuantity = 4;
+      const fetchedProductsArray = [];
+      for (let i = 1; i <= maxCardQuantity; i++) {
+        try {
+          const productData = await fetchSpecificProduct(productId + i);
+          // setSpecificProducts(productData);
+          if (productData) {
+            fetchedProductsArray.push(productData);
+            console.log("fetched products array:", fetchedProductsArray);
+          }
+        } catch (error) {
+          console.error("Error fetching product:", error);
+        }
+      }
+      setSpecificProducts(fetchedProductsArray);
+    };
+
     fetchProduct();
+    fetchAnotherProduct();
   }, [productId]);
 
-  if (!product) {
+  if (!product && !specificProducts) {
     return (
       <div className="loading-screen">
         <div className="loading-container">
@@ -289,6 +340,53 @@ const ProductDetails = () => {
             ></FontAwesomeIcon>
             ADD TO BASKET
           </button>
+        </div>
+        <div className="also-like">
+          <div className="heading-buttons-container">
+            <h5 className="section-heading-like">You might also like</h5>
+            <div className="arrow-buttons">
+              <button className="left-btn">
+                <FontAwesomeIcon
+                  className="arrow-icon"
+                  icon={faCaretLeft}
+                ></FontAwesomeIcon>
+              </button>
+              <figure className="separator-btn"></figure>
+              <button className="right-btn">
+                <FontAwesomeIcon
+                  className="arrow-icon"
+                  icon={faCaretRight}
+                ></FontAwesomeIcon>
+              </button>
+            </div>
+          </div>
+          <div className="similar-products">
+            {specificProducts &&
+              specificProducts.map((product: any, index: any) => {
+                if (
+                  !product ||
+                  !product.image ||
+                  !product.title ||
+                  typeof product.price !== "number"
+                ) {
+                  return null;
+                }
+
+                const title =
+                  product.title.length > maxLengthTitle
+                    ? product.title.substring(0, maxLengthTitle - 3) + "..."
+                    : product.title;
+
+                return (
+                  <SimilarCard
+                    key={index}
+                    title={title}
+                    image={product.image}
+                    price={product.price.toString()}
+                  />
+                );
+              })}
+          </div>
         </div>
       </div>
       <Footer />

@@ -507,6 +507,173 @@
 .product-details-container .buttons .basket .basket-icon {
   margin-right: clamp(4px, 1.86912vw, 16px);
 }
+.product-details-container .also-like {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: clamp(16px, 7.47648vw, 64px);
+}
+.product-details-container .also-like .heading-buttons-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.product-details-container .also-like .heading-buttons-container .section-heading-like {
+  color: #262626;
+  font-family: Lato;
+  font-size: clamp(7px, 3.27096vw, 28px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 142.857%;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+.product-details-container .also-like .heading-buttons-container .arrow-buttons {
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  border: 1px solid #9D9D9D;
+  border-radius: 4px;
+}
+.product-details-container .also-like .heading-buttons-container .arrow-buttons .left-btn, .product-details-container .also-like .heading-buttons-container .arrow-buttons .right-btn {
+  border: none;
+  background-color: transparent;
+}
+.product-details-container .also-like .heading-buttons-container .arrow-buttons .left-btn {
+  width: clamp(10px, 4.6728vw, 40px);
+  margin-top: clamp(4px, 1.86912vw, 16px);
+  margin-left: clamp(8px, 3.73824vw, 32px);
+  margin-right: clamp(4px, 1.86912vw, 16px);
+  margin-bottom: clamp(4px, 1.86912vw, 16px);
+  color: #9D9D9D;
+}
+.product-details-container .also-like .heading-buttons-container .arrow-buttons .right-btn {
+  width: clamp(10px, 4.6728vw, 40px);
+  margin-top: clamp(4px, 1.86912vw, 16px);
+  margin-right: clamp(8px, 3.73824vw, 32px);
+  margin-left: clamp(4px, 1.86912vw, 16px);
+  margin-bottom: clamp(4px, 1.86912vw, 16px);
+}
+.product-details-container .also-like .heading-buttons-container .arrow-buttons .separator-btn {
+  width: 1px;
+  height: clamp(8px, 3.73824vw, 32px);
+  background: #9D9D9D;
+}
+.product-details-container .also-like .similar-products {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: clamp(8px, 3.73824vw, 32px);
+}
+.product-details-container .also-like .similar-products .specific-card {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  margin-top: clamp(8px, 3.73824vw, 32px);
+}
+.product-details-container .also-like .similar-products .specific-card .specific-card-img {
+  width: clamp(45px, 21.0276vw, 180px);
+  height: clamp(55px, 25.7004vw, 220px);
+}
+.product-details-container .also-like .similar-products .specific-card .card-container {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  margin-left: clamp(16px, 7.47648vw, 64px);
+}
+.product-details-container .also-like .similar-products .specific-card .card-container .specific-card-heading {
+  color: #262626;
+  font-family: Lato;
+  font-size: clamp(7px, 3.27096vw, 28px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 142.857%;
+  margin-top: clamp(4px, 1.86912vw, 16px);
+}
+.product-details-container .also-like .similar-products .specific-card .card-container .prices-container {
+  display: flex;
+  align-items: center;
+  margin-top: clamp(6px, 2.80368vw, 24px);
+}
+.product-details-container .also-like .similar-products .specific-card .card-container .prices-container .price {
+  color: #FF2E00;
+  font-family: Lato;
+  font-size: clamp(7px, 3.27096vw, 28px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 142.857%;
+}
+.product-details-container .also-like .similar-products .specific-card .card-container .prices-container .original-price {
+  color: #555555;
+  font-family: Lato;
+  font-size: clamp(6px, 2.80368vw, 24px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 166.667%;
+  text-decoration: line-through;
+  text-decoration-line: strikethrough;
+  margin-left: clamp(4px, 1.86912vw, 16px);
+}
+.product-details-container .also-like .similar-products .specific-card .card-container .prices-container .discount {
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FF2E00;
+  border-radius: 2px;
+  margin-left: clamp(6px, 2.80368vw, 24px);
+}
+.product-details-container .also-like .similar-products .specific-card .card-container .prices-container .discount .discount-percent {
+  color: white;
+  font-family: Inter;
+  font-size: clamp(4px, 1.86912vw, 16px);
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-top: clamp(2px, 0.93456vw, 8px);
+  margin-bottom: clamp(2px, 0.93456vw, 8px);
+  margin-left: clamp(2px, 0.93456vw, 8px);
+  margin-right: clamp(2px, 0.93456vw, 8px);
+}
+.product-details-container .also-like .similar-products .specific-card .card-container .specific-card-btn {
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #555555;
+  font-family: Lato;
+  font-size: clamp(7px, 3.27096vw, 28px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 142.857%;
+  background-color: transparent;
+  border: 1px solid #555555;
+  border-radius: 4px;
+  margin-top: clamp(6px, 2.80368vw, 24px);
+  margin-bottom: clamp(6px, 2.80368vw, 24px);
+}
+.product-details-container .also-like .similar-products .specific-card .card-container .specific-card-btn .price-btn {
+  margin-top: clamp(4px, 1.86912vw, 16px);
+  margin-bottom: clamp(4px, 1.86912vw, 16px);
+  margin-left: clamp(16px, 7.47648vw, 64px);
+}
+.product-details-container .also-like .similar-products .specific-card .card-container .specific-card-btn .btn-text {
+  margin-top: clamp(4px, 1.86912vw, 16px);
+  margin-left: clamp(4px, 1.86912vw, 16px);
+  margin-bottom: clamp(4px, 1.86912vw, 16px);
+  margin-right: clamp(16px, 7.47648vw, 64px);
+}
 
 .loading-screen {
   width: 100%;
