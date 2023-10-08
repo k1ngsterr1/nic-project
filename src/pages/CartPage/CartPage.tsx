@@ -6,6 +6,7 @@ import {
   faMinus,
   faTrash,
   faShoppingBag,
+  faCircleXmark,
 } from "@fortawesome/free-solid-svg-icons";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
@@ -17,7 +18,27 @@ const CartPage = () => {
   const [quantity, setQuantity] = useState(1);
 
   if (cart.length === 0) {
-    return <div className="screen">Your cart is empty. Start shopping!</div>;
+    return (
+      <div className="screen">
+        <div className="empty-container">
+          <Header />
+          <div className="text-container">
+            <FontAwesomeIcon
+              className="icon"
+              icon={faCircleXmark}
+            ></FontAwesomeIcon>
+            <p className="main-text">
+              <strong>Your Cart is Empty 🛒</strong>
+            </p>
+            <p className="text">
+              It looks like you haven't added any items to your cart yet. Start
+              exploring our collection and find something you love!
+            </p>
+          </div>
+        </div>
+        <Footer />
+      </div>
+    );
   }
 
   function plusQuantity() {
