@@ -30,35 +30,43 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch, categories }) => {
 
   const handleSearch = async () => {
     const productsRef = collection(db, "products");
-    setSearchTerm(queryList);
+    const cleanedSearchText = queryList.trim(); // Trimming the queryList
+
+    console.log("Cleaned Search Term:", cleanedSearchText);
+
     let q;
 
     if (selectedCategory && selectedCategory.value !== "All categories") {
       q = query(
         productsRef,
-        where("title", "==", searchTerm),
+        where("title", "==", cleanedSearchText),
         where("category", "==", selectedCategory.value)
       );
     } else {
-      q = query(productsRef, where("title", "==", searchTerm));
+      q = query(productsRef, where("title", "==", cleanedSearchText));
     }
 
     try {
       const querySnapshot = await getDocs(q);
       const searchResults = querySnapshot.docs.map((doc) => doc.data());
 
-      console.log("Search Term:", searchTerm);
+      console.log("Selected Category:", selectedCategory);
       console.log("Constructed Query:", q);
       console.log("Fetched Results:", searchResults);
 
-      navigate(`/search?query=${searchTerm}`, {
+      if (searchResults.length === 0) {
+        console.warn(
+          "Search didn't return any results. Please double-check the query and the data in Firestore."
+        );
+      }
+
+      navigate(`/search?query=${cleanedSearchText}`, {
         state: { results: searchResults },
       });
     } catch (error) {
       console.error("Error fetching search results:", error);
     }
   };
-
   return (
     <div className="search-bar">
       <input
