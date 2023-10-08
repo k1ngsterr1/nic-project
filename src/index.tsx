@@ -5,12 +5,15 @@ import app from "./api/firebase/firebase";
 
 import "swiper/css";
 import "./styles/global/global.css";
+import { CartProvider } from "./contexts/CartContext";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <CartProvider>
+      <App />
+    </CartProvider>
   </React.StrictMode>
 );

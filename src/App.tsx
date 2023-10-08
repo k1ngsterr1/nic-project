@@ -12,7 +12,7 @@ import Registration from "./pages/Registration/Registration";
 import ForgotPassword from "./pages/ForgotPassword/ForgotPassword";
 import MenuPage from "./pages/MenuPage/MenuPage";
 import ProductDetails from "./pages/ProductDetails/ProductDetails";
-import SearchResult from "./components/SearchResult/SearchResult";
+import SearchResult from "./pages/SearchResult/SearchResult";
 
 function App() {
   return (

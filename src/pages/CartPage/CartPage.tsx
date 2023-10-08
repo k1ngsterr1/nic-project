@@ -1,7 +1,7 @@
 import React from "react";
 
 const CartPage = () => {
-  return <div>CartPage</div>;
+  return <div className="screen"></div>;
 };
 
 export default CartPage;

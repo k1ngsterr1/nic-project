@@ -4,6 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useParams } from "react-router-dom";
 import { fetchSpecificProduct } from "../../api/productsAPI/productsAPI";
 import { Pagination, Thumbs } from "swiper/modules";
+import { Product } from "../../types";
+import { useCart } from "../../contexts/CartContext";
 import Footer from "../../components/Footer/Footer";
 import SwiperCore from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -54,6 +56,13 @@ const SimilarCard: React.FC<CardProps> = ({ image, title, price }) => {
 
 const ProductDetails = () => {
   const maxLengthTitle = 20;
+
+  const [cart, setCart] = useState<Product[]>([]);
+  const { addToCart, removeFromCart } = useCart();
+
+  const handleAddToCartClick = () => {
+    addToCart(product);
+  };
 
   const { productId } = useParams<{ productId: any }>();
   const [product, setProduct] = useState<any | null>(null);
@@ -333,7 +342,7 @@ const ProductDetails = () => {
         </div>
         <div className="buttons">
           <button className="button shop">SHOP NOW</button>
-          <button className="button basket">
+          <button className="button basket" onClick={handleAddToCartClick}>
             <FontAwesomeIcon
               className="basket-icon"
               icon={faBagShopping}

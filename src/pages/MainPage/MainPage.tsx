@@ -13,7 +13,7 @@ const MainPage = () => {
   return (
     <div className="screen">
       <div className="container">
-        <Header></Header>
+        <Header />
         <main className="main-content">
           <ProductSpotlight
             image={spotlightImage01}
@@ -35,7 +35,7 @@ const MainPage = () => {
         <TrendingList />
         <TopList />
       </div>
-      <Footer></Footer>
+      <Footer />
     </div>
   );
 };

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBagShopping } from "@fortawesome/free-solid-svg-icons";
+import { useCart } from "../../../contexts/CartContext";
 
 import "./styles/cart.css";
 
@@ -14,6 +15,7 @@ const CartQuantity: React.FC<QuantityProps> = ({ quantity }) => {
 
 const Cart = () => {
   const [cartQuantity, setCartQuantity] = useState(0);
+  const { cart } = useCart();
 
   return (
     <div className="cart-container">
@@ -21,7 +23,7 @@ const Cart = () => {
         className="bag-icon"
         icon={faBagShopping}
       ></FontAwesomeIcon>
-      <CartQuantity quantity={cartQuantity}></CartQuantity>
+      <CartQuantity quantity={cart.length}></CartQuantity>
     </div>
   );
 };

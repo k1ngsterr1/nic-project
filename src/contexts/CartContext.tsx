@@ -1,25 +1,42 @@
-import React, { createContext, useState, ReactNode } from "react";
+import { createContext, useContext, useState, ReactNode } from "react";
+import { Product } from "../types";
 
-// 1. Define an interface for the context value
-interface CartContextType {
-  cart: any[]; // you should replace 'any' with a more specific type if you know the structure of your cart items
-  setCart: React.Dispatch<React.SetStateAction<any[]>>;
-}
+type CartContextType = {
+  cart: Product[];
+  addToCart: (product: Product) => void;
+  removeFromCart: (productId: string) => void;
+};
 
-interface CartProviderProps {
+const CartContext = createContext<CartContextType | undefined>(undefined);
+
+type CartProviderProps = {
   children: ReactNode;
-}
-
-export const CartContext = createContext<CartContextType | undefined>(
-  undefined
-);
+};
 
 export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
-  const [cart, setCart] = useState<any[]>([]); // replace 'any' with a more specific type if applicable
+  const [cart, setCart] = useState<Product[]>([]);
+
+  const addToCart = (product: Product) => {
+    setCart((prevCart) => [...prevCart, product]);
+  };
+
+  const removeFromCart = (productId: string) => {
+    setCart((prevCart) =>
+      prevCart.filter((product) => product.id !== productId)
+    );
+  };
 
   return (
-    <CartContext.Provider value={{ cart, setCart }}>
+    <CartContext.Provider value={{ cart, addToCart, removeFromCart }}>
       {children}
     </CartContext.Provider>
   );
+};
+
+export const useCart = () => {
+  const context = useContext(CartContext);
+  if (!context) {
+    throw new Error("useCart must be used within a CartProvider");
+  }
+  return context;
 };
