@@ -1,1 +1,142 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");/*# sourceMappingURL=cart_page.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+.margin {
+  display: flex;
+  align-items: center;
+  margin-top: clamp(16px, 7.47648vw, 64px);
+}
+.margin .quantity {
+  color: #9D9D9D;
+  font-family: Lato;
+  font-size: clamp(9px, 4.20552vw, 36px);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 166.667%;
+  margin-left: clamp(4px, 1.86912vw, 16px);
+}
+
+.cards {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+.cards .card {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: clamp(16px, 7.47648vw, 64px);
+}
+.cards .card .card-upper-row {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+}
+.cards .card .card-upper-row .card-image {
+  width: clamp(40px, 18.6912vw, 160px);
+  height: clamp(40px, 18.6912vw, 160px);
+}
+.cards .card .card-upper-row .card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: clamp(8px, 3.73824vw, 32px);
+}
+.cards .card .card-upper-row .card-content .card-heading {
+  color: #262626;
+  font-family: Lato;
+  font-size: clamp(8px, 3.73824vw, 32px);
+  font-style: normal;
+  font-weight: 800;
+  line-height: 142.857%;
+}
+.cards .card .card-upper-row .card-content .color-and-price {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cards .card .card-upper-row .card-content .color-and-price .colors {
+  display: flex;
+  align-items: center;
+}
+.cards .card .card-upper-row .card-content .color-and-price .colors .color-text {
+  color: #9D9D9D;
+  font-family: Lato;
+  font-size: clamp(7px, 3.27096vw, 28px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 142.857%;
+}
+.cards .card .card-upper-row .card-content .color-and-price .colors .color {
+  width: clamp(6px, 2.80368vw, 24px);
+  height: clamp(6px, 2.80368vw, 24px);
+  background-color: #4172DC;
+  border-radius: 50px;
+  margin-left: clamp(4px, 1.86912vw, 16px);
+}
+.cards .card .card-upper-row .card-content .color-and-price .price {
+  color: #555555;
+  text-align: right;
+  font-family: Lato;
+  font-size: clamp(7px, 3.27096vw, 28px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 142.857%;
+}
+.cards .card .card-lower-row {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: clamp(8px, 3.73824vw, 32px);
+}
+.cards .card .card-lower-row .quantity-container {
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.cards .card .card-lower-row .quantity-container .quantity-text {
+  color: #262626;
+  font-family: Lato;
+  font-size: clamp(8px, 3.73824vw, 32px);
+  font-style: normal;
+  font-weight: 600;
+  line-height: 206.908%;
+}
+.cards .card .card-lower-row .quantity-container .quantity-counter {
+  width: clamp(50.5px, 23.59764vw, 202px);
+  height: clamp(20px, 9.3456vw, 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  border: 1px solid #C4C4C4;
+}
+.cards .card .card-lower-row .quantity-container .quantity-counter .quantity-icon {
+  font-size: clamp(7px, 3.27096vw, 28px);
+  color: #9D9D9D;
+}
+.cards .card .card-lower-row .quantity-container .quantity-counter .minus {
+  margin-right: clamp(8px, 3.73824vw, 32px);
+}
+.cards .card .card-lower-row .quantity-container .quantity-counter .plus {
+  margin-left: clamp(8px, 3.73824vw, 32px);
+}
+.cards .card .card-lower-row .price {
+  color: #555555;
+  text-align: center;
+  font-family: Lato;
+  font-size: clamp(7px, 3.27096vw, 28px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 142.857%;
+}
+.cards .card .card-lower-row .trash-icon {
+  color: #555555;
+  font-size: clamp(9px, 4.20552vw, 36px);
+}/*# sourceMappingURL=cart_page.css.map */

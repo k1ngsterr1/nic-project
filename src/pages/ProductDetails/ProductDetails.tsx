@@ -30,9 +30,15 @@ interface CardProps {
   image: string;
   title: string;
   price: string;
+  addToCart: any;
 }
 
-const SimilarCard: React.FC<CardProps> = ({ image, title, price }) => {
+const SimilarCard: React.FC<CardProps> = ({
+  image,
+  title,
+  price,
+  addToCart,
+}) => {
   return (
     <div className="specific-card">
       <img src={image} alt={title} className="specific-card-img" />
@@ -45,7 +51,7 @@ const SimilarCard: React.FC<CardProps> = ({ image, title, price }) => {
             <span className="discount-percent">-40%</span>
           </div>
         </div>
-        <button className="specific-card-btn">
+        <button className="specific-card-btn" onClick={addToCart}>
           <span className="price-btn">${price}</span>
           <span className="btn-text">Add to cart</span>
         </button>
@@ -392,6 +398,7 @@ const ProductDetails = () => {
                     title={title}
                     image={product.image}
                     price={product.price.toString()}
+                    addToCart={handleAddToCartClick}
                   />
                 );
               })}
