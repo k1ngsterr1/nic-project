@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import Select from "react-select";
-
+import app from "../../../api/firebase/firebase";
+import { collection, query, where, getDocs, Query } from "firebase/firestore";
+import { useNavigate, useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import "firebase/compat/firestore";
 
 import "./styles/search_bar.css";
 
@@ -15,11 +18,46 @@ interface SearchBarProps {
   categories: OptionType[];
 }
 
+const db = app.firestore();
+
 const SearchBar: React.FC<SearchBarProps> = ({ onSearch, categories }) => {
-  const [query, setQuery] = useState("");
+  const [queryList, setQueryList] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<OptionType | null>(
     categories[0]
   );
+  const [searchTerm, setSearchTerm] = useState("");
+  const navigate = useNavigate();
+
+  const handleSearch = async () => {
+    const productsRef = collection(db, "products");
+    setSearchTerm(queryList);
+    let q;
+
+    if (selectedCategory && selectedCategory.value !== "All categories") {
+      q = query(
+        productsRef,
+        where("title", "==", searchTerm),
+        where("category", "==", selectedCategory.value)
+      );
+    } else {
+      q = query(productsRef, where("title", "==", searchTerm));
+    }
+
+    try {
+      const querySnapshot = await getDocs(q);
+      const searchResults = querySnapshot.docs.map((doc) => doc.data());
+
+      console.log("Search Term:", searchTerm);
+      console.log("Constructed Query:", q);
+      console.log("Fetched Results:", searchResults);
+
+      navigate(`/search?query=${searchTerm}`, {
+        state: { results: searchResults },
+      });
+    } catch (error) {
+      console.error("Error fetching search results:", error);
+    }
+  };
 
   return (
     <div className="search-bar">
@@ -27,8 +65,8 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch, categories }) => {
         type="text"
         className="search-bar-input"
         placeholder="Search Products"
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
+        value={queryList}
+        onChange={(e) => setQueryList(e.target.value)}
       />
       <div className="select-search-container">
         <Select
@@ -73,7 +111,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch, categories }) => {
           }}
         />
         <span className="separator"></span>
-        <button className="search-button">
+        <button className="search-button" onClick={handleSearch}>
           <FontAwesomeIcon icon={faSearch}></FontAwesomeIcon>
         </button>
       </div>

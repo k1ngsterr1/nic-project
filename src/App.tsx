@@ -12,6 +12,7 @@ import Registration from "./pages/Registration/Registration";
 import ForgotPassword from "./pages/ForgotPassword/ForgotPassword";
 import MenuPage from "./pages/MenuPage/MenuPage";
 import ProductDetails from "./pages/ProductDetails/ProductDetails";
+import SearchResult from "./components/SearchResult/SearchResult";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
             path="/product/:productId"
             element={<ProductDetails />}
           ></Route>
+          <Route path="/search" element={<SearchResult />}></Route>
         </Routes>
       </BrowserRouter>
     </div>
