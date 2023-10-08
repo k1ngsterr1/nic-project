@@ -50,7 +50,7 @@ const SearchResult = (props: any) => {
                     the best result.
                   </span>
                 </div>
-                <div className="attention-row">
+                <div className="attention-row next">
                   <FontAwesomeIcon
                     className="attention-icon"
                     icon={faCircleExclamation}
