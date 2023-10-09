@@ -17,7 +17,7 @@ import CartPage from "./pages/CartPage/CartPage";
 
 function App() {
   return (
-    <div>
+    <>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<MainPage />}></Route>
@@ -33,7 +33,7 @@ function App() {
           <Route path="/cart" element={<CartPage />}></Route>
         </Routes>
       </BrowserRouter>
-    </div>
+    </>
   );
 }
 
