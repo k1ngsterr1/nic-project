@@ -99,7 +99,7 @@
         display: flex !important
 
         .cards
-            width: 90%
+            width: 80%
             display: flex
             flex-direction: row !important
             align-items: center
@@ -108,4 +108,46 @@
 
             .card
                 width: clamp(103px,24.700239808153476vw,412px)
+                height: auto
+                display: flex
+                justify-content: center
                 background-color: $white
+                margin-top: $m32tab
+                margin-bottom: $m32tab
+
+                .card-content
+                    width: 80%
+                    height: auto
+                    margin-top: $m8tab
+                    margin: auto
+                    margin-bottom: $m16tab
+
+                    .card-title
+                        color: #000
+                        font-feature-settings: 'clig' off, 'liga' off
+                        font-family: Lato
+                        font-size: $font18tab
+                        font-style: normal
+                        font-weight: 600
+                        line-height: 125%
+
+                    .rating-container
+                        display: flex
+                        align-items: center
+
+                        .star
+                            color: $star
+                            font-size: $font14tab
+                            margin-top: $m8tab
+                            margin-bottom: $m8tab
+
+                    .price
+                        color: $discount
+                        font-feature-settings: 'clig' off, 'liga' off
+                        font-family: Lato
+                        font-size: $font16tab
+                        font-style: normal
+                        font-weight: 800
+                        line-height: 142.857%
+                        margin-top: $m8tab !important
+                        margin-bottom: $m16tab !important

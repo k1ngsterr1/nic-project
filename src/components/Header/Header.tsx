@@ -64,6 +64,10 @@ const Header = () => {
     navigate("/");
   }
 
+  function loginNavigate() {
+    navigate("/login");
+  }
+
   const handleSearch = (query: string, category: string) => {
     console.log(`Searching for ${query} in ${category} category.`);
   };
@@ -93,7 +97,12 @@ const Header = () => {
       </div>
       <div className="tablet-header">
         <div className="upper-content">
-          <img src={logo} alt="logotype" className="logo" />
+          <img
+            src={logo}
+            alt="logotype"
+            className="logo"
+            onClick={mainNavigate}
+          />
           <SearchBar onSearch={handleSearch} categories={categories} />
         </div>
         <nav className="nav-container">
@@ -189,7 +198,7 @@ const Header = () => {
               ></Select>
             </div>
             <div className="buttons-container">
-              <button className="sign-in-btn">
+              <button className="sign-in-btn" onClick={loginNavigate}>
                 <FontAwesomeIcon
                   className="user-icon"
                   icon={faUser}

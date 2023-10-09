@@ -74,8 +74,8 @@ const Login = () => {
 
   return (
     <div className="screen">
+      <Header />
       <div className="container">
-        <Header />
         <main className="main-content">
           <div className="heading-container">
             <h2 className="section-heading">
@@ -176,6 +176,7 @@ const Login = () => {
             </div>
           </form>
         </main>
+        <main className="tablet-content"></main>
       </div>
       <Footer />
     </div>

@@ -78,7 +78,7 @@
   .footer .footer-container .row .nav-link .footer-heading {
     color: #262626;
     font-family: Lato;
-    font-size: clamp(12px, 2.5778732546vw, 48px);
+    font-size: clamp(9px, 1.9334049409vw, 36px);
     font-style: normal;
     font-weight: 700;
     line-height: 142.857%;

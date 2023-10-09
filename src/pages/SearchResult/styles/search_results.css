@@ -99,7 +99,7 @@
     display: flex !important;
   }
   .possible-products .cards {
-    width: 90%;
+    width: 80%;
     display: flex;
     flex-direction: row !important;
     align-items: center;
@@ -108,6 +108,48 @@
   }
   .possible-products .cards .card {
     width: clamp(103px, 24.7002398082vw, 412px);
+    height: auto;
+    display: flex;
+    justify-content: center;
     background-color: white;
+    margin-top: clamp(16px, 3.4371643394vw, 64px);
+    margin-bottom: clamp(16px, 3.4371643394vw, 64px);
+  }
+  .possible-products .cards .card .card-content {
+    width: 80%;
+    height: auto;
+    margin-top: clamp(4px, 0.8592910849vw, 16px);
+    margin: auto;
+    margin-bottom: clamp(8px, 1.7185821697vw, 32px);
+  }
+  .possible-products .cards .card .card-content .card-title {
+    color: #000;
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Lato;
+    font-size: clamp(9px, 1.9334049409vw, 36px);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%;
+  }
+  .possible-products .cards .card .card-content .rating-container {
+    display: flex;
+    align-items: center;
+  }
+  .possible-products .cards .card .card-content .rating-container .star {
+    color: #FFC000;
+    font-size: clamp(7px, 1.5037593985vw, 28px);
+    margin-top: clamp(4px, 0.8592910849vw, 16px);
+    margin-bottom: clamp(4px, 0.8592910849vw, 16px);
+  }
+  .possible-products .cards .card .card-content .price {
+    color: #FF2E00;
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Lato;
+    font-size: clamp(8px, 1.7185821697vw, 32px);
+    font-style: normal;
+    font-weight: 800;
+    line-height: 142.857%;
+    margin-top: clamp(4px, 0.8592910849vw, 16px) !important;
+    margin-bottom: clamp(8px, 1.7185821697vw, 32px) !important;
   }
 }/*# sourceMappingURL=search_results.css.map */
