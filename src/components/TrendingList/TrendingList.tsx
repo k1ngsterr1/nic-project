@@ -24,6 +24,10 @@ const TrendingList = () => {
   const card02 = require("../../assets/card_02.jpg");
   const card03 = require("../../assets/card_03.jpg");
 
+  const horizontal_card01 = require("../../assets/horizontal_img.jpg");
+  const horizontal_card02 = require("../../assets/horizontal_img_2.jpg");
+  const horizontal_card03 = require("../../assets/horizontal_img_3.jpg");
+
   const swiperRef = React.useRef<Swiper | null>(null);
 
   return (
@@ -66,6 +70,26 @@ const TrendingList = () => {
           />
         </SwiperSlide>
       </Swiper>
+      <div className="trending-list-tablet">
+        <TrendingCard
+          imageUrl={horizontal_card01}
+          title="Cool & Sexy Calvin Klein"
+          description="Dotted dress-Casual"
+          price="$89"
+        />
+        <TrendingCard
+          imageUrl={horizontal_card02}
+          title="Cool & Sexy Calvin Klein"
+          description="Dotted dress-Casual"
+          price="$89"
+        />
+        <TrendingCard
+          imageUrl={horizontal_card03}
+          title="Beige Coat Zara"
+          description="Cream-Brown-Formal"
+          price="$102"
+        />
+      </div>
     </div>
   );
 };

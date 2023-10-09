@@ -21,6 +21,7 @@
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .products-list {
+    justify-content: space-between !important;
     margin-top: clamp(32px, 6.8743286788vw, 128px) !important;
   }
   .products-list .product-swiper {
@@ -36,5 +37,6 @@
     display: flex;
     flex-direction: row !important;
     align-items: center;
+    margin-top: clamp(24px, 6.25vw, 96px);
   }
 }/*# sourceMappingURL=products_list.css.map */

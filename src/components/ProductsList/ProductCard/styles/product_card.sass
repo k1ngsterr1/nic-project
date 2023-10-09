@@ -112,3 +112,140 @@
                     font-weight: 600
                     line-height: normal
                     padding: clamp(2px,0.93456vw,8px)
+
+@media (min-width: 768px) and (max-width: 1024px)
+
+    .product-card
+        width: 95% !important
+        height: auto
+        display: flex
+        align-items: center
+        text-align: center
+        flex-direction: column
+        background: $white
+        border-radius: 8px
+        box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.10)
+
+        .deal
+            color: $light_text
+            text-align: center
+            font-family: Lato
+            font-size: $font14tab
+            font-style: normal
+            font-weight: 800
+            line-height: 142.857%
+            letter-spacing: 0.5px
+            text-transform: uppercase
+            margin-bottom: $m16mob
+
+        .product-image
+            width: clamp(120.5px,31.380208333333332vw,482px)
+            height: clamp(114.5px,29.817708333333332vw,458px)
+            margin-top: $m16tab
+
+        .product-card-content
+            display: none
+
+        .product-card-content-tablet
+            width: 76.45569620253164%
+            display: flex
+            flex-direction: column
+
+            .name-and-description
+                width: 100%
+                height: auto
+                display: flex
+                align-items: center
+                justify-content: space-between
+                margin-top: $m32tab
+
+                .product-name
+                    color: $primary_gray
+                    font-family: Lato
+                    font-size: $font18tab
+                    font-style: normal
+                    font-weight: 700
+                    line-height: 156.25%
+
+                .description
+                    color: $secondary_text
+                    font-family: Lato
+                    font-size: $font16tab
+                    font-style: normal
+                    font-weight: 400
+                    line-height: 208.333%
+
+            .rating-and-prices
+                width: 100%
+                height: auto
+                display: flex
+                flex-direction: row
+                align-items: center !important
+                justify-content: space-between !important
+                margin-top: $m8tab
+                margin-bottom: $m32tab
+
+                .rating-container
+                    width: 50%
+                    display: flex
+                    align-items: center
+
+                    .rating
+                        color: $star
+                        font-size: $font14tab
+
+                    .rating-quantity
+                        color: $secondary_text
+                        text-align: center
+                        font-family: Lato
+                        font-size: $font14tab
+                        font-style: normal
+                        font-weight: 400
+                        line-height: 208.333%
+                        margin-left: $m8tab
+
+                .price-container
+                    width: auto
+                    display: flex
+                    align-items: center
+
+                    .current-price
+                        color: $discount !important
+                        font-family: Lato
+                        font-size: $font14tab
+                        font-style: normal
+                        font-weight: 700
+                        line-height: 142.857%
+
+                    .original-price
+                        color: $secondary_text
+                        font-family: Lato
+                        font-size: $font12tab
+                        font-style: normal
+                        font-weight: 400
+                        line-height: 166.667%
+                        text-decoration: line-through
+                        text-decoration-line: strikethrough
+                        margin-left: $m8tab
+
+                    .discount
+                        width: clamp(22px, 5.729166666666667vw,88px)
+                        height: auto
+                        background-color: $discount
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        border-radius: 2.057px
+                        margin-left: $m8tab
+
+                        .percentage
+                            color: $white
+                            font-family: Inter
+                            font-size: $font12tab
+                            font-style: normal
+                            font-weight: 600
+                            line-height: normal
+                            padding-left: 6px
+                            padding-right: 6px
+                            padding-top: 6px
+                            padding-bottom: 6px

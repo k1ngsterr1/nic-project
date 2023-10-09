@@ -126,4 +126,43 @@
   font-weight: 600;
   line-height: 142.857%;
   margin-left: clamp(4px, 1.86912vw, 16px);
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .trending-card {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: clamp(16px, 3.4371643394vw, 64px);
+  }
+  .trending-card .card-image {
+    width: 100%;
+    height: clamp(172px, 44.7916666667vw, 688px);
+  }
+  .trending-card .card-lower-container {
+    width: 100%;
+  }
+  .trending-card .card-lower-container .lower-content {
+    margin-top: clamp(8px, 1.7185821697vw, 32px) !important;
+    margin-bottom: clamp(8px, 1.7185821697vw, 32px) !important;
+  }
+  .trending-card .card-lower-container .lower-content .title-description .title {
+    font-size: clamp(9px, 1.9334049409vw, 36px);
+  }
+  .trending-card .card-lower-container .lower-content .title-description .description {
+    font-size: clamp(7px, 1.5037593985vw, 28px);
+  }
+  .trending-card .card-lower-container .lower-content .shop-btn {
+    width: clamp(73px, 19.0104166667vw, 292px);
+    height: clamp(22px, 5.7291666667vw, 88px);
+    border-radius: 5px;
+  }
+  .trending-card .card-lower-container .lower-content .shop-btn .btn-content .price {
+    font-size: clamp(7px, 1.5037593985vw, 28px);
+  }
+  .trending-card .card-lower-container .lower-content .shop-btn .btn-content .text {
+    font-size: clamp(7px, 1.5037593985vw, 28px);
+    margin-left: clamp(4px, 0.8592910849vw, 16px);
+  }
 }/*# sourceMappingURL=trending_card.css.map */

@@ -123,6 +123,7 @@ const ProductsList = () => {
         <div className="row-upper">
           {products
             .filter((product) => product.title !== "")
+            .slice(0, 2)
             .map((product) => (
               <div className="card" key={product.id}>
                 <ProductCard
@@ -149,7 +150,36 @@ const ProductsList = () => {
               </div>
             ))}
         </div>
-        <div className="row-lower"></div>
+        <div className="row-upper">
+          {products
+            .filter((product) => product.title !== "")
+            .slice(2, 4)
+            .map((product) => (
+              <div className="card" key={product.id}>
+                <ProductCard
+                  productName={
+                    product.title.length > maxLengthTitle
+                      ? product.title.substring(0, maxLengthTitle - 3) + "..."
+                      : product.title
+                  }
+                  fullProductName={product.title}
+                  imageUrl={product.image}
+                  rating={renderRating(product.rating.rate)}
+                  ratingQuantity={product.rating.count}
+                  description={
+                    product.description.length > maxLengthDescription
+                      ? product.description.substring(
+                          0,
+                          maxLengthDescription - 3
+                        ) + "..."
+                      : product.description
+                  }
+                  currentPrice={product.price}
+                  id={product.id}
+                />
+              </div>
+            ))}
+        </div>
       </div>
     </div>
   );

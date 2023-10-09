@@ -111,4 +111,142 @@
   font-weight: 600;
   line-height: normal;
   padding: clamp(2px, 0.93456vw, 8px);
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .product-card {
+    width: 95% !important;
+    height: auto;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+  }
+  .product-card .deal {
+    color: #9D9D9D;
+    text-align: center;
+    font-family: Lato;
+    font-size: clamp(7px, 1.5037593985vw, 28px);
+    font-style: normal;
+    font-weight: 800;
+    line-height: 142.857%;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: clamp(8px, 3.73824vw, 32px);
+  }
+  .product-card .product-image {
+    width: clamp(120.5px, 31.3802083333vw, 482px);
+    height: clamp(114.5px, 29.8177083333vw, 458px);
+    margin-top: clamp(8px, 1.7185821697vw, 32px);
+  }
+  .product-card .product-card-content {
+    display: none;
+  }
+  .product-card .product-card-content-tablet {
+    width: 76.4556962025%;
+    display: flex;
+    flex-direction: column;
+  }
+  .product-card .product-card-content-tablet .name-and-description {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: clamp(16px, 3.4371643394vw, 64px);
+  }
+  .product-card .product-card-content-tablet .name-and-description .product-name {
+    color: #262626;
+    font-family: Lato;
+    font-size: clamp(9px, 1.9334049409vw, 36px);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 156.25%;
+  }
+  .product-card .product-card-content-tablet .name-and-description .description {
+    color: #555555;
+    font-family: Lato;
+    font-size: clamp(8px, 1.7185821697vw, 32px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 208.333%;
+  }
+  .product-card .product-card-content-tablet .rating-and-prices {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center !important;
+    justify-content: space-between !important;
+    margin-top: clamp(4px, 0.8592910849vw, 16px);
+    margin-bottom: clamp(16px, 3.4371643394vw, 64px);
+  }
+  .product-card .product-card-content-tablet .rating-and-prices .rating-container {
+    width: 50%;
+    display: flex;
+    align-items: center;
+  }
+  .product-card .product-card-content-tablet .rating-and-prices .rating-container .rating {
+    color: #FFC000;
+    font-size: clamp(7px, 1.5037593985vw, 28px);
+  }
+  .product-card .product-card-content-tablet .rating-and-prices .rating-container .rating-quantity {
+    color: #555555;
+    text-align: center;
+    font-family: Lato;
+    font-size: clamp(7px, 1.5037593985vw, 28px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 208.333%;
+    margin-left: clamp(4px, 0.8592910849vw, 16px);
+  }
+  .product-card .product-card-content-tablet .rating-and-prices .price-container {
+    width: auto;
+    display: flex;
+    align-items: center;
+  }
+  .product-card .product-card-content-tablet .rating-and-prices .price-container .current-price {
+    color: #FF2E00 !important;
+    font-family: Lato;
+    font-size: clamp(7px, 1.5037593985vw, 28px);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 142.857%;
+  }
+  .product-card .product-card-content-tablet .rating-and-prices .price-container .original-price {
+    color: #555555;
+    font-family: Lato;
+    font-size: clamp(6px, 1.2889366273vw, 24px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 166.667%;
+    text-decoration: line-through;
+    text-decoration-line: strikethrough;
+    margin-left: clamp(4px, 0.8592910849vw, 16px);
+  }
+  .product-card .product-card-content-tablet .rating-and-prices .price-container .discount {
+    width: clamp(22px, 5.7291666667vw, 88px);
+    height: auto;
+    background-color: #FF2E00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2.057px;
+    margin-left: clamp(4px, 0.8592910849vw, 16px);
+  }
+  .product-card .product-card-content-tablet .rating-and-prices .price-container .discount .percentage {
+    color: white;
+    font-family: Inter;
+    font-size: clamp(6px, 1.2889366273vw, 24px);
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
 }/*# sourceMappingURL=product_card.css.map */

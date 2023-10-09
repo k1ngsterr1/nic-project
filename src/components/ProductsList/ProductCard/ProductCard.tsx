@@ -25,8 +25,6 @@ const ProductCard: React.FC<ProductCardProps> = (props) => {
 
   return (
     <div className="product-card" onClick={handleRedirection}>
-      <span className="deal">Deal of the day</span>
-      <div className="time">{props.time}</div>
       <img
         className="product-image"
         src={props.imageUrl}
@@ -44,6 +42,25 @@ const ProductCard: React.FC<ProductCardProps> = (props) => {
           <span className="original-price">$129.99</span>
           <div className="discount">
             <span className="percentage">-40%</span>
+          </div>
+        </div>
+      </div>
+      <div className="product-card-content-tablet">
+        <div className="name-and-description">
+          <h5 className="product-name">{props.productName}</h5>
+          <p className="description">{props.description}</p>
+        </div>
+        <div className="rating-and-prices">
+          <div className="rating-container">
+            <div className="rating">{props.rating}</div>
+            <span className="rating-quantity">({props.ratingQuantity})</span>
+          </div>
+          <div className="price-container">
+            <span className="current-price">${props.currentPrice}</span>
+            <span className="original-price">$129.99</span>
+            <div className="discount">
+              <span className="percentage">-40%</span>
+            </div>
           </div>
         </div>
       </div>

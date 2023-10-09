@@ -15,4 +15,16 @@
 .trending-list .trending-swiper .swiper-wrapper {
   display: flex;
   flex-direction: row;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .trending-list .trending-swiper {
+    display: none;
+  }
+  .trending-list .trending-list-tablet {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: clamp(32px, 6.8743286788vw, 128px);
+  }
 }/*# sourceMappingURL=trending_list.css.map */

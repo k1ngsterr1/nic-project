@@ -128,3 +128,45 @@
                         font-weight: 600
                         line-height: 142.857%
                         margin-left: $m8mob
+
+@media (min-width: 768px) and (max-width: 1024px)
+
+    .trending-card
+        width: 100%
+        height: auto
+        display: flex
+        flex-direction: column
+        margin-bottom: $m64tab
+
+        .card-image
+            width: 100%
+            height: clamp(172px,44.791666666666664vw,688px)
+
+        .card-lower-container
+            width: 100%
+
+            .lower-content
+                margin-top: $m16tab !important
+                margin-bottom: $m16tab !important
+
+                .title-description
+
+                    .title
+                        font-size: $font18tab
+
+                    .description
+                        font-size: $font14tab
+
+                .shop-btn
+                    width: clamp(73px,19.010416666666668vw,292px)
+                    height: clamp( 22px,5.729166666666667vw,88px)
+                    border-radius: 5px
+
+                    .btn-content
+
+                        .price
+                            font-size: $font14tab
+
+                        .text
+                            font-size: $font14tab
+                            margin-left: $m8tab
