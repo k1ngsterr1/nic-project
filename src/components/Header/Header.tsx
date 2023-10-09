@@ -10,32 +10,34 @@ import Hamburger from "hamburger-react";
 import Cart from "./Cart/Cart";
 import SearchBar from "./SearchBar/SearchBar";
 import { useNavigate } from "react-router-dom";
+import Select from "react-select";
 
 import "./styles/header.css";
-import Select from "react-select";
 
 const logo = require("../../assets/Logo.svg").default;
 const categoriesLogo = require("../../assets/categories.svg").default;
 
-const options = [
-  { value: "chocolate", label: "Chocolate" },
-  { value: "strawberry", label: "Strawberry" },
-  { value: "vanilla", label: "Vanilla" },
-];
-
 const Header = () => {
+  const categories = [
+    { value: "all", label: "All categories" },
+    { value: "electronics", label: "Electronics" },
+    { value: "fashion", label: "Fashion" },
+  ];
+
   const navigate = useNavigate();
-  const [selectedCategory, setSelectedCategory] = useState("");
+  const [selectedCurrency, setSelectedCurrency] = useState<OptionType | null>(
+    categories[0]
+  );
   const [isOpen, setOpen] = useState(false);
 
   function mainNavigate() {
     navigate("/");
   }
 
-  const categories = [
+  const optionsCurrency = [
     { value: "USD", label: "USD" },
-    { value: "KZT", label: "KZT" },
     { value: "EUR", label: "EUR" },
+    { value: "KZT", label: "KZT" },
   ];
 
   const handleSearch = (query: string, category: string) => {
@@ -104,7 +106,13 @@ const Header = () => {
             alt="categories"
           />
           <div className="selects">
-            <Select className="currency-list" options={categories}></Select>
+            <Select
+              className="currency-list"
+              options={optionsCurrency}
+              defaultValue={categories[0]}
+              value={}
+              onChange={() => setSelectedCurrenct(categories[1])}
+            ></Select>
           </div>
         </div>
       </div>
