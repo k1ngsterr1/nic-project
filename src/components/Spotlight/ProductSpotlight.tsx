@@ -7,7 +7,8 @@ interface SpotLightProps {
   heading: string;
   additionalText: string;
   button: string;
-  backgroundColor: string;
+  backgroundColor?: string;
+  bgStyles?: string;
   marginTop?: string;
 }
 
@@ -17,12 +18,13 @@ const ProductSpotlight: React.FC<SpotLightProps> = ({
   additionalText,
   button,
   backgroundColor,
+  bgStyles,
   marginTop,
 }) => {
   return (
     <div
       className={`spotlight ${backgroundColor}`}
-      style={{ marginTop: marginTop }}
+      style={{ marginTop: marginTop, background: `${bgStyles}` }}
     >
       <div className="spotlight-content">
         <h4 className="category-heading">{heading}</h4>

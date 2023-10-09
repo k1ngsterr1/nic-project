@@ -69,4 +69,32 @@
 .footer .two {
   margin-top: clamp(32px, 14.95296vw, 128px);
   margin-bottom: clamp(32px, 14.95296vw, 128px);
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .footer .footer-container .row {
+    margin-top: clamp(16px, 3.4371643394vw, 64px) !important;
+  }
+  .footer .footer-container .row .nav-link .footer-heading {
+    color: #262626;
+    font-family: Lato;
+    font-size: clamp(12px, 2.5778732546vw, 48px);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 142.857%;
+  }
+  .footer .footer-container .row .nav-link .links {
+    margin-top: clamp(8px, 1.7185821697vw, 32px) !important;
+  }
+  .footer .footer-container .row .nav-link .links .link {
+    color: #555555;
+    font-family: Lato;
+    font-size: clamp(10px, 2.1482277121vw, 40px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 142.857%;
+  }
+  .footer .footer-container .row .help {
+    margin-right: clamp(16px, 3.4371643394vw, 64px);
+  }
 }/*# sourceMappingURL=footer.css.map */

@@ -15,7 +15,7 @@
     .spotlight-content
         width: clamp(109.5px,51.167159999999996vw,438px)
         height: 100%
-        margin-left: 20px
+        margin-left: clamp(10px,4.6728vw,40px)
 
         .spotlight-button
             display: flex
@@ -44,4 +44,39 @@
 @media (min-width: 768px) and (max-width: 1024px)
 
     .spotlight
-        display: none
+        width: clamp(185px,44.36450839328537vw,640px) !important
+        height: clamp(200px,47.961630695443645vw,800px) !important
+        display: flex
+        margin-top: 0px !important
+
+        .spotlight-content
+            width: clamp(98.75px, 18.94484412470024vw,395px)
+            height: auto
+            margin-left: clamp(10px,2.3980815347721824vw,40px)
+
+            .category-heading
+                font-size: clamp( 18px,4.316546762589928vw,72px)
+                line-height: 127.778%
+
+            .sub-category-text
+                font-size: $font28tab
+                line-height: 128.571%
+                margin-top: $m16tab
+
+            .spotlight-button
+                display: flex
+                align-items: flex-start
+                font-size: $font18tab
+                font-feature-settings: 'clig' off, 'liga' off
+                font-family: Lato
+                font-style: normal
+                font-weight: 400
+                line-height: 200%
+                color: $white
+                text-decoration-line: underline
+                background-color: transparent
+                border: none
+                margin-top: $m32tab
+
+        .spotlight-image
+            height: 100%

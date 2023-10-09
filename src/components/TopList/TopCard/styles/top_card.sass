@@ -1,7 +1,7 @@
 @import "../../../../styles/variables/variables"
 
 .top-card
-    width: 280px
+    width: clamp(140px,65.41919999999999vw,560px)
     height: auto
     background: $white
     border-radius: 8px
@@ -119,3 +119,54 @@
                 font-weight: 400
                 line-height: 166.667%
                 margin-left: clamp(6px,2.80368vw,24px)
+
+@media (min-width: 768px) and (max-width: 1024px)
+
+    .top-card
+        width: clamp(175px,41.96642685851319vw,700px) !important
+        height: auto
+
+        .top-card-container
+            margin-top: $m16tab
+            margin-bottom: $m16tab
+
+            .upper-content
+
+                .text-content
+
+                    .top-name
+                        font-size: $font20tab !important
+
+                    .description
+                        font-size: $font14tab !important
+
+                .heart-button, .heart-button-active
+                    font-size: $font24tab !important
+
+            .rating-container
+                display: flex !important
+                align-items: center !important
+                margin-top: $m8tab !important
+
+                .rating
+                    display: flex !important
+                    align-items: center !important
+
+                    .rating
+                        font-size: $font16tab !important
+
+                .rating-quantity
+                    font-size: $font16tab !important
+                    margin-left: clamp(6px,1.5625vw,24px) !important
+
+            .price-container
+                margin-top: $m8tab !important
+
+                .current-price
+                    font-size: $font20tab !important
+
+                .original-price
+                    font-size: $font18tab !important
+
+                .discount
+                    font-size: $font18tab !important

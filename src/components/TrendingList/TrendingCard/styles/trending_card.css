@@ -136,6 +136,9 @@
     flex-direction: column;
     margin-bottom: clamp(32px, 6.8743286788vw, 128px);
   }
+  .trending-card .label {
+    display: none;
+  }
   .trending-card .card-image {
     width: 100%;
     height: clamp(172px, 44.7916666667vw, 688px);

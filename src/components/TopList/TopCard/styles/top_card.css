@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 .top-card {
-  width: 280px;
+  width: clamp(140px, 65.4192vw, 560px);
   height: auto;
   background: white;
   border-radius: 8px;
@@ -118,4 +118,52 @@
   font-weight: 400;
   line-height: 166.667%;
   margin-left: clamp(6px, 2.80368vw, 24px);
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .top-card {
+    width: clamp(175px, 41.9664268585vw, 700px) !important;
+    height: auto;
+  }
+  .top-card .top-card-container {
+    margin-top: clamp(8px, 1.7185821697vw, 32px);
+    margin-bottom: clamp(8px, 1.7185821697vw, 32px);
+  }
+  .top-card .top-card-container .upper-content .text-content .top-name {
+    font-size: clamp(10px, 2.1482277121vw, 40px) !important;
+  }
+  .top-card .top-card-container .upper-content .text-content .description {
+    font-size: clamp(7px, 1.5037593985vw, 28px) !important;
+  }
+  .top-card .top-card-container .upper-content .heart-button, .top-card .top-card-container .upper-content .heart-button-active {
+    font-size: clamp(12px, 2.5778732546vw, 48px) !important;
+  }
+  .top-card .top-card-container .rating-container {
+    display: flex !important;
+    align-items: center !important;
+    margin-top: clamp(4px, 0.8592910849vw, 16px) !important;
+  }
+  .top-card .top-card-container .rating-container .rating {
+    display: flex !important;
+    align-items: center !important;
+  }
+  .top-card .top-card-container .rating-container .rating .rating {
+    font-size: clamp(8px, 1.7185821697vw, 32px) !important;
+  }
+  .top-card .top-card-container .rating-container .rating-quantity {
+    font-size: clamp(8px, 1.7185821697vw, 32px) !important;
+    margin-left: clamp(6px, 1.5625vw, 24px) !important;
+  }
+  .top-card .top-card-container .price-container {
+    margin-top: clamp(4px, 0.8592910849vw, 16px) !important;
+  }
+  .top-card .top-card-container .price-container .current-price {
+    font-size: clamp(10px, 2.1482277121vw, 40px) !important;
+  }
+  .top-card .top-card-container .price-container .original-price {
+    font-size: clamp(9px, 1.9334049409vw, 36px) !important;
+  }
+  .top-card .top-card-container .price-container .discount {
+    font-size: clamp(9px, 1.9334049409vw, 36px) !important;
+  }
 }/*# sourceMappingURL=top_card.css.map */

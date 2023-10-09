@@ -72,6 +72,49 @@ const TopList = () => {
           ></TopCard>
         </SwiperSlide>
       </Swiper>
+      <div className="tablet-top-list">
+        <div className="row">
+          <TopCard
+            imageUrl={card01}
+            productName="Mango"
+            description="Kimono & Caftan - Black - Regular fit"
+            ratingQuantity={124}
+            currentPrice={70}
+            originalPrice={140}
+            discount={50}
+          />
+          <TopCard
+            imageUrl={card02}
+            productName="Mango"
+            description="Kimono & Caftan - Black - Regular fit"
+            ratingQuantity={124}
+            currentPrice={70}
+            originalPrice={140}
+            discount={50}
+          ></TopCard>
+        </div>
+        <div className="row">
+          <TopCard
+            imageUrl={card03}
+            productName="Mango"
+            description="Kimono & Caftan - Black - Regular fit"
+            ratingQuantity={124}
+            currentPrice={70}
+            originalPrice={140}
+            discount={50}
+          />
+          <TopCard
+            imageUrl={card04}
+            productName="Mango"
+            description="Kimono & Caftan - Black - Regular fit"
+            ratingQuantity={124}
+            currentPrice={70}
+            originalPrice={140}
+            discount={50}
+          ></TopCard>
+        </div>
+        <div className="row"></div>
+      </div>
     </div>
   );
 };

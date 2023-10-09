@@ -14,7 +14,7 @@
 .spotlight .spotlight-content {
   width: clamp(109.5px, 51.16716vw, 438px);
   height: 100%;
-  margin-left: 20px;
+  margin-left: clamp(10px, 4.6728vw, 40px);
 }
 .spotlight .spotlight-content .spotlight-button {
   display: flex;
@@ -45,6 +45,41 @@
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .spotlight {
-    display: none;
+    width: clamp(185px, 44.3645083933vw, 640px) !important;
+    height: clamp(200px, 47.9616306954vw, 800px) !important;
+    display: flex;
+    margin-top: 0px !important;
+  }
+  .spotlight .spotlight-content {
+    width: clamp(98.75px, 18.9448441247vw, 395px);
+    height: auto;
+    margin-left: clamp(10px, 2.3980815348vw, 40px);
+  }
+  .spotlight .spotlight-content .category-heading {
+    font-size: clamp(18px, 4.3165467626vw, 72px);
+    line-height: 127.778%;
+  }
+  .spotlight .spotlight-content .sub-category-text {
+    font-size: clamp(14px, 3.007518797vw, 56px);
+    line-height: 128.571%;
+    margin-top: clamp(8px, 1.7185821697vw, 32px);
+  }
+  .spotlight .spotlight-content .spotlight-button {
+    display: flex;
+    align-items: flex-start;
+    font-size: clamp(9px, 1.9334049409vw, 36px);
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 200%;
+    color: white;
+    text-decoration-line: underline;
+    background-color: transparent;
+    border: none;
+    margin-top: clamp(16px, 3.4371643394vw, 64px);
+  }
+  .spotlight .spotlight-image {
+    height: 100%;
   }
 }/*# sourceMappingURL=spotlight.css.map */

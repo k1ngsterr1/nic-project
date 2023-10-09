@@ -1,1 +1,120 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");/*# sourceMappingURL=main_page.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+.spotlight-row {
+  display: none;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .spotlight-row {
+    width: 90%;
+    display: flex;
+    flex-direction: row !important;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: clamp(32px, 6.8743286788vw, 128px) !important;
+  }
+  .advertisment-row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #F7DDD0;
+    margin-top: clamp(32px, 6.8743286788vw, 128px);
+  }
+  .advertisment-row .centered-container {
+    width: 65%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: clamp(16px, 3.4371643394vw, 64px);
+    margin-bottom: clamp(16px, 3.4371643394vw, 64px);
+  }
+  .advertisment-row .centered-container .text-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .advertisment-row .centered-container .text-content .ad-heading {
+    color: #465D6B;
+    font-family: Lato;
+    font-size: clamp(12px, 2.5778732546vw, 48px);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 83.333%;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+  .advertisment-row .centered-container .text-content .text {
+    width: 60%;
+    color: #555555;
+    font-family: Lato;
+    font-size: clamp(10px, 2.1482277121vw, 40px);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    margin-top: clamp(8px, 1.7185821697vw, 32px);
+  }
+  .advertisment-row .centered-container .iphone-img {
+    width: auto;
+    height: auto;
+  }
+  .advertisment-row .left {
+    margin-left: clamp(32px, 6.8743286788vw, 128px);
+  }
+  .advertisment-row .right {
+    margin-right: clamp(32px, 6.8743286788vw, 128px);
+  }
+  .email-input-container {
+    position: absolute;
+    width: clamp(260px, 68.345323741vw, 1040px);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #7296AB;
+    border-radius: 8px;
+    left: 15%;
+    margin-top: 0px;
+  }
+  .email-input-container .email-heading {
+    color: #D1E2EB;
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Lato;
+    font-size: clamp(16px, 3.4371643394vw, 64px);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 62.5%;
+    margin-top: clamp(32px, 6.8743286788vw, 128px);
+  }
+  .email-input-container .email-paragraph {
+    color: white;
+    text-align: center;
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Lato;
+    font-size: clamp(8px, 1.7185821697vw, 32px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%;
+    margin-top: clamp(8px, 1.7185821697vw, 32px);
+  }
+  .email-input-container .email-input {
+    width: clamp(134px, 32.1342925659vw, 536px);
+    height: clamp(18px, 4.3165467626vw, 72px);
+    color: #9D9D9D;
+    text-align: right;
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Lato;
+    font-size: clamp(7px, 1.5037593985vw, 28px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 142.857%;
+    border: none;
+    outline: none;
+    text-align: left;
+    border-radius: 6px;
+    padding-left: clamp(8px, 1.7185821697vw, 32px);
+    margin-top: clamp(16px, 3.4371643394vw, 64px);
+    margin-bottom: clamp(32px, 6.8743286788vw, 128px);
+  }
+}/*# sourceMappingURL=main_page.css.map */

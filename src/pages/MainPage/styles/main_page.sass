@@ -1,1 +1,119 @@
 @import "../../../styles/variables/variables"
+
+.spotlight-row
+    display: none
+
+@media (min-width: 768px) and (max-width: 1024px)
+
+    .spotlight-row
+        width: 90%
+        display: flex
+        flex-direction: row !important
+        align-items: center
+        justify-content: space-between
+        margin: auto
+        margin-top: $m64tab !important
+
+    .advertisment-row
+        width: 100%
+        display: flex
+        align-items: center
+        justify-content: space-between
+        background-color: #F7DDD0
+        margin-top: $m64tab
+
+        .centered-container
+            width: 65%
+            display: flex
+            align-items: center
+            justify-content: space-between
+            margin: auto
+            margin-top: $m32tab
+            margin-bottom: $m32tab
+
+            .text-content
+                display: flex
+                flex-direction: column
+                align-items: flex-start
+
+                .ad-heading
+                    color: #465D6B
+                    font-family: Lato
+                    font-size: $font24tab
+                    font-style: normal
+                    font-weight: 700
+                    line-height: 83.333%
+                    letter-spacing: 0.5px
+                    text-transform: uppercase
+
+                .text
+                    width: 60%
+                    color: $secondary_text
+                    font-family: Lato
+                    font-size: $font20tab
+                    font-style: normal
+                    font-weight: 500
+                    line-height: 140%
+                    margin-top: $m16tab
+
+            .iphone-img
+                width: auto
+                height: auto
+
+        .left
+            margin-left: $m64tab
+
+        .right
+            margin-right: $m64tab
+
+    .email-input-container
+        position: absolute
+        width: clamp(260px,68.34532374100719vw,1040px)
+        height: auto
+        display: flex
+        flex-direction: column
+        align-items: center
+        background-color: #7296AB
+        border-radius: 8px
+        left: 15%
+        margin-top: 0px
+
+        .email-heading
+            color: #D1E2EB
+            font-feature-settings: 'clig' off, 'liga' off
+            font-family: Lato
+            font-size: $m32tab
+            font-style: normal
+            font-weight: 700
+            line-height: 62.5%
+            margin-top: $m64tab
+
+        .email-paragraph
+            color: $white
+            text-align: center
+            font-feature-settings: 'clig' off, 'liga' off
+            font-family: Lato
+            font-size: $font16tab
+            font-style: normal
+            font-weight: 400
+            line-height: 125%
+            margin-top: $m16tab
+
+        .email-input
+            width: clamp(134px,32.13429256594724vw,536px)
+            height: clamp(18px,4.316546762589928vw,72px)
+            color: #9D9D9D
+            text-align: right
+            font-feature-settings: 'clig' off, 'liga' off
+            font-family: Lato
+            font-size: $font14tab
+            font-style: normal
+            font-weight: 400
+            line-height: 142.857%
+            border: none
+            outline: none
+            text-align: left
+            border-radius: 6px
+            padding-left: $m16tab
+            margin-top: $m32tab
+            margin-bottom: $m64tab
