@@ -17,4 +17,24 @@
 .products-list .product-swiper .swiper-wrapper {
   display: flex;
   flex-direction: row;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .products-list {
+    margin-top: clamp(32px, 6.8743286788vw, 128px) !important;
+  }
+  .products-list .product-swiper {
+    display: none;
+  }
+  .products-list .tablet-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .products-list .tablet-container .row-upper {
+    width: 100%;
+    display: flex;
+    flex-direction: row !important;
+    align-items: center;
+  }
 }/*# sourceMappingURL=products_list.css.map */

@@ -13,7 +13,7 @@
   overflow-x: hidden !important;
 }
 * body header {
-  width: 90%;
+  width: 100%;
   display: flex;
   margin: auto;
 }
@@ -164,4 +164,46 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .heading-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .section-heading {
+    color: black;
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Lato;
+    font-size: clamp(14px, 3.007518797vw, 56px) !important;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+  }
+  .view-btn {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+  }
+  .view {
+    color: #262626;
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Lato;
+    font-size: clamp(8px, 1.7185821697vw, 32px) !important;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 166.667%;
+    margin-right: clamp(4px, 0.8592910849vw, 16px) !important;
+  }
+  .chevron-icon {
+    font-size: clamp(8px, 1.7185821697vw, 32px) !important;
+  }
+  .main-content {
+    display: none !important;
+  }
 }/*# sourceMappingURL=global.css.map */

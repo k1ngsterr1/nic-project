@@ -41,4 +41,10 @@
 
 .blue {
   background-color: #0186C4;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .spotlight {
+    display: none;
+  }
 }/*# sourceMappingURL=spotlight.css.map */

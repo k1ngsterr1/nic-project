@@ -3,14 +3,22 @@
 body
 
     header
+        display: flex
         flex-direction: column
+        align-items: center
+        justify-content: center
+        margin: auto
 
         .mobile-header
+            width: 90%
             display: flex
             flex-direction: column
+            align-items: center
+            justify-content: center
+            margin: auto
 
             .upper-content
-                width: 100%
+                width: 90%
                 height: auto
                 display: flex
                 justify-content: space-between
@@ -22,7 +30,7 @@ body
                     height: clamp(13.5px,6.30828vw,54px)
 
             .lower-content
-                width: 100%
+                width: 90%
                 display: flex
                 align-items: center
 
@@ -41,21 +49,24 @@ body
         margin-top: $m16tab
 
         .upper-content
-            width: 100%
+            width: 90%
             display: flex
             justify-content: space-between
             align-items: center
+            margin: auto
 
             .logo
                 width: clamp(89.5px,21.46282973621103vw, 358px) !important
                 height: clamp(16.5px,3.9568345323741005vw,66px) !important
 
         .nav-container
-            width: 100%
+            width: 90%
             display: flex
             justify-content: space-between
             align-items: center
+            margin: auto
             margin-top: $m16tab
+            margin-bottom: $m16tab
 
             .links
                 display: flex
@@ -89,9 +100,83 @@ body
             width: 100%
             display: flex
             align-items: center
-            justify-content: space-between
             background-color: $primary_gray
 
-            .categories-logo
-                width: clamp(72.5px,17.38609112709832vw,290px)
-                height: clamp(12px,2.8776978417266186vw,48px)
+            .lower-content
+                width: 90%
+                height: auto
+                display: flex
+                align-items: center
+                justify-content: space-between
+                margin: auto
+
+                .categories-logo
+                    width: clamp(72.5px,17.38609112709832vw,290px)
+                    height: clamp(12px,2.8776978417266186vw,48px)
+
+                .selects
+                    display: flex
+                    align-items: center
+
+                    .currency-list
+                        color: $white
+                        background: transparent
+                        background-color: transparent
+                        margin-right: $m16tab
+
+                .buttons-container
+                    width: 30%
+                    display: flex
+                    align-items: center
+                    justify-content: space-between
+
+                    .sign-in-btn
+                        display: flex
+                        align-items: center
+                        color: $white
+                        font-size: $font14tab
+                        background-color: transparent
+                        border: none
+
+                        .user-icon
+                            font-size: $font18tab
+                            margin-right: clamp(2.5px,0.6510416666666666vw,10px)
+
+                    .favourite-btn
+                        display: flex
+                        align-items: center
+                        color: $white
+                        font-size: $font14tab
+                        background-color: transparent
+                        border: none
+
+                        .heart-icon
+                            font-size: $font18tab
+                            margin-right: clamp(2.5px,0.6510416666666666vw,10px)
+
+        .lower-navigation
+            width: 90%
+            height: auto
+            margin: auto
+            margin-top: $m32tab
+
+            .nav-links-container
+                width: 100%
+                height: auto
+                display: flex
+                align-items: center
+                justify-content: space-between
+
+                .link
+                    color: $primary_gray
+                    text-align: right
+                    font-feature-settings: 'clig' off, 'liga' off
+                    font-family: Lato
+                    font-size: $font14tab
+                    font-style: normal
+                    font-weight: 700
+                    line-height: 142.857%
+                    text-decoration: none
+
+                .active
+                    color: $selected

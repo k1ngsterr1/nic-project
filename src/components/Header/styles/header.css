@@ -1,13 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 body header {
-  flex-direction: column;
-}
-body header .mobile-header {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+body header .mobile-header {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
 }
 body header .mobile-header .upper-content {
-  width: 100%;
+  width: 90%;
   height: auto;
   display: flex;
   justify-content: space-between;
@@ -19,7 +27,7 @@ body header .mobile-header .upper-content .logo {
   height: clamp(13.5px, 6.30828vw, 54px);
 }
 body header .mobile-header .lower-content {
-  width: 100%;
+  width: 90%;
   display: flex;
   align-items: center;
 }
@@ -38,21 +46,24 @@ body header .tablet-header {
     margin-top: clamp(8px, 1.7185821697vw, 32px);
   }
   .tablet-header .upper-content {
-    width: 100%;
+    width: 90%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: auto;
   }
   .tablet-header .upper-content .logo {
     width: clamp(89.5px, 21.4628297362vw, 358px) !important;
     height: clamp(16.5px, 3.9568345324vw, 66px) !important;
   }
   .tablet-header .nav-container {
-    width: 100%;
+    width: 90%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: auto;
     margin-top: clamp(8px, 1.7185821697vw, 32px);
+    margin-bottom: clamp(8px, 1.7185821697vw, 32px);
   }
   .tablet-header .nav-container .links {
     display: flex;
@@ -86,11 +97,85 @@ body header .tablet-header {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     background-color: #262626;
   }
-  .tablet-header .lower-container .categories-logo {
+  .tablet-header .lower-container .lower-content {
+    width: 90%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+  }
+  .tablet-header .lower-container .lower-content .categories-logo {
     width: clamp(72.5px, 17.3860911271vw, 290px);
     height: clamp(12px, 2.8776978417vw, 48px);
+  }
+  .tablet-header .lower-container .lower-content .selects {
+    display: flex;
+    align-items: center;
+  }
+  .tablet-header .lower-container .lower-content .selects .currency-list {
+    color: white;
+    background: transparent;
+    background-color: transparent;
+    margin-right: clamp(8px, 1.7185821697vw, 32px);
+  }
+  .tablet-header .lower-container .lower-content .buttons-container {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .tablet-header .lower-container .lower-content .buttons-container .sign-in-btn {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: clamp(7px, 1.5037593985vw, 28px);
+    background-color: transparent;
+    border: none;
+  }
+  .tablet-header .lower-container .lower-content .buttons-container .sign-in-btn .user-icon {
+    font-size: clamp(9px, 1.9334049409vw, 36px);
+    margin-right: clamp(2.5px, 0.6510416667vw, 10px);
+  }
+  .tablet-header .lower-container .lower-content .buttons-container .favourite-btn {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: clamp(7px, 1.5037593985vw, 28px);
+    background-color: transparent;
+    border: none;
+  }
+  .tablet-header .lower-container .lower-content .buttons-container .favourite-btn .heart-icon {
+    font-size: clamp(9px, 1.9334049409vw, 36px);
+    margin-right: clamp(2.5px, 0.6510416667vw, 10px);
+  }
+  .tablet-header .lower-navigation {
+    width: 90%;
+    height: auto;
+    margin: auto;
+    margin-top: clamp(16px, 3.4371643394vw, 64px);
+  }
+  .tablet-header .lower-navigation .nav-links-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .tablet-header .lower-navigation .nav-links-container .link {
+    color: #262626;
+    text-align: right;
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Lato;
+    font-size: clamp(7px, 1.5037593985vw, 28px);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 142.857%;
+    text-decoration: none;
+  }
+  .tablet-header .lower-navigation .nav-links-container .active {
+    color: #FF7A00;
   }
 }/*# sourceMappingURL=header.css.map */

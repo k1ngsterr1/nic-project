@@ -5,6 +5,7 @@ import ProductsList from "../../components/ProductsList/ProductsList";
 import TrendingList from "../../components/TrendingList/TrendingList";
 import Footer from "../../components/Footer/Footer";
 import TopList from "../../components/TopList/TopList";
+import MainBanner from "../../components/MainBanner/MainBanner";
 
 const spotlightImage01 = require("../../assets/category_01.jpg");
 const spotlightImage02 = require("../../assets/category_02.jpg");
@@ -13,6 +14,7 @@ const MainPage = () => {
   return (
     <div className="screen">
       <Header />
+      <MainBanner />
       <div className="container">
         <main className="main-content">
           <ProductSpotlight

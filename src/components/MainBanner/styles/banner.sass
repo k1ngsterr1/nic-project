@@ -1,0 +1,71 @@
+@import "../../../styles/variables/variables"
+
+.banner
+    display: none
+
+@media (min-width: 768px) and (max-width: 1024px)
+
+    .banner
+        width: 100%
+        display: flex
+        justify-content: space-between
+        background-color: #7CA8EA
+        margin-top: $m16tab
+
+        .banner-img
+            width: 50%
+            height: auto
+
+        .banner-content
+            width: 68.47826086956522%
+            height: auto
+            display: flex
+            flex-direction: column
+            align-items: center
+            margin: auto
+
+            .banner-heading
+                color: $white
+                text-align: center
+                font-feature-settings: 'clig' off, 'liga' off
+                font-family: Lato
+                font-size: $m32tab
+                font-style: normal
+                font-weight: 700
+                line-height: 156.25%
+                text-transform: uppercase
+
+            .banner-paragraph
+                width: 60%
+                color: $white
+                text-align: center
+                font-feature-settings: 'clig' off, 'liga' off
+                font-family: Lato
+                font-size: $font28tab
+                font-style: normal
+                font-weight: 500
+                line-height: 178.571%
+                margin-top: $m32tab
+
+            .banner-btn
+                width: clamp(121.5px,31.640625vw,486px)
+                height: clamp(28px,7.291666666666667vw,112px)
+                display: flex
+                align-items: center
+                justify-content: center
+                color: $white
+                text-align: right
+                font-feature-settings: 'clig' off, 'liga' off
+                font-family: Lato
+                font-size: $font14tab
+                font-style: normal
+                font-weight: 500
+                line-height: 142.857%
+                text-transform: uppercase
+                background-color: $button_blue
+                border: none
+                border-radius: 4px
+                margin-top: $m32tab
+
+                .icon
+                    margin-right: $m8tab

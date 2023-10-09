@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+.banner {
+  display: none;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .banner {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #7CA8EA;
+    margin-top: clamp(8px, 1.7185821697vw, 32px);
+  }
+  .banner .banner-img {
+    width: 50%;
+    height: auto;
+  }
+  .banner .banner-content {
+    width: 68.4782608696%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+  }
+  .banner .banner-content .banner-heading {
+    color: white;
+    text-align: center;
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Lato;
+    font-size: clamp(16px, 3.4371643394vw, 64px);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 156.25%;
+    text-transform: uppercase;
+  }
+  .banner .banner-content .banner-paragraph {
+    width: 60%;
+    color: white;
+    text-align: center;
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Lato;
+    font-size: clamp(14px, 3.007518797vw, 56px);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 178.571%;
+    margin-top: clamp(16px, 3.4371643394vw, 64px);
+  }
+  .banner .banner-content .banner-btn {
+    width: clamp(121.5px, 31.640625vw, 486px);
+    height: clamp(28px, 7.2916666667vw, 112px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: right;
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Lato;
+    font-size: clamp(7px, 1.5037593985vw, 28px);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 142.857%;
+    text-transform: uppercase;
+    background-color: #4172DC;
+    border: none;
+    border-radius: 4px;
+    margin-top: clamp(16px, 3.4371643394vw, 64px);
+  }
+  .banner .banner-content .banner-btn .icon {
+    margin-right: clamp(4px, 0.8592910849vw, 16px);
+  }
+}/*# sourceMappingURL=banner.css.map */
