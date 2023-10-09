@@ -12,8 +12,8 @@ const spotlightImage02 = require("../../assets/category_02.jpg");
 const MainPage = () => {
   return (
     <div className="screen">
+      <Header />
       <div className="container">
-        <Header />
         <main className="main-content">
           <ProductSpotlight
             image={spotlightImage01}

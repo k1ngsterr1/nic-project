@@ -77,3 +77,44 @@
 
     .search-bar-input
         color: $primary_gray
+
+@media (min-width: 768px) and (max-width: 1024px)
+
+    .search-bar
+        width: clamp(172.5px,41.36690647482014vw,690px)
+        height: clamp(20px,4.796163069544365vw,80px)
+        margin-top: 0px !important
+
+        .search-bar-input
+            width: 50%
+            height: auto
+            font-size: $font14tab
+
+        .select-search-container
+            margin-right: $m16tab
+
+            .select-list
+                width: auto
+                height: auto
+                color: $primary_gray
+                font-feature-settings: 'clig' off, 'liga' off
+                font-family: Lato
+                font-size: $font14tab
+                font-style: normal
+                font-weight: 400
+                line-height: 142.857%
+                border: none !important
+                outline: none !important
+                box-shadow: none !important
+            &:focus
+                outline: none !important
+
+        .separator
+            width: 1px
+            height: $m32tab !important
+            margin-right: clamp(6px, 1.4388489208633093vw,24px) !important
+            margin-left: clamp(6px, 1.4388489208633093vw,24px) !important
+            background-color: $light_text
+
+        .search-button
+            font-size: $font18tab !important

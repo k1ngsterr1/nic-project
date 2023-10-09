@@ -87,7 +87,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch, categories }) => {
           styles={{
             control: (provided, state) => ({
               ...provided,
-              width: "clamp(72.5px,33.8778vw,290px)",
+              // width: "clamp(72.5px,33.8778vw,290px)",
               border: "none",
               outline: "none",
               boxShadow: "none",
@@ -98,7 +98,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch, categories }) => {
                   ? "transparent"
                   : provided.borderColor,
               },
-              fontSize: "clamp(7px,3.2709599999999996vw,28px)",
+              // fontSize: "clamp(7px,3.2709599999999996vw,28px)",
             }),
             dropdownIndicator: (provided) => ({
               ...provided,

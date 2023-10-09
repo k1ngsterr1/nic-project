@@ -2,7 +2,11 @@
 body header {
   flex-direction: column;
 }
-body header .upper-content {
+body header .mobile-header {
+  display: flex;
+  flex-direction: column;
+}
+body header .mobile-header .upper-content {
   width: 100%;
   height: auto;
   display: flex;
@@ -10,12 +14,83 @@ body header .upper-content {
   align-items: center;
   margin-top: clamp(16px, 7.47648vw, 64px);
 }
-body header .upper-content .logo {
+body header .mobile-header .upper-content .logo {
   width: clamp(66.5px, 31.07412vw, 266px);
   height: clamp(13.5px, 6.30828vw, 54px);
 }
-body header .lower-content {
+body header .mobile-header .lower-content {
   width: 100%;
   display: flex;
   align-items: center;
+}
+body header .tablet-header {
+  display: none;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .mobile-header {
+    display: none !important;
+  }
+  .tablet-header {
+    width: 100%;
+    display: flex !important;
+    flex-direction: column;
+    margin-top: clamp(8px, 1.7185821697vw, 32px);
+  }
+  .tablet-header .upper-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .tablet-header .upper-content .logo {
+    width: clamp(89.5px, 21.4628297362vw, 358px) !important;
+    height: clamp(16.5px, 3.9568345324vw, 66px) !important;
+  }
+  .tablet-header .nav-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: clamp(8px, 1.7185821697vw, 32px);
+  }
+  .tablet-header .nav-container .links {
+    display: flex;
+    align-items: center;
+  }
+  .tablet-header .nav-container .links .link {
+    color: #9D9D9D;
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Lato;
+    font-size: clamp(7px, 1.5037593985vw, 28px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 142.857%;
+  }
+  .tablet-header .nav-container .links .next {
+    margin-left: clamp(16px, 3.4371643394vw, 64px);
+  }
+  .tablet-header .nav-container .social {
+    display: flex;
+    align-items: center;
+  }
+  .tablet-header .nav-container .social .social-link {
+    color: #9D9D9D;
+    font-size: clamp(12px, 2.5778732546vw, 48px);
+  }
+  .tablet-header .nav-container .fb {
+    margin-right: clamp(8px, 1.7185821697vw, 32px);
+    margin-left: clamp(8px, 1.7185821697vw, 32px);
+  }
+  .tablet-header .lower-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #262626;
+  }
+  .tablet-header .lower-container .categories-logo {
+    width: clamp(72.5px, 17.3860911271vw, 290px);
+    height: clamp(12px, 2.8776978417vw, 48px);
+  }
 }/*# sourceMappingURL=header.css.map */
