@@ -134,7 +134,7 @@
     height: auto;
     display: flex;
     flex-direction: column;
-    margin-bottom: clamp(16px, 3.4371643394vw, 64px);
+    margin-bottom: clamp(32px, 6.8743286788vw, 128px);
   }
   .trending-card .card-image {
     width: 100%;
