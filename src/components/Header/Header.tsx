@@ -12,13 +12,20 @@ import SearchBar from "./SearchBar/SearchBar";
 import { useNavigate } from "react-router-dom";
 
 import "./styles/header.css";
-import Select from "react-select/dist/declarations/src/Select";
+import Select from "react-select";
 
 const logo = require("../../assets/Logo.svg").default;
 const categoriesLogo = require("../../assets/categories.svg").default;
 
+const options = [
+  { value: "chocolate", label: "Chocolate" },
+  { value: "strawberry", label: "Strawberry" },
+  { value: "vanilla", label: "Vanilla" },
+];
+
 const Header = () => {
   const navigate = useNavigate();
+  const [selectedCategory, setSelectedCategory] = useState("");
   const [isOpen, setOpen] = useState(false);
 
   function mainNavigate() {
@@ -26,10 +33,9 @@ const Header = () => {
   }
 
   const categories = [
-    { value: "all", label: "All categories" },
-    { value: "electronics", label: "Electronics" },
-    { value: "fashion", label: "Fashion" },
-    // ... more categories
+    { value: "USD", label: "USD" },
+    { value: "KZT", label: "KZT" },
+    { value: "EUR", label: "EUR" },
   ];
 
   const handleSearch = (query: string, category: string) => {
@@ -97,7 +103,9 @@ const Header = () => {
             src={categoriesLogo}
             alt="categories"
           />
-          <Select></Select>
+          <div className="selects">
+            <Select className="currency-list" options={categories}></Select>
+          </div>
         </div>
       </div>
     </header>
