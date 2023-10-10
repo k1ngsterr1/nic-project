@@ -383,7 +383,7 @@ const Login = () => {
                     </div>
                   ) : null}
                 </div>
-                <div className="email-input-container-l">
+                <div className="email-input-container-l-reg">
                   <label htmlFor="email" className="label">
                     Email <span className="required">*</span>
                   </label>
@@ -394,8 +394,8 @@ const Login = () => {
                     placeholder="Email Adress"
                     className={
                       formikRegistration.errors.email
-                        ? "email-input-error-reg"
-                        : "email-input-reg"
+                        ? "email-input-error"
+                        : "email-input"
                     }
                     onChange={emailChangeRegistration}
                     onBlur={formikRegistration.handleBlur}
