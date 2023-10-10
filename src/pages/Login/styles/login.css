@@ -152,7 +152,7 @@
   text-align: center;
   font-feature-settings: "clig" off, "liga" off;
   font-family: Lato;
-  font-size: 14px;
+  font-size: clamp(7px, 3.27096vw, 28px);
   font-style: normal;
   font-weight: 500;
 }
@@ -205,4 +205,262 @@
   line-height: 142.857%;
   text-decoration: none;
   margin-left: clamp(2px, 0.93456vw, 8px);
+}
+.screen .tablet-content {
+  display: none;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .tablet-content {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .tablet-content .back-heading {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: clamp(16px, 1.66656vw, 64px);
+  }
+  .tablet-content .back-heading .text {
+    color: #555555;
+    font-family: Lato;
+    font-size: clamp(9px, 1.9334049409vw, 36px);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 213.242%;
+  }
+  .tablet-content .back-heading .chevron {
+    margin-right: clamp(4px, 0.8592910849vw, 16px);
+  }
+  .tablet-content .forms {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .tablet-content .forms .sign-in-content {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .tablet-content .forms .sign-in-content .sign-in-heading {
+    color: #000;
+    font-family: Lato;
+    font-size: clamp(10px, 2.1482277121vw, 40px);
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  .tablet-content .forms .sign-in-content .form {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .tablet-content .forms .sign-in-content .form .email-input-container-l, .tablet-content .forms .sign-in-content .form .password-input-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .tablet-content .forms .sign-in-content .form .email-input-container-l .label, .tablet-content .forms .sign-in-content .form .password-input-container .label {
+    color: #262626;
+    font-family: Lato;
+    font-size: clamp(10px, 2.1482277121vw, 40px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: clamp(8px, 1.7185821697vw, 32px);
+  }
+  .tablet-content .forms .sign-in-content .form .email-input-container-l .label .required, .tablet-content .forms .sign-in-content .form .password-input-container .label .required {
+    color: #BF2E3B;
+  }
+  .tablet-content .forms .sign-in-content .form .email-input-container-l .email-input, .tablet-content .forms .sign-in-content .form .email-input-container-l .password-input, .tablet-content .forms .sign-in-content .form .password-input-container .email-input, .tablet-content .forms .sign-in-content .form .password-input-container .password-input {
+    width: clamp(160px, 41.6666666667vw, 640px);
+    height: clamp(20px, 5.2083333333vw, 80px);
+    padding-left: clamp(5px, 1.3020833333vw, 20px);
+    border: 1px solid #C4C4C4;
+    border-radius: 4px;
+    margin-top: clamp(8px, 1.7185821697vw, 32px);
+  }
+  .tablet-content .forms .sign-in-content .form .email-input-container-l .email-input:focus, .tablet-content .forms .sign-in-content .form .email-input-container-l .password-input:focus, .tablet-content .forms .sign-in-content .form .password-input-container .email-input:focus, .tablet-content .forms .sign-in-content .form .password-input-container .password-input:focus {
+    outline: none;
+    border: 1px solid #262626;
+  }
+  .tablet-content .forms .sign-in-content .form .email-input-container-l .email-input-error, .tablet-content .forms .sign-in-content .form .email-input-container-l .password-input-error, .tablet-content .forms .sign-in-content .form .password-input-container .email-input-error, .tablet-content .forms .sign-in-content .form .password-input-container .password-input-error {
+    width: clamp(160px, 41.6666666667vw, 640px);
+    height: clamp(20px, 5.2083333333vw, 80px);
+    padding-left: clamp(5px, 1.3020833333vw, 20px);
+    border: 1px solid #FF2E00;
+    border-radius: 4px;
+    margin-top: clamp(8px, 1.7185821697vw, 32px);
+  }
+  .tablet-content .forms .sign-in-content .form .email-input-container-l .email-input-error:focus, .tablet-content .forms .sign-in-content .form .email-input-container-l .password-input-error:focus, .tablet-content .forms .sign-in-content .form .password-input-container .email-input-error:focus, .tablet-content .forms .sign-in-content .form .password-input-container .password-input-error:focus {
+    outline: none;
+    border: 1px solid #262626;
+  }
+  .tablet-content .forms .sign-in-content .form .email-input-container-l .error, .tablet-content .forms .sign-in-content .form .password-input-container .error {
+    color: #FF2E00;
+    font-family: Lato;
+    font-size: clamp(7px, 1.5037593985vw, 28px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 83.333%;
+    margin-top: clamp(8px, 1.7185821697vw, 32px);
+  }
+  .tablet-content .forms .sign-in-content .form .password-input-container {
+    margin-top: clamp(8px, 1.7185821697vw, 32px);
+  }
+  .tablet-content .forms .sign-in-content .form .lower-container-l {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: clamp(8px, 1.7185821697vw, 32px);
+  }
+  .tablet-content .forms .sign-in-content .form .lower-container-l .checkbox-container {
+    display: flex;
+    align-items: center;
+  }
+  .tablet-content .forms .sign-in-content .form .lower-container-l .checkbox-container .checkbox {
+    width: clamp(10px, 2.6041666667vw, 40px);
+    height: clamp(10px, 2.6041666667vw, 40px);
+  }
+  .tablet-content .forms .sign-in-content .form .lower-container-l .checkbox-container .checkbox-label {
+    color: #262626;
+    font-family: Lato;
+    font-size: clamp(7px, 1.5037593985vw, 28px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: clamp(4px, 0.8592910849vw, 16px);
+  }
+  .tablet-content .forms .sign-in-content .form .lower-container-l .password-link {
+    color: #4172DC;
+    font-family: Lato;
+    font-size: clamp(7px, 1.5037593985vw, 28px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration-line: underline;
+  }
+  .tablet-content .forms .sign-in-content .form .form-button {
+    width: 100%;
+    height: clamp(28px, 7.2916666667vw, 112px);
+    color: white;
+    text-align: center;
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Lato;
+    font-size: clamp(8px, 1.7185821697vw, 32px);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 142.857%;
+    text-transform: uppercase;
+    background-color: #C4C4C4;
+    border: none;
+    border-radius: 4px;
+    margin-top: clamp(16px, 3.4371643394vw, 64px);
+    transition: 0.3s all;
+  }
+  .tablet-content .forms .sign-in-content .form .form-button:hover {
+    background-color: #434343;
+  }
+  .tablet-content .forms .sign-in-content .form .form-button-active {
+    width: 100%;
+    height: clamp(28px, 7.2916666667vw, 112px);
+    color: white;
+    text-align: center;
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Lato;
+    font-size: clamp(8px, 1.7185821697vw, 32px);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 142.857%;
+    text-transform: uppercase;
+    background-color: #4172DC;
+    border: none;
+    border-radius: 4px;
+    margin-top: clamp(16px, 3.4371643394vw, 64px);
+    transition: 0.3s all;
+  }
+  .tablet-content .forms .sign-in-content .form .form-button-active:hover {
+    background-color: #265BCF;
+  }
+  .tablet-content .forms .sign-in-content .form .divider-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: clamp(8px, 3.73824vw, 32px);
+  }
+  .tablet-content .forms .sign-in-content .form .divider-container .divider {
+    width: 42%;
+    height: 1px;
+    background-color: #9D9D9D;
+  }
+  .tablet-content .forms .sign-in-content .form .divider-container .text {
+    color: #9D9D9D;
+    text-align: center;
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Lato;
+    font-size: clamp(7px, 1.5037593985vw, 28px);
+    font-style: normal;
+    font-weight: 500;
+  }
+  .tablet-content .forms .sign-in-content .form .google-button {
+    width: 100%;
+    height: clamp(28px, 7.2916666667vw, 112px);
+    color: white;
+    text-align: center;
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Lato;
+    font-size: clamp(8px, 1.7185821697vw, 32px);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 142.857%;
+    background-color: #434343;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 4px;
+    margin-top: clamp(8px, 1.7185821697vw, 32px);
+    transition: 0.3s all;
+  }
+  .tablet-content .forms .sign-in-content .form .google-button:hover {
+    background-color: #4172DC;
+  }
+  .tablet-content .forms .sign-in-content .form .google-button .google-icon {
+    margin-right: clamp(4px, 0.8592910849vw, 16px);
+  }
+  .tablet-content .forms .sign-in-content .form .text-container {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin-top: clamp(16px, 3.4371643394vw, 64px);
+  }
+  .tablet-content .forms .sign-in-content .form .text-container .link-text {
+    color: #262626;
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Lato;
+    font-size: clamp(7px, 1.5037593985vw, 28px);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 142.857%;
+  }
+  .tablet-content .forms .sign-in-content .form .text-container .link-text .sign-up-link {
+    color: #FF7A00;
+    font-size: clamp(7px, 1.5037593985vw, 28px);
+    font-style: normal;
+    font-weight: 900;
+    line-height: 142.857%;
+    text-decoration: none;
+    margin-left: clamp(2px, 0.5208333333vw, 8px);
+  }
 }/*# sourceMappingURL=login.css.map */
