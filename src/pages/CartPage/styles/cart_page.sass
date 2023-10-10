@@ -287,7 +287,7 @@
 .empty-container
     width: 90%
     height: auto
-    display: flex
+    display: flex !important
     flex-direction: column
     align-items: center
     justify-content: center
@@ -325,3 +325,313 @@
             line-height: 142.857%
             text-align: center
             margin-top: $m16mob
+
+.cards-tablet-content
+    display: none
+
+@media (min-width: 768px) and (max-width: 1024px)
+
+    .container
+
+        .cards
+            display: none
+
+        .margin
+
+            .quantity
+                font-size: $font24tab
+
+        .cards-tablet-content
+            display: flex
+            flex-direction: column
+
+            .content
+                display: flex
+                flex-direction: row
+                align-items: flex-start
+
+                .cards-tablet
+                    width: 100%
+                    display: flex
+                    flex-direction: column
+
+                    .card
+                        width: 80%
+                        height: auto
+                        display: flex
+                        flex-direction: column
+                        align-items: flex-start
+                        margin-top: $m64tab
+
+                        .card-upper-row
+                            width: 100%
+                            height: auto
+                            display: flex
+                            align-items: center
+                            justify-content: space-between
+
+                            .card-title-img
+                                display: flex
+                                flex-direction: row
+
+                                .card-image
+                                    width: clamp(30px,7.8125vw,120px)
+                                    height: clamp(35px,9.114583333333334vw,140px)
+
+                                .card-content
+                                    display: flex
+                                    flex-direction: column
+                                    align-items: flex-start
+                                    margin-left: $m16tab
+
+                                    .card-heading
+                                        color: $primary_gray
+                                        font-family: Lato
+                                        font-size: $font18tab
+                                        font-style: normal
+                                        font-weight: 800
+                                        line-height: 142.857%
+
+                                    .color-and-price
+                                        width: 100%
+                                        height: auto
+                                        display: flex
+                                        align-items: center
+                                        justify-content: space-between
+
+                                        .colors
+                                            display: flex
+                                            align-items: center
+
+                                            .color-text
+                                                color: $light_text
+                                                font-family: Lato
+                                                font-size: $font16tab
+                                                font-style: normal
+                                                font-weight: 400
+                                                line-height: 142.857%
+
+                                            .color
+                                                width: clamp(6px,1.5625vw,24px)
+                                                height: clamp(6px,1.5625vw,24px)
+                                                background-color: $button_blue
+                                                border-radius: 50px
+                                                margin-left: $m8tab
+
+                                    .price
+                                        color: $secondary_text
+                                        text-align: right
+                                        font-family: Lato
+                                        font-size: $font14tab
+                                        font-style: normal
+                                        font-weight: 400
+                                        line-height: 142.857%
+
+                        .card-lower-row
+                            width: 100%
+                            height: auto
+                            display: flex
+                            align-items: center
+                            justify-content: space-between
+                            margin-top: $m16tab
+
+                            .quantity-container
+                                width: auto
+                                display: flex
+                                flex-direction: row
+                                align-items: center
+
+                                .quantity-text
+                                    color: $primary_gray
+                                    font-family: Lato
+                                    font-size: $font16tab
+                                    font-style: normal
+                                    font-weight: 600
+                                    line-height: 206.908%
+
+                                .quantity-counter
+                                    width: clamp(50.5px,13.151041666666666vw,202px)
+                                    height: clamp(20px,5.208333333333333vw,80px)
+                                    display: flex
+                                    align-items: center
+                                    justify-content: center
+                                    border-radius: 4px
+                                    border: 1px solid $gray
+
+                                    .quantity-icon
+                                        font-size: $font14tab
+                                        color: $light_text
+
+                                    .minus
+                                        margin-right: $m16tab
+
+                                    .plus
+                                        margin-left: $m16tab
+
+                            .price
+                                color: $secondary_text
+                                text-align: center
+                                font-family: Lato
+                                font-size: $font14tab
+                                font-style: normal
+                                font-weight: 400
+                                line-height: 142.857%
+
+                            .trash-icon
+                                color: $secondary_text
+                                font-size: $font18tab
+
+                .summary-coupon
+                    display: flex
+                    flex-direction: column
+
+                    .summary-block
+                        width: auto
+                        height: auto
+                        display: flex
+                        flex-direction: column
+                        justify-content: center
+                        align-items: center
+                        background-color: #E9E9E9
+                        margin-top: $m64tab
+
+                        .summary-container
+                            width: 47.69874476987448%
+                            height: auto
+                            display: flex
+                            flex-direction: column
+                            align-items: flex-start
+
+                            .summary-heading
+                                color: $primary_gray
+                                font-family: Roboto Slab
+                                font-size: $font16tab
+                                font-style: normal
+                                font-weight: 700
+                                line-height: 156.25%
+                                margin-top: $m16tab
+
+                            .price-row, .shipping-row, .tax-row, .gift-row, .total-row
+                                width: 100%
+                                display: flex
+                                align-items: center
+                                justify-content: space-between
+                                margin-top: clamp(6px,1.5625vw,24px)
+
+                                .price-text, .shipping-text, .tax-text, .checkbox-label
+                                    color: $secondary_text
+                                    font-family: Lato
+                                    font-size: $font14tab
+                                    font-style: normal
+                                    font-weight: 400
+                                    line-height: 142.857%
+
+                                .total-text-bold, .bold-price
+                                    color: $primary_gray
+                                    font-family: Lato
+                                    font-size: $font14tab
+                                    font-style: normal
+                                    font-weight: 700
+                                    line-height: 142.857%
+
+                                .price
+                                    color: $primary_gray
+                                    text-align: right
+                                    font-family: Lato
+                                    font-size: $font14tab
+                                    font-style: normal
+                                    font-weight: 400
+                                    line-height: 142.857%
+
+                                .checkbox-container
+                                    display: flex
+                                    align-items: center
+
+                                    .checkbox
+                                        width: clamp(10px, 2.6041666666666665vw,40px)
+                                        height: clamp(10px, 2.6041666666666665vw,40px)
+
+                                    .checkbox-label
+                                        margin-left: $m8tab
+
+                            .total-row
+
+                            .gift-row
+                                margin-top: clamp(10px,2.6041666666666665vw,40px)
+
+                            .separator
+                                width: 100%
+                                height: 1px
+                                background-color: $light_text
+                                margin-top: clamp(6px,1.5625vw,24px)
+
+                        .checkout-btn
+                            width: clamp(114px,29.6875vw,456px)
+                            height: clamp(26px,6.770833333333333vw,104px)
+                            color: $white
+                            text-align: right
+                            font-feature-settings: 'clig' off, 'liga' off
+                            font-family: Lato
+                            font-size: $font14tab
+                            font-style: normal
+                            font-weight: 500
+                            line-height: 142.857%
+                            text-transform: uppercase
+                            display: flex
+                            align-items: center
+                            justify-content: center
+                            background-color: #434343
+                            border-radius: 4px
+                            border: none
+                            margin-top: $m32tab
+                            margin-bottom: clamp(10px,2.6041666666666665vw,40px)
+                            margin-left: $m32tab
+                            margin-right: $m32tab
+
+                            .bag-icon
+                                color: $white
+                                font-size: $font20tab
+                                margin-right: $m8tab
+
+                    .coupon-container-tab
+                        width: 90%
+                        height: auto
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        margin: auto
+                        margin-top: $m32tab
+
+                        .coupon-input
+                            width: 50%
+                            height: $m64tab
+                            color: $secondary_text
+                            display: flex
+                            font-feature-settings: 'clig' off, 'liga' off
+                            font-family: Lato
+                            font-size: $font12tab
+                            font-style: normal
+                            font-weight: 500
+                            line-height: 166.667%
+                            text-align: center
+                            text-transform: capitalize
+                            border-bottom-left-radius: 4px
+                            border-top-left-radius: 4px
+                            border: 1px solid $gray_dark
+
+                        .apply-btn
+                            width: 50%
+                            height: $m64tab
+                            color: $white
+                            display: flex
+                            align-items: center
+                            justify-content: center
+                            border: none
+                            border: 30px solid #262626
+                            background-color: $primary_gray
+
+    .summary
+        display: none
+
+    .coupon-container
+        display: none
