@@ -29,10 +29,12 @@ const Login = () => {
 
   const formik = useFormik({
     initialValues: {
+      name: "",
       email: "",
       password: "",
     },
     validationSchema: Yup.object({
+      name: Yup.string().required("Name is required"),
       email: Yup.string()
         .email("Wrong email address")
         .required("Email is required"),
@@ -278,10 +280,30 @@ const Login = () => {
                 </button>
               </form>
             </div>
-            <figure className="separator"></figure>
+            <figure className="separator-line"></figure>
             <div className="sign-up-content">
-              {" "}
+              <span className="sign-in-heading">Sign up</span>
               <form onSubmit={formik.handleSubmit} className="form">
+                <div className="email-input-container-l">
+                  <label htmlFor="name" className="label">
+                    Name <span className="required">*</span>
+                  </label>
+                  <input
+                    id="name"
+                    name="name"
+                    type="text"
+                    placeholder="Name"
+                    className={
+                      formik.errors.name ? "email-input-error" : "email-input"
+                    }
+                    onChange={emailChange}
+                    onBlur={formik.handleBlur}
+                    value={formik.values.email}
+                  />
+                  {formik.errors.name && formik.touched.name ? (
+                    <div className="error">{formik.errors.name}</div>
+                  ) : null}
+                </div>
                 <div className="email-input-container-l">
                   <label htmlFor="email" className="label">
                     Email <span className="required">*</span>
