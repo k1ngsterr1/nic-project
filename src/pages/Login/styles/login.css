@@ -241,6 +241,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-top: clamp(8px, 1.7185821697vw, 32px);
   }
   .tablet-content .forms .sign-in-content, .tablet-content .forms .sign-up-content {
     width: auto;
@@ -293,6 +294,14 @@
     outline: none;
     border: 1px solid #262626;
   }
+  .tablet-content .forms .sign-in-content .form .email-input-container-l .email-input-reg, .tablet-content .forms .sign-in-content .form .password-input-container .email-input-reg, .tablet-content .forms .sign-up-content .form .email-input-container-l .email-input-reg, .tablet-content .forms .sign-up-content .form .password-input-container .email-input-reg {
+    width: clamp(150px, 39.0625vw, 600px);
+    height: clamp(20px, 5.2083333333vw, 80px);
+    padding-left: clamp(5px, 1.3020833333vw, 20px);
+    border: 1px solid #C4C4C4;
+    border-radius: 4px;
+    margin-top: clamp(16px, 3.4371643394vw, 64px);
+  }
   .tablet-content .forms .sign-in-content .form .email-input-container-l .email-input-error, .tablet-content .forms .sign-in-content .form .email-input-container-l .password-input-error, .tablet-content .forms .sign-in-content .form .password-input-container .email-input-error, .tablet-content .forms .sign-in-content .form .password-input-container .password-input-error, .tablet-content .forms .sign-up-content .form .email-input-container-l .email-input-error, .tablet-content .forms .sign-up-content .form .email-input-container-l .password-input-error, .tablet-content .forms .sign-up-content .form .password-input-container .email-input-error, .tablet-content .forms .sign-up-content .form .password-input-container .password-input-error {
     width: clamp(150px, 39.0625vw, 600px);
     height: clamp(20px, 5.2083333333vw, 80px);
@@ -302,6 +311,18 @@
     margin-top: clamp(8px, 1.7185821697vw, 32px);
   }
   .tablet-content .forms .sign-in-content .form .email-input-container-l .email-input-error:focus, .tablet-content .forms .sign-in-content .form .email-input-container-l .password-input-error:focus, .tablet-content .forms .sign-in-content .form .password-input-container .email-input-error:focus, .tablet-content .forms .sign-in-content .form .password-input-container .password-input-error:focus, .tablet-content .forms .sign-up-content .form .email-input-container-l .email-input-error:focus, .tablet-content .forms .sign-up-content .form .email-input-container-l .password-input-error:focus, .tablet-content .forms .sign-up-content .form .password-input-container .email-input-error:focus, .tablet-content .forms .sign-up-content .form .password-input-container .password-input-error:focus {
+    outline: none;
+    border: 1px solid #262626;
+  }
+  .tablet-content .forms .sign-in-content .form .email-input-container-l .email-input-error-reg, .tablet-content .forms .sign-in-content .form .password-input-container .email-input-error-reg, .tablet-content .forms .sign-up-content .form .email-input-container-l .email-input-error-reg, .tablet-content .forms .sign-up-content .form .password-input-container .email-input-error-reg {
+    width: clamp(150px, 39.0625vw, 600px);
+    height: clamp(20px, 5.2083333333vw, 80px);
+    padding-left: clamp(5px, 1.3020833333vw, 20px);
+    border: 1px solid #FF2E00;
+    border-radius: 4px;
+    margin-top: clamp(16px, 3.4371643394vw, 64px);
+  }
+  .tablet-content .forms .sign-in-content .form .email-input-container-l .email-input-error-reg:focus, .tablet-content .forms .sign-in-content .form .password-input-container .email-input-error-reg:focus, .tablet-content .forms .sign-up-content .form .email-input-container-l .email-input-error-reg:focus, .tablet-content .forms .sign-up-content .form .password-input-container .email-input-error-reg:focus {
     outline: none;
     border: 1px solid #262626;
   }
@@ -321,6 +342,18 @@
     border: none;
   }
   .tablet-content .forms .sign-in-content .form .email-input-container-l .password-show-container .eye-btn .eye-icon, .tablet-content .forms .sign-in-content .form .password-input-container .password-show-container .eye-btn .eye-icon, .tablet-content .forms .sign-up-content .form .email-input-container-l .password-show-container .eye-btn .eye-icon, .tablet-content .forms .sign-up-content .form .password-input-container .password-show-container .eye-btn .eye-icon {
+    color: #C4C4C4;
+    font-size: clamp(8.5px, 2.2135416667vw, 34px);
+  }
+  .tablet-content .forms .sign-in-content .form .email-input-container-l .password-show-container .eye-btn-my, .tablet-content .forms .sign-in-content .form .password-input-container .password-show-container .eye-btn-my, .tablet-content .forms .sign-up-content .form .email-input-container-l .password-show-container .eye-btn-my, .tablet-content .forms .sign-up-content .form .password-input-container .password-show-container .eye-btn-my {
+    position: absolute;
+    cursor: pointer;
+    top: clamp(12.5px, 3.2552083333vw, 50px);
+    right: clamp(16px, 3.4371643394vw, 64px);
+    background-color: transparent;
+    border: none;
+  }
+  .tablet-content .forms .sign-in-content .form .email-input-container-l .password-show-container .eye-btn-my .eye-icon, .tablet-content .forms .sign-in-content .form .password-input-container .password-show-container .eye-btn-my .eye-icon, .tablet-content .forms .sign-up-content .form .email-input-container-l .password-show-container .eye-btn-my .eye-icon, .tablet-content .forms .sign-up-content .form .password-input-container .password-show-container .eye-btn-my .eye-icon {
     color: #C4C4C4;
     font-size: clamp(8.5px, 2.2135416667vw, 34px);
   }
