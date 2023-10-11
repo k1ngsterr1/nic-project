@@ -1448,7 +1448,6 @@
     margin-top: clamp(8px, 0.83328vw, 32px);
   }
   .adaptive-gallery .adaptive-gallery-container .products-photo .photos .main-photo {
-    width: 504px;
     margin-left: clamp(8px, 0.83328vw, 32px);
   }
   .adaptive-gallery .adaptive-gallery-container .products-info {
