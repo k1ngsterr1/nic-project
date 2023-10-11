@@ -49,12 +49,19 @@
   .tablet-top-list {
     display: none;
   }
+  .top-swiper {
+    display: none !important;
+  }
   .pc-top-list {
     width: 100%;
     height: auto;
-    display: flex;
+    display: flex !important;
+    margin-top: clamp(32px, 3.33312vw, 128px);
   }
-  .pc-top-list .top-swiper-pc {
-    display: flex;
+  .pc-top-list .cards {
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
   }
 }/*# sourceMappingURL=top_list.css.map */

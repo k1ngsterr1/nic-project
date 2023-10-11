@@ -117,4 +117,15 @@
     margin-top: clamp(16px, 3.4371643394vw, 64px);
     margin-bottom: clamp(32px, 6.8743286788vw, 128px);
   }
+}
+@media (min-width: 1024px) {
+  .spotlight-row {
+    width: 90%;
+    display: flex;
+    flex-direction: row !important;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: clamp(32px, 6.8743286788vw, 128px) !important;
+  }
 }/*# sourceMappingURL=main_page.css.map */

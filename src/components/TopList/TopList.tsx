@@ -25,7 +25,7 @@ const TopList = () => {
         className="top-swiper"
         direction="horizontal"
         slidesPerView={1}
-        spaceBetween={-60}
+        spaceBetween={120}
       >
         <SwiperSlide>
           <TopCard
@@ -116,58 +116,45 @@ const TopList = () => {
         <div className="row"></div>
       </div>
       <div className="pc-top-list">
-        {" "}
-        <Swiper
-          className="top-swiper-pc"
-          direction="horizontal"
-          slidesPerView={1}
-          spaceBetween={-60}
-        >
-          <SwiperSlide>
-            <TopCard
-              imageUrl={card01}
-              productName="Mango"
-              description="Kimono & Caftan - Black - Regular fit"
-              ratingQuantity={124}
-              currentPrice={70}
-              originalPrice={140}
-              discount={50}
-            ></TopCard>
-          </SwiperSlide>
-          <SwiperSlide>
-            <TopCard
-              imageUrl={card02}
-              productName="Zara"
-              description="Midi top - Daily fit"
-              ratingQuantity={523}
-              currentPrice={95}
-              originalPrice={145}
-              discount={7}
-            ></TopCard>
-          </SwiperSlide>
-          <SwiperSlide>
-            <TopCard
-              imageUrl={card03}
-              productName="Uniqlo"
-              description="Midi atlas Slim fit - bohemian"
-              ratingQuantity={86}
-              currentPrice={125}
-              originalPrice={156}
-              discount={8}
-            ></TopCard>
-          </SwiperSlide>
-          <SwiperSlide>
-            <TopCard
-              imageUrl={card04}
-              productName="Mango dress"
-              description="Kimono & Caftan - Colorful - Night club fit"
-              ratingQuantity={121}
-              currentPrice={365}
-              originalPrice={487}
-              discount={15}
-            ></TopCard>
-          </SwiperSlide>
-        </Swiper>
+        <div className="cards">
+          <TopCard
+            imageUrl={card01}
+            productName="Mango"
+            description="Kimono & Caftan - Black - Regular fit"
+            ratingQuantity={124}
+            currentPrice={70}
+            originalPrice={140}
+            discount={50}
+          ></TopCard>
+          <TopCard
+            imageUrl={card02}
+            productName="Zara"
+            description="Midi top - Daily fit"
+            ratingQuantity={523}
+            currentPrice={95}
+            originalPrice={145}
+            discount={7}
+          ></TopCard>
+          <TopCard
+            imageUrl={card03}
+            productName="Uniqlo"
+            description="Midi atlas Slim fit - bohemian"
+            ratingQuantity={86}
+            currentPrice={125}
+            originalPrice={156}
+            discount={8}
+          ></TopCard>
+
+          <TopCard
+            imageUrl={card04}
+            productName="Mango dress"
+            description="Kimono & Caftan - Colorful - Night club fit"
+            ratingQuantity={121}
+            currentPrice={365}
+            originalPrice={487}
+            discount={15}
+          ></TopCard>
+        </div>
       </div>
     </div>
   );

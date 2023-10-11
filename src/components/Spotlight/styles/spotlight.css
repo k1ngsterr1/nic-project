@@ -82,4 +82,47 @@
   .spotlight .spotlight-image {
     height: 100%;
   }
+}
+@media (min-width: 1024px) {
+  .spotlight {
+    width: clamp(400px, 41.664vw, 1600px) !important;
+    height: clamp(220px, 22.9152vw, 880px) !important;
+    display: flex;
+    margin-top: 0px !important;
+  }
+  .spotlight .spotlight-content {
+    width: 90%;
+    height: auto;
+    margin-left: clamp(10px, 2.3980815348vw, 40px);
+  }
+  .spotlight .spotlight-content .category-heading {
+    width: 70%;
+    font-size: clamp(20px, 2.0832vw, 80px);
+    line-height: 127.778%;
+  }
+  .spotlight .spotlight-content .sub-category-text {
+    width: 50%;
+    font-size: clamp(14px, 1.45824vw, 56px);
+    line-height: 128.571%;
+    margin-top: clamp(8px, 0.83328vw, 32px);
+  }
+  .spotlight .spotlight-content .spotlight-button {
+    display: flex;
+    align-items: flex-start;
+    font-size: clamp(12px, 1.24992vw, 48px);
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 200%;
+    color: white;
+    text-decoration-line: underline;
+    background-color: transparent;
+    border: none;
+    margin-top: clamp(8px, 0.83328vw, 32px);
+  }
+  .spotlight .spotlight-image {
+    width: 80%;
+    height: 100%;
+  }
 }/*# sourceMappingURL=spotlight.css.map */
