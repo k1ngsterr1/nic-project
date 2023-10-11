@@ -632,4 +632,340 @@
   .coupon-container {
     display: none;
   }
+}
+@media (min-width: 1024px) {
+  .empty-container {
+    width: 90%;
+    height: auto;
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+  }
+  .empty-container .text-container {
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: clamp(32px, 3.33312vw, 128px);
+  }
+  .empty-container .text-container .icon {
+    font-size: clamp(32px, 3.33312vw, 128px);
+    color: #4172DC;
+  }
+  .empty-container .text-container .main-text {
+    color: #262626;
+    font-family: Lato;
+    font-size: clamp(10px, 1.0416vw, 40px);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 142.857%;
+    margin-top: clamp(8px, 0.83328vw, 32px);
+  }
+  .empty-container .text-container .text {
+    width: 30%;
+    color: #262626;
+    font-family: Lato;
+    font-size: clamp(8px, 0.83328vw, 32px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 142.857%;
+    text-align: center;
+    margin-top: clamp(8px, 0.83328vw, 32px);
+  }
+  .container .cards {
+    display: none;
+  }
+  .container .margin .quantity {
+    font-size: clamp(12px, 1.24992vw, 48px);
+  }
+  .container .cards-tablet-content {
+    display: flex;
+    flex-direction: column;
+  }
+  .container .cards-tablet-content .content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .container .cards-tablet-content .content .cards-tablet {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .container .cards-tablet-content .content .cards-tablet .card {
+    width: 65%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: clamp(32px, 3.33312vw, 128px);
+  }
+  .container .cards-tablet-content .content .cards-tablet .card .card-upper-row {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .container .cards-tablet-content .content .cards-tablet .card .card-upper-row .card-title-img {
+    display: flex;
+    flex-direction: row;
+  }
+  .container .cards-tablet-content .content .cards-tablet .card .card-upper-row .card-title-img .card-image {
+    width: clamp(30px, 3.1248vw, 120px);
+    height: clamp(35px, 3.6456vw, 140px);
+  }
+  .container .cards-tablet-content .content .cards-tablet .card .card-upper-row .card-title-img .card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: clamp(8px, 0.83328vw, 32px);
+  }
+  .container .cards-tablet-content .content .cards-tablet .card .card-upper-row .card-title-img .card-content .card-heading {
+    color: #262626;
+    font-family: Lato;
+    font-size: clamp(9px, 0.93744vw, 36px);
+    font-style: normal;
+    font-weight: 800;
+    line-height: 142.857%;
+  }
+  .container .cards-tablet-content .content .cards-tablet .card .card-upper-row .card-title-img .card-content .color-and-price {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .container .cards-tablet-content .content .cards-tablet .card .card-upper-row .card-title-img .card-content .color-and-price .colors {
+    display: flex;
+    align-items: center;
+  }
+  .container .cards-tablet-content .content .cards-tablet .card .card-upper-row .card-title-img .card-content .color-and-price .colors .color-text {
+    color: #9D9D9D;
+    font-family: Lato;
+    font-size: clamp(8px, 0.83328vw, 32px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 142.857%;
+  }
+  .container .cards-tablet-content .content .cards-tablet .card .card-upper-row .card-title-img .card-content .color-and-price .colors .color {
+    width: clamp(6px, 1.5625vw, 24px);
+    height: clamp(6px, 1.5625vw, 24px);
+    background-color: #4172DC;
+    border-radius: 50px;
+    margin-left: clamp(4px, 0.41664vw, 16px);
+  }
+  .container .cards-tablet-content .content .cards-tablet .card .card-upper-row .card-title-img .card-content .price {
+    color: #555555;
+    text-align: right;
+    font-family: Lato;
+    font-size: clamp(7px, 0.72912vw, 28px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 142.857%;
+  }
+  .container .cards-tablet-content .content .cards-tablet .card .card-upper-row .quantity-container {
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .container .cards-tablet-content .content .cards-tablet .card .card-upper-row .quantity-container .quantity-text {
+    color: #262626;
+    font-family: Lato;
+    font-size: clamp(8px, 0.83328vw, 32px);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 206.908%;
+  }
+  .container .cards-tablet-content .content .cards-tablet .card .card-upper-row .quantity-container .quantity-counter {
+    width: clamp(50.5px, 5.26008vw, 202px);
+    height: clamp(20px, 2.0832vw, 80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    border: 1px solid #C4C4C4;
+  }
+  .container .cards-tablet-content .content .cards-tablet .card .card-upper-row .quantity-container .quantity-counter .quantity-icon {
+    font-size: clamp(7px, 0.72912vw, 28px);
+    color: #9D9D9D;
+  }
+  .container .cards-tablet-content .content .cards-tablet .card .card-upper-row .quantity-container .quantity-counter .minus {
+    margin-right: clamp(8px, 0.83328vw, 32px);
+  }
+  .container .cards-tablet-content .content .cards-tablet .card .card-upper-row .quantity-container .quantity-counter .plus {
+    margin-left: clamp(8px, 0.83328vw, 32px);
+  }
+  .container .cards-tablet-content .content .cards-tablet .card .card-upper-row .price {
+    color: #555555;
+    text-align: center;
+    font-family: Lato;
+    font-size: clamp(7px, 0.72912vw, 28px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 142.857%;
+  }
+  .container .cards-tablet-content .content .cards-tablet .card .card-upper-row .trash-icon {
+    color: #555555;
+    font-size: clamp(9px, 0.93744vw, 36px);
+  }
+  .container .cards-tablet-content .content .summary-coupon {
+    display: flex;
+    flex-direction: column;
+  }
+  .container .cards-tablet-content .content .summary-coupon .summary-block {
+    width: 400px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #E9E9E9;
+    margin-top: clamp(32px, 3.33312vw, 128px);
+  }
+  .container .cards-tablet-content .content .summary-coupon .summary-block .summary-container {
+    width: 67.6987447699%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: clamp(8px, 0.83328vw, 32px);
+  }
+  .container .cards-tablet-content .content .summary-coupon .summary-block .summary-container .summary-heading {
+    color: #262626;
+    font-family: Roboto Slab;
+    font-size: clamp(8px, 0.83328vw, 32px);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 156.25%;
+    margin-top: clamp(8px, 0.83328vw, 32px);
+  }
+  .container .cards-tablet-content .content .summary-coupon .summary-block .summary-container .price-row, .container .cards-tablet-content .content .summary-coupon .summary-block .summary-container .shipping-row, .container .cards-tablet-content .content .summary-coupon .summary-block .summary-container .tax-row, .container .cards-tablet-content .content .summary-coupon .summary-block .summary-container .gift-row, .container .cards-tablet-content .content .summary-coupon .summary-block .summary-container .total-row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: clamp(6px, 0.62496vw, 24px);
+  }
+  .container .cards-tablet-content .content .summary-coupon .summary-block .summary-container .price-row .price-text, .container .cards-tablet-content .content .summary-coupon .summary-block .summary-container .price-row .shipping-text, .container .cards-tablet-content .content .summary-coupon .summary-block .summary-container .price-row .tax-text, .container .cards-tablet-content .content .summary-coupon .summary-block .summary-container .price-row .checkbox-label, .container .cards-tablet-content .content .summary-coupon .summary-block .summary-container .shipping-row .price-text, .container .cards-tablet-content .content .summary-coupon .summary-block .summary-container .shipping-row .shipping-text, .container .cards-tablet-content .content .summary-coupon .summary-block .summary-container .shipping-row .tax-text, .container .cards-tablet-content .content .summary-coupon .summary-block .summary-container .shipping-row .checkbox-label, .container .cards-tablet-content .content .summary-coupon .summary-block .summary-container .tax-row .price-text, .container .cards-tablet-content .content .summary-coupon .summary-block .summary-container .tax-row .shipping-text, .container .cards-tablet-content .content .summary-coupon .summary-block .summary-container .tax-row .tax-text, .container .cards-tablet-content .content .summary-coupon .summary-block .summary-container .tax-row .checkbox-label, .container .cards-tablet-content .content .summary-coupon .summary-block .summary-container .gift-row .price-text, .container .cards-tablet-content .content .summary-coupon .summary-block .summary-container .gift-row .shipping-text, .container .cards-tablet-content .content .summary-coupon .summary-block .summary-container .gift-row .tax-text, .container .cards-tablet-content .content .summary-coupon .summary-block .summary-container .gift-row .checkbox-label, .container .cards-tablet-content .content .summary-coupon .summary-block .summary-container .total-row .price-text, .container .cards-tablet-content .content .summary-coupon .summary-block .summary-container .total-row .shipping-text, .container .cards-tablet-content .content .summary-coupon .summary-block .summary-container .total-row .tax-text, .container .cards-tablet-content .content .summary-coupon .summary-block .summary-container .total-row .checkbox-label {
+    color: #555555;
+    font-family: Lato;
+    font-size: clamp(7px, 0.72912vw, 28px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 142.857%;
+  }
+  .container .cards-tablet-content .content .summary-coupon .summary-block .summary-container .price-row .total-text-bold, .container .cards-tablet-content .content .summary-coupon .summary-block .summary-container .price-row .bold-price, .container .cards-tablet-content .content .summary-coupon .summary-block .summary-container .shipping-row .total-text-bold, .container .cards-tablet-content .content .summary-coupon .summary-block .summary-container .shipping-row .bold-price, .container .cards-tablet-content .content .summary-coupon .summary-block .summary-container .tax-row .total-text-bold, .container .cards-tablet-content .content .summary-coupon .summary-block .summary-container .tax-row .bold-price, .container .cards-tablet-content .content .summary-coupon .summary-block .summary-container .gift-row .total-text-bold, .container .cards-tablet-content .content .summary-coupon .summary-block .summary-container .gift-row .bold-price, .container .cards-tablet-content .content .summary-coupon .summary-block .summary-container .total-row .total-text-bold, .container .cards-tablet-content .content .summary-coupon .summary-block .summary-container .total-row .bold-price {
+    color: #262626;
+    font-family: Lato;
+    font-size: clamp(7px, 0.72912vw, 28px);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 142.857%;
+  }
+  .container .cards-tablet-content .content .summary-coupon .summary-block .summary-container .price-row .price, .container .cards-tablet-content .content .summary-coupon .summary-block .summary-container .shipping-row .price, .container .cards-tablet-content .content .summary-coupon .summary-block .summary-container .tax-row .price, .container .cards-tablet-content .content .summary-coupon .summary-block .summary-container .gift-row .price, .container .cards-tablet-content .content .summary-coupon .summary-block .summary-container .total-row .price {
+    color: #262626;
+    text-align: right;
+    font-family: Lato;
+    font-size: clamp(7px, 0.72912vw, 28px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 142.857%;
+  }
+  .container .cards-tablet-content .content .summary-coupon .summary-block .summary-container .price-row .checkbox-container, .container .cards-tablet-content .content .summary-coupon .summary-block .summary-container .shipping-row .checkbox-container, .container .cards-tablet-content .content .summary-coupon .summary-block .summary-container .tax-row .checkbox-container, .container .cards-tablet-content .content .summary-coupon .summary-block .summary-container .gift-row .checkbox-container, .container .cards-tablet-content .content .summary-coupon .summary-block .summary-container .total-row .checkbox-container {
+    display: flex;
+    align-items: center;
+  }
+  .container .cards-tablet-content .content .summary-coupon .summary-block .summary-container .price-row .checkbox-container .checkbox, .container .cards-tablet-content .content .summary-coupon .summary-block .summary-container .shipping-row .checkbox-container .checkbox, .container .cards-tablet-content .content .summary-coupon .summary-block .summary-container .tax-row .checkbox-container .checkbox, .container .cards-tablet-content .content .summary-coupon .summary-block .summary-container .gift-row .checkbox-container .checkbox, .container .cards-tablet-content .content .summary-coupon .summary-block .summary-container .total-row .checkbox-container .checkbox {
+    width: clamp(10px, 1.0416vw, 40px);
+    height: clamp(10px, 1.0416vw, 40px);
+  }
+  .container .cards-tablet-content .content .summary-coupon .summary-block .summary-container .price-row .checkbox-container .checkbox-label, .container .cards-tablet-content .content .summary-coupon .summary-block .summary-container .shipping-row .checkbox-container .checkbox-label, .container .cards-tablet-content .content .summary-coupon .summary-block .summary-container .tax-row .checkbox-container .checkbox-label, .container .cards-tablet-content .content .summary-coupon .summary-block .summary-container .gift-row .checkbox-container .checkbox-label, .container .cards-tablet-content .content .summary-coupon .summary-block .summary-container .total-row .checkbox-container .checkbox-label {
+    margin-left: clamp(4px, 0.41664vw, 16px);
+  }
+  .container .cards-tablet-content .content .summary-coupon .summary-block .summary-container .gift-row {
+    margin-top: clamp(10px, 1.0416vw, 40px);
+  }
+  .container .cards-tablet-content .content .summary-coupon .summary-block .summary-container .separator {
+    width: 100%;
+    height: 1px;
+    background-color: #9D9D9D;
+    margin-top: clamp(6px, 0.62496vw, 24px);
+  }
+  .container .cards-tablet-content .content .summary-coupon .summary-block .checkout-btn {
+    width: clamp(114px, 11.87424vw, 456px);
+    height: clamp(26px, 2.70816vw, 104px);
+    color: white;
+    text-align: right;
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Lato;
+    font-size: clamp(7px, 0.72912vw, 28px);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 142.857%;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #434343;
+    border-radius: 4px;
+    border: none;
+    margin-top: clamp(16px, 1.66656vw, 64px);
+    margin-bottom: clamp(10px, 1.0416vw, 40px);
+    margin-left: clamp(16px, 1.66656vw, 64px);
+    margin-right: clamp(16px, 1.66656vw, 64px);
+  }
+  .container .cards-tablet-content .content .summary-coupon .summary-block .checkout-btn .bag-icon {
+    color: white;
+    font-size: clamp(10px, 1.0416vw, 40px);
+    margin-right: clamp(4px, 0.41664vw, 16px);
+  }
+  .container .cards-tablet-content .content .summary-coupon .coupon-container-tab {
+    width: 90%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: clamp(16px, 1.66656vw, 64px);
+  }
+  .container .cards-tablet-content .content .summary-coupon .coupon-container-tab .coupon-input {
+    width: 50%;
+    height: clamp(32px, 3.33312vw, 128px);
+    color: #555555;
+    display: flex;
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Lato;
+    font-size: clamp(6px, 0.62496vw, 24px);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 166.667%;
+    text-align: center;
+    text-transform: capitalize;
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+    border: 1px solid #434343;
+  }
+  .container .cards-tablet-content .content .summary-coupon .coupon-container-tab .apply-btn {
+    width: 50%;
+    height: clamp(32px, 3.33312vw, 128px);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border: 30px solid #262626;
+    background-color: #262626;
+  }
+  .summary {
+    display: none;
+  }
+  .coupon-container {
+    display: none;
+  }
 }/*# sourceMappingURL=cart_page.css.map */

@@ -1389,19 +1389,22 @@
     .product-details-container
         display: none
 
-    .adaptive-gallery
-        width: 90%
+    .adaptive-gallery-pc
+        width: 100%
         display: flex
         align-items: center
         flex-direction: column
         margin: auto
+        // border: 2px solid red
         margin-top: $m32
 
         .adaptive-gallery-container
             width: 100%
             display: flex
             align-items: center
+            justify-content: center
             margin: auto
+            // border: 2px solid red
 
             .products-photo
                 display: flex
@@ -1443,10 +1446,11 @@
                         margin-left: $m16
 
             .products-info
-                width: 90%
+                width: 40%
                 display: flex
+                // border: 2px solid red
                 flex-direction: column
-                margin-left: $m32
+                margin-left: $m64
 
                 .title-and-favorite
                     width: 100%
@@ -1470,6 +1474,7 @@
                         font-style: normal
                         font-weight: 700
                         line-height: 165.526%
+                        margin-top: $m8
 
                     .favorite-btn
                         width: clamp(20px,2.0832vw,80px)
@@ -1481,6 +1486,7 @@
                         background-color: transparent
 
                 .sizes-container
+                    width: 55%
                     display: flex
                     flex-direction: row
                     margin-top: $m32
@@ -1551,7 +1557,7 @@
                     margin-top: $m32
 
                     .color-text
-                        font-size: $font20!important
+                        font-size: $font20 !important
 
                     .colors
                         width: auto
@@ -1699,7 +1705,7 @@
                                 font-size: $font12
 
                 .buttons
-                    width: 90% !important
+                    width: 40% !important
                     display: flex !important
                     justify-content: space-between
                     align-items: center
@@ -1739,7 +1745,7 @@
                         background-color: transparent
 
         .product-details-container-tab
-            width: 90%
+            width: 80%
             height: auto
             display: flex
             flex-direction: column
@@ -1747,12 +1753,13 @@
             margin-top: $m64 !important
 
             .tabs-container
-                width: 100%
+                width: 50%
                 height: auto
                 display: flex
                 flex-direction: row
                 align-items: center
                 justify-content: space-between
+                margin: auto
 
                 .product-tab
                     color: $primary_gray
@@ -1803,7 +1810,7 @@
                             line-height: 156.25%
 
                         .paragraph
-                            width: 320px
+                            width: 100%
                             color: $secondary_text
                             font-family: Lato
                             font-size: $font18
@@ -1948,6 +1955,12 @@
                     justify-content: space-between
                     margin-top: $m16
 
+                    .row
+                        width: 100%
+                        display: flex
+                        align-items: center
+                        justify-content: space-between
+
                     .specific-card
                         width: 100%
                         height: auto
@@ -1956,7 +1969,7 @@
                         margin-top: $m16
 
                         .specific-card-img
-                            width: clamp(45px,4.6872vw,180px)
+                            width: clamp(60px,6.2496vw,240px)
                             height: clamp(67.5px,7.0308vw,270px)
 
                         .card-container

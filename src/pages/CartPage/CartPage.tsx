@@ -152,8 +152,6 @@ const CartPage = () => {
                       )}
                       $
                     </span>
-                  </div>
-                  <div className="card-lower-row">
                     <div className="quantity-container">
                       <div className="quantity-counter">
                         <FontAwesomeIcon

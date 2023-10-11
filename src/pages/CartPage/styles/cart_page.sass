@@ -635,3 +635,345 @@
 
     .coupon-container
         display: none
+
+@media (min-width: 1024px)
+
+    .empty-container
+        width: 90%
+        height: auto
+        display: flex !important
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        margin: auto
+
+        .text-container
+            width: 100%
+            height: 40vh
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            margin-top: $m64
+
+            .icon
+                font-size: $m64
+                color: $button_blue
+
+            .main-text
+                color: $primary_gray
+                font-family: Lato
+                font-size: $font20
+                font-style: normal
+                font-weight: 700
+                line-height: 142.857%
+                margin-top: $m16
+
+            .text
+                width: 30%
+                color: $primary_gray
+                font-family: Lato
+                font-size: $font16
+                font-style: normal
+                font-weight: 400
+                line-height: 142.857%
+                text-align: center
+                margin-top: $m16
+
+    .container
+
+        .cards
+            display: none
+
+        .margin
+
+            .quantity
+                font-size: $font24
+
+        .cards-tablet-content
+            display: flex
+            flex-direction: column
+
+            .content
+                display: flex
+                flex-direction: row
+                align-items: flex-start
+
+                .cards-tablet
+                    width: 100%
+                    display: flex
+                    flex-direction: column
+
+                    .card
+                        width: 65%
+                        height: auto
+                        display: flex
+                        flex-direction: column
+                        align-items: flex-start
+                        margin-top: $m64
+
+                        .card-upper-row
+                            width: 100%
+                            height: auto
+                            display: flex
+                            align-items: center
+                            justify-content: space-between
+
+                            .card-title-img
+                                display: flex
+                                flex-direction: row
+
+                                .card-image
+                                    width: clamp(30px,3.1248vw,120px)
+                                    height: clamp(35px,3.6456vw,140px)
+
+                                .card-content
+                                    display: flex
+                                    flex-direction: column
+                                    align-items: flex-start
+                                    margin-left: $m16
+
+                                    .card-heading
+                                        color: $primary_gray
+                                        font-family: Lato
+                                        font-size: $font18
+                                        font-style: normal
+                                        font-weight: 800
+                                        line-height: 142.857%
+
+                                    .color-and-price
+                                        width: 100%
+                                        height: auto
+                                        display: flex
+                                        align-items: center
+                                        justify-content: space-between
+
+                                        .colors
+                                            display: flex
+                                            align-items: center
+
+                                            .color-text
+                                                color: $light_text
+                                                font-family: Lato
+                                                font-size: $font16
+                                                font-style: normal
+                                                font-weight: 400
+                                                line-height: 142.857%
+
+                                            .color
+                                                width: clamp(6px,1.5625vw,24px)
+                                                height: clamp(6px,1.5625vw,24px)
+                                                background-color: $button_blue
+                                                border-radius: 50px
+                                                margin-left: $m8
+
+                                    .price
+                                        color: $secondary_text
+                                        text-align: right
+                                        font-family: Lato
+                                        font-size: $font14
+                                        font-style: normal
+                                        font-weight: 400
+                                        line-height: 142.857%
+
+                            .quantity-container
+                                width: auto
+                                display: flex
+                                flex-direction: row
+                                align-items: center
+
+                                .quantity-text
+                                    color: $primary_gray
+                                    font-family: Lato
+                                    font-size: $font16
+                                    font-style: normal
+                                    font-weight: 600
+                                    line-height: 206.908%
+
+                                .quantity-counter
+                                    width: clamp(50.5px,5.26008vw,202px)
+                                    height: clamp(20px,2.0832vw,80px)
+                                    display: flex
+                                    align-items: center
+                                    justify-content: center
+                                    border-radius: 4px
+                                    border: 1px solid $gray
+
+                                    .quantity-icon
+                                        font-size: $font14
+                                        color: $light_text
+
+                                    .minus
+                                        margin-right: $m16
+
+                                    .plus
+                                        margin-left: $m16
+
+                            .price
+                                color: $secondary_text
+                                text-align: center
+                                font-family: Lato
+                                font-size: $font14
+                                font-style: normal
+                                font-weight: 400
+                                line-height: 142.857%
+
+                            .trash-icon
+                                color: $secondary_text
+                                font-size: $font18
+
+                .summary-coupon
+                    display: flex
+                    flex-direction: column
+
+                    .summary-block
+                        width: 400px
+                        height: auto
+                        display: flex
+                        flex-direction: column
+                        justify-content: center
+                        align-items: center
+                        background-color: #E9E9E9
+                        margin-top: $m64
+
+                        .summary-container
+                            width: 67.69874476987448%
+                            height: auto
+                            display: flex
+                            flex-direction: column
+                            align-items: flex-start
+                            margin-top: $m16
+
+                            .summary-heading
+                                color: $primary_gray
+                                font-family: Roboto Slab
+                                font-size: $font16
+                                font-style: normal
+                                font-weight: 700
+                                line-height: 156.25%
+                                margin-top: $m16
+
+                            .price-row, .shipping-row, .tax-row, .gift-row, .total-row
+                                width: 100%
+                                display: flex
+                                align-items: center
+                                justify-content: space-between
+                                margin-top: clamp(6px,0.62496vw,24px)
+
+                                .price-text, .shipping-text, .tax-text, .checkbox-label
+                                    color: $secondary_text
+                                    font-family: Lato
+                                    font-size: $font14
+                                    font-style: normal
+                                    font-weight: 400
+                                    line-height: 142.857%
+
+                                .total-text-bold, .bold-price
+                                    color: $primary_gray
+                                    font-family: Lato
+                                    font-size: $font14
+                                    font-style: normal
+                                    font-weight: 700
+                                    line-height: 142.857%
+
+                                .price
+                                    color: $primary_gray
+                                    text-align: right
+                                    font-family: Lato
+                                    font-size: $font14
+                                    font-style: normal
+                                    font-weight: 400
+                                    line-height: 142.857%
+
+                                .checkbox-container
+                                    display: flex
+                                    align-items: center
+
+                                    .checkbox
+                                        width: clamp(10px,1.0416vw,40px)
+                                        height: clamp(10px,1.0416vw,40px)
+
+                                    .checkbox-label
+                                        margin-left: $m8
+
+                            .total-row
+
+                            .gift-row
+                                margin-top: clamp(10px,1.0416vw,40px)
+
+                            .separator
+                                width: 100%
+                                height: 1px
+                                background-color: $light_text
+                                margin-top: clamp(6px,0.62496vw,24px)
+
+                        .checkout-btn
+                            width: clamp(114px,11.87424vw,456px)
+                            height: clamp(26px,2.70816vw,104px)
+                            color: $white
+                            text-align: right
+                            font-feature-settings: 'clig' off, 'liga' off
+                            font-family: Lato
+                            font-size: $font15
+                            font-style: normal
+                            font-weight: 500
+                            line-height: 142.857%
+                            text-transform: uppercase
+                            display: flex
+                            align-items: center
+                            justify-content: center
+                            background-color: #434343
+                            border-radius: 4px
+                            border: none
+                            margin-top: $m32
+                            margin-bottom: clamp(10px,1.0416vw,40px)
+                            margin-left: $m32
+                            margin-right: $m32
+
+                            .bag-icon
+                                color: $white
+                                font-size: $font20
+                                margin-right: $m8
+
+                    .coupon-container-tab
+                        width: 90%
+                        height: auto
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        margin: auto
+                        margin-top: $m32
+
+                        .coupon-input
+                            width: 50%
+                            height: $m64
+                            color: $secondary_text
+                            display: flex
+                            font-feature-settings: 'clig' off, 'liga' off
+                            font-family: Lato
+                            font-size: $font12
+                            font-style: normal
+                            font-weight: 500
+                            line-height: 166.667%
+                            text-align: center
+                            text-transform: capitalize
+                            border-bottom-left-radius: 4px
+                            border-top-left-radius: 4px
+                            border: 1px solid $gray_dark
+
+                        .apply-btn
+                            width: 50%
+                            height: $m64
+                            color: $white
+                            display: flex
+                            align-items: center
+                            justify-content: center
+                            border: none
+                            border: 30px solid #262626
+                            background-color: $primary_gray
+
+    .summary
+        display: none
+
+    .coupon-container
+        display: none
