@@ -213,6 +213,9 @@
     .tablet-content
         display: none
 
+    .pc-content
+        display: none
+
 @media (min-width: 768px) and (max-width: 1024px)
 
     .tablet-content
@@ -224,6 +227,7 @@
         .back-heading
             width: 100%
             display: flex
+            cursor: pointer
             align-items: center
             justify-content: flex-end
             margin-top: $m32
@@ -530,6 +534,343 @@
                             .sign-up-link
                                 color: $selected
                                 font-size: $font14tab
+                                font-style: normal
+                                font-weight: 900
+                                line-height: 142.857%
+                                text-decoration: none
+                                margin-left: clamp(2px, 0.5208333333333334vw,8px)
+
+            .separator-line
+                width: 1px
+                height: 1px
+                background-color: $gray_dark
+                rotate: 90deg
+
+    .pc-content
+        display: none
+
+@media (min-width: 1024px)
+
+    .main-content, .tablet-content
+        display: none
+
+    .pc-content
+        width: 100%
+        display: flex !important
+        flex-direction: column
+        justify-content: space-between
+
+        .back-heading
+            width: 100%
+            display: flex
+            cursor: pointer
+            align-items: center
+            justify-content: flex-end
+            margin-top: $m32
+
+            .text
+                color: $secondary_text
+                font-family: Lato
+                font-size: $font18
+                font-style: normal
+                font-weight: 600
+                line-height: 213.242%
+
+            .chevron
+                margin-right: $m8
+
+        .forms
+            width: 80%
+            height: auto
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+            margin: auto
+            margin-top: $m32
+
+            .sign-in-content, .sign-up-content
+                width: auto
+                height: auto
+                display: flex
+                flex-direction: column
+
+                .sign-in-heading
+                    color: #000
+                    font-family: Lato
+                    font-size: $font20
+                    font-style: normal
+                    font-weight: 600
+                    line-height: normal
+
+                .form
+                    width: auto
+                    display: flex
+                    flex-direction: column
+                    align-items: flex-start
+                    margin-top: $m16
+
+                    .email-input-container-l, .password-input-container
+                        width: 100%
+                        height: auto
+                        display: flex
+                        flex-direction: column
+
+                        .label
+                            color: $primary_gray
+                            font-family: Lato
+                            font-size: $font20
+                            font-style: normal
+                            font-weight: 400
+                            line-height: normal
+                            margin-top: $m16
+
+                            .required
+                                color: $spotlight_red
+
+                        .email-input, .password-input
+                            width: clamp(300px,31.248vw,1200px)
+                            height: clamp(20px,2.0832vw,80px)
+                            padding-left: clamp(5px,0.5208vw,20px)
+                            border: 1px solid $gray
+                            border-radius: 4px
+                            margin-top: $m16tab
+                            &:focus
+                                outline: none
+                                border: 1px solid $primary_gray
+
+                        .email-input-error, .password-input-error
+                            width: clamp(300px,31.248vw,1200px)
+                            height: clamp(20px,2.0832vw,80px)
+                            padding-left: clamp(5px,0.5208vw,20px)
+                            border: 1px solid #FF2E00
+                            border-radius: 4px
+                            margin-top: $m16
+                            &:focus
+                                outline: none
+                                border: 1px solid $primary_gray
+
+                        .error
+                            color: #FF2E00
+                            font-family: Lato
+                            font-size: $font14
+                            font-style: normal
+                            font-weight: 400
+                            line-height: 83.333%
+                            margin-top: $m16
+
+                        .password-show-container
+                            position: relative
+                            width: 100%
+                            height: auto !important
+                            flex-direction: row
+                            align-items: center
+
+                            .eye-btn
+                                position: absolute
+                                cursor: pointer
+                                top: clamp(22.5px,2.3436vw,90px)
+                                right: $m16
+                                background-color: transparent
+                                border: none
+
+                                .eye-icon
+                                    color: $gray
+                                    font-size: clamp(8.5px,0.88536vw,34px)
+
+                            .eye-btn-my
+                                position: absolute
+                                cursor: pointer
+                                top: clamp(22.5px,2.3436vw,90px)
+                                right: $m16
+                                background-color: transparent
+                                border: none
+
+                                .eye-icon
+                                    color: $gray
+                                    font-size: clamp(8.5px,0.88536vw,34px)
+
+                    .email-input-container-l-reg
+                        width: 100%
+                        height: auto
+                        display: flex
+                        flex-direction: column
+                        margin-top: $m16
+
+                        .label
+                            color: $primary_gray
+                            font-family: Lato
+                            font-size: $font20
+                            font-style: normal
+                            font-weight: 400
+                            line-height: normal
+                            margin-top: $m16
+
+                            .required
+                                color: $spotlight_red
+
+                        .email-input
+                            width: clamp(300px,31.248vw,1200px)
+                            height: clamp(20px,2.0832vw,80px)
+                            padding-left: clamp(5px,0.5208vw,20px)
+                            border: 1px solid $gray
+                            border-radius: 4px
+                            margin-top: $m16tab
+                            &:focus
+                                outline: none
+                                border: 1px solid $primary_gray
+
+                        .email-input-error, .password-input-error
+                            width: clamp(300px,31.248vw,1200px)
+                            height: clamp(20px,2.0832vw,80px)
+                            padding-left: clamp(5px,0.5208vw,20px)
+                            border: 1px solid #FF2E00
+                            border-radius: 4px
+                            margin-top: $m16tab
+                            &:focus
+                                outline: none
+                                border: 1px solid $primary_gray
+
+                    .password-input-container
+                        margin-top: $m16
+
+                    .lower-container-l
+                        width: 100%
+                        display: flex
+                        justify-content: space-between
+                        align-items: center
+                        margin-top: $m16
+
+                        .checkbox-container
+                            display: flex
+                            align-items: center
+
+                            .checkbox
+                                width: clamp(10px,1.0416vw,40px)
+                                height: clamp(10px,1.0416vw,40px)
+
+                            .checkbox-label
+                                color: $primary_gray
+                                font-family: Lato
+                                font-size: $font14
+                                font-style: normal
+                                font-weight: 400
+                                line-height: normal
+                                margin-left: $m8
+
+                        .password-link
+                            color: $button_blue
+                            font-family: Lato
+                            font-size: $font14
+                            font-style: normal
+                            font-weight: 400
+                            line-height: normal
+                            text-decoration-line: underline
+
+                    .form-button
+                        width: 100%
+                        height: clamp(28px,2.91648vw,112px)
+                        color: $white
+                        text-align: center
+                        font-feature-settings: 'clig' off, 'liga' off
+                        font-family: Lato
+                        font-size: $font16
+                        font-style: normal
+                        font-weight: 500
+                        line-height: 142.857%
+                        text-transform: uppercase
+                        background-color: $gray
+                        border: none
+                        border-radius: 4px
+                        margin-top: $m32
+                        transition: 0.3s all
+                        &:hover
+                            background-color: $gray_dark
+
+                    .form-button-active
+                        width: 100%
+                        height: clamp(28px,2.91648vw,112px)
+                        color: $white
+                        text-align: center
+                        font-feature-settings: 'clig' off, 'liga' off
+                        font-family: Lato
+                        font-size: $font16
+                        font-style: normal
+                        font-weight: 500
+                        line-height: 142.857%
+                        text-transform: uppercase
+                        background-color: $button_blue
+                        border: none
+                        border-radius: 4px
+                        margin-top: $m32
+                        transition: 0.3s all
+                        &:hover
+                            background-color: #265BCF
+
+                    .divider-container
+                        width: 100%
+                        height: auto
+                        display: flex
+                        justify-content: space-between
+                        align-items: center
+                        margin-top: $m16
+
+                        .divider
+                            width: 42%
+                            height: 1px
+                            background-color: $light_text
+
+                        .text
+                            color: $light_text
+                            text-align: center
+                            font-feature-settings: 'clig' off, 'liga' off
+                            font-family: Lato
+                            font-size: $font14
+                            font-style: normal
+                            font-weight: 500
+
+                    .google-button
+                        width: 100%
+                        height: clamp(28px,2.91648vw,112px)
+                        color: $white
+                        text-align: center
+                        font-feature-settings: 'clig' off, 'liga' off
+                        font-family: Lato
+                        font-size: $font16
+                        font-style: normal
+                        font-weight: 500
+                        line-height: 142.857%
+                        background-color: $gray_dark
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        border: none
+                        border-radius: 4px
+                        margin-top: $m16
+                        transition: 0.3s all
+                        &:hover
+                            background-color: $button_blue
+
+                        .google-icon
+                            margin-right: $m8
+
+                    .text-container
+                        width: 100%
+                        height: auto
+                        text-align: center
+                        margin-top: $m32
+
+                        .link-text
+                            color: $primary_gray
+                            font-feature-settings: 'clig' off, 'liga' off
+                            font-family: Lato
+                            font-size: $font14
+                            font-style: normal
+                            font-weight: 500
+                            line-height: 142.857%
+
+                            .sign-up-link
+                                color: $selected
+                                font-size: $font14
                                 font-style: normal
                                 font-weight: 900
                                 line-height: 142.857%

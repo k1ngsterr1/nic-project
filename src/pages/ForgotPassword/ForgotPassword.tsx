@@ -248,8 +248,94 @@ const ForgotPassword = () => {
             </div>
           </form>
         </main>
-      </div>
+        <main className="pc-content">
+          <div className="back-heading">
+            <span className="text" onClick={navigateBack}>
+              <FontAwesomeIcon
+                className="chevron"
+                icon={faChevronLeft}
+              ></FontAwesomeIcon>
+              Back to login
+            </span>
+          </div>
+          <div className="heading-container-second">
+            <h3 className="password-heading">Forgot password</h3>
+            <span className="password-description">
+              Enter your email adress to reacquisition to your password.
+            </span>
+          </div>
+          <form onSubmit={formik.handleSubmit} className="form">
+            <div className="email-input-container-l">
+              <label htmlFor="email" className="label">
+                Email <span className="required">*</span>
+              </label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="Email Adress"
+                className={
+                  formik.errors.email ? "email-input-error" : "email-input"
+                }
+                onChange={emailChange}
+                onBlur={formik.handleBlur}
+                value={formik.values.email}
+              />
+              {formik.errors.email && formik.touched.email ? (
+                <div className="error">{formik.errors.email}</div>
+              ) : null}
+            </div>
+            <div className="password-input-container">
+              <label htmlFor="password" className="label">
+                New Password <span className="required">*</span>
+              </label>
+              <div className="password-show-container">
+                <input
+                  id="password"
+                  name="password"
+                  autoComplete="false"
+                  type={isPasswordShown ? "text" : "password"}
+                  placeholder="Password"
+                  className={
+                    formik.errors.password
+                      ? "password-input-error"
+                      : "password-input"
+                  }
+                  onChange={passwordChange}
+                  onBlur={formik.handleBlur}
+                  value={formik.values.password}
+                />
+                <span className="eye-btn" onClick={showPassword}>
+                  <FontAwesomeIcon
+                    className="eye-icon"
+                    icon={isPasswordShown ? faEyeSlash : faEye}
+                  ></FontAwesomeIcon>
+                </span>
+              </div>
+              {formik.errors.password && formik.touched.password ? (
+                <div className="error">{formik.errors.password}</div>
+              ) : null}
+            </div>
+            <button
+              className={
+                email && password !== "" ? "form-button-active" : "form-button"
+              }
+              type="submit"
+            >
+              Reset Password
+            </button>
 
+            <div className="text-container">
+              <span className="link-text">
+                Don't have an account?{" "}
+                <Link className="sign-up-link" to="/login">
+                  <strong>Sign up</strong>
+                </Link>
+              </span>
+            </div>
+          </form>
+        </main>
+      </div>
       <PopupWindow
         vector={email_icon}
         paragraph="We have just sent you your new confirmation email to"

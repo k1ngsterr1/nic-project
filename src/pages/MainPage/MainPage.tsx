@@ -21,6 +21,11 @@ const spotlightTablet02 = require("../../assets/tablet_02.jpg");
 const spotlightTablet03 = require("../../assets/tablet_03.jpg");
 const spotlightTablet04 = require("../../assets/tablet_04.jpg");
 
+const spotlightPc01 = require("../../assets/spotlight_pc_01.jpg");
+const spotlightPc02 = require("../../assets/spotlight_pc_02.jpg");
+const spotlightPc03 = require("../../assets/spotlight_pc_03.jpg");
+const spotlightPc04 = require("../../assets/spotlight_pc_04.jpg");
+
 const iphone = require("../../assets/Iphone.png");
 
 const MainPage = () => {
@@ -81,7 +86,7 @@ const MainPage = () => {
         </div>
         <FontAwesomeIcon className="chevron right" icon={faChevronRight} />
       </div>
-      <div className="spotlight-row ">
+      <div className="spotlight-row">
         <ProductSpotlight
           image={spotlightTablet03}
           heading="The Pinky Barbie Edition"
@@ -91,6 +96,52 @@ const MainPage = () => {
         ></ProductSpotlight>
         <ProductSpotlight
           image={spotlightTablet04}
+          heading="Best Sellers Everyone Love"
+          additionalText="poolside glam include"
+          button="Exlopre all category"
+          bgStyles="#0186C4"
+        ></ProductSpotlight>
+      </div>
+      <div className="spotlight-row-pc">
+        <ProductSpotlight
+          image={spotlightPc01}
+          heading="Never-Ending Summer"
+          additionalText="Throwback Shirts & all-day dressed"
+          button="Exlopre all category"
+          bgStyles="#BF2E3B"
+        ></ProductSpotlight>
+        <ProductSpotlight
+          image={spotlightPc02}
+          heading="The most famous sport brands"
+          additionalText="Get in gym essentials"
+          button="Exlopre all category"
+          bgStyles="#1D5159"
+        ></ProductSpotlight>
+      </div>
+      <div className="advertisment-row-pc">
+        <FontAwesomeIcon className="chevron left" icon={faChevronLeft} />
+        <div className="centered-container">
+          <div className="text-content">
+            <span className="ad-heading">MagSafe</span>
+            <span className="text">
+              Snap on a magnetic case, wallet, or both. And get faster wireless
+              charging.
+            </span>
+          </div>
+          <img src={iphone} className="iphone-img" alt="iphone" />
+        </div>
+        <FontAwesomeIcon className="chevron right" icon={faChevronRight} />
+      </div>
+      <div className="spotlight-row-pc">
+        <ProductSpotlight
+          image={spotlightPc03}
+          heading="The Pinky Barbie Edition"
+          additionalText="Lets play dress up"
+          button="Exlopre all category"
+          bgStyles="#D11FB5"
+        ></ProductSpotlight>
+        <ProductSpotlight
+          image={spotlightPc04}
           heading="Best Sellers Everyone Love"
           additionalText="poolside glam include"
           button="Exlopre all category"

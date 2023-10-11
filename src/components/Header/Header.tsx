@@ -27,9 +27,9 @@ interface OptionType {
   label: string;
 }
 
-interface HeaderProps {
-  c: OptionType[];
-}
+// interface HeaderProps {
+//   c: OptionType[];
+// }
 
 const Header = () => {
   const categories = [

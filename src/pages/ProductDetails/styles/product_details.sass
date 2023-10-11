@@ -1377,3 +1377,675 @@
                                     margin-left: $m8tab
                                     margin-bottom: $m8tab
                                     margin-right: $m32tab
+
+@media (min-width: 1024px)
+
+    .product-gallery
+        display: none
+
+    .product-container
+        display: none
+
+    .product-details-container
+        display: none
+
+    .adaptive-gallery
+        width: 90%
+        display: flex
+        align-items: center
+        flex-direction: column
+        margin: auto
+        margin-top: $m32
+
+        .adaptive-gallery-container
+            width: 100%
+            display: flex
+            align-items: center
+            margin: auto
+
+            .products-photo
+                display: flex
+                flex-direction: column
+
+                .bread-dots
+                    display: flex
+                    align-items: center
+                    margin-bottom: $m32
+
+                    .link
+                        color: $secondary_text
+                        text-align: right
+                        font-feature-settings: 'clig' off, 'liga' off
+                        font-family: Lato
+                        font-size: $font16
+                        font-style: normal
+                        font-weight: 700
+                        line-height: 142.857%
+                        text-decoration: none
+
+                    .chevron
+                        font-size: $font12
+                        margin-right: $m8
+                        margin-left: $m8
+
+                .photos
+                    display: flex
+                    justify-content: space-between
+
+                    .thumbs
+                        display: flex
+                        flex-direction: column
+
+                        .low
+                            margin-top: $m16
+
+                    .main-photo
+                        margin-left: $m16
+
+            .products-info
+                width: 90%
+                display: flex
+                flex-direction: column
+                margin-left: $m32
+
+                .title-and-favorite
+                    width: 100%
+                    display: flex
+                    align-items: center
+                    justify-content: space-between
+
+                    .title-name
+                        color: $primary_gray
+                        font-feature-settings: 'clig' off, 'liga' off
+                        font-family: Lato
+                        font-size: clamp(11px,1.1457600000000001vw,44px)
+                        font-style: normal
+                        font-weight: 700
+                        line-height: normal
+
+                    .price
+                        color: $primary_gray
+                        font-family: Lato
+                        font-size: $font20
+                        font-style: normal
+                        font-weight: 700
+                        line-height: 165.526%
+
+                    .favorite-btn
+                        width: clamp(20px,2.0832vw,80px)
+                        height: clamp(20px,2.0832vw,80px)
+                        color: $light_text
+                        font-size: $font18
+                        border: 1px solid $light_text
+                        border-radius: 50px
+                        background-color: transparent
+
+                .sizes-container
+                    display: flex
+                    flex-direction: row
+                    margin-top: $m32
+
+                    .size-text
+                        font-size: $font20 !important
+
+                    .sizes
+                        width: 75%
+                        display: flex
+                        flex-direction: column
+                        justify-content: flex-start
+
+                        .sizes-upper-row
+                            width: 100%
+                            display: flex
+                            justify-content: space-between
+                            align-items: center
+                            margin-left: $m16
+
+                            .size-button-active
+                                width: clamp(25px,2.604vw,100px)
+                                height: clamp(17px,1.77072vw,68px)
+                                flex-direction: flex
+                                justify-content: center
+                                align-items: center
+                                background-color: transparent
+                                border-radius: 4px
+                                border: 1px solid $gray_dark
+
+                            .size-button-inactive
+                                width: clamp(25px,2.604vw,100px)
+                                height: clamp(17px,1.77072vw,68px)
+                                flex-direction: flex
+                                justify-content: center
+                                align-items: center
+                                background-color: transparent
+                                border-radius: 4px
+                                border: 1px solid $gray
+
+                            .size-button-choosen
+                                width: clamp(25px,2.604vw,100px)
+                                height: clamp(17px,1.77072vw,68px)
+                                flex-direction: flex
+                                justify-content: center
+                                align-items: center
+                                background-color: transparent
+                                background-color: $selected
+                                border: none
+                                border-radius: 4px
+
+                        .last
+                            margin-top: $m16
+
+                        .guideline
+                            color: $selected
+                            font-family: Lato
+                            font-size: $font16 !important
+                            font-style: normal
+                            font-weight: 700
+                            line-height: 275.877%
+                            margin-left: $m16
+                            margin-top: $m8
+
+                .color-container
+                    display: flex
+                    align-items: center
+                    margin-top: $m32
+
+                    .color-text
+                        font-size: $font20!important
+
+                    .colors
+                        width: auto
+                        display: flex
+                        justify-content: space-between
+                        align-items: center
+                        margin-left: $m16
+
+                        .color
+                            width: $font16
+                            height: $font16
+                            border-radius: 50px
+
+                        .brown
+                            background-color: #750430
+                        .green
+                            background-color: #00A95D
+                            margin-left: $m8
+                        .blue
+                            background-color: #A2D2FC
+                            margin-left: $m8
+
+                        .orange
+                            background-color: #FF7A00
+                            margin-left: $m8
+
+                .shipping-container
+                    width: 100%
+                    display: flex
+                    align-items: center
+                    margin-top: $m32
+
+                    .shipping-text
+                        font-size: $font20 !important
+
+                    .shipping-titles
+                        display: flex
+                        flex-direction: column
+                        margin-left: $m16
+
+                        .territory
+                            display: flex
+                            align-items: center
+
+                            .chevron-down
+                                font-size: $font12
+                                margin-left: $m8
+
+                        .delivery
+                            color: $light_text
+                            font-family: Lato
+                            font-size: $font16
+                            font-style: normal
+                            font-weight: 700
+                            line-height: 166.667%
+
+                .quantity-container
+                    width: 100%
+                    display: flex
+                    align-items: center
+                    margin-top: $m32
+
+                    .quantity-text
+                        font-size: $font20!important
+
+                    .quantity-counter
+                        width: auto
+                        height: clamp(20px,2.0832vw,80px)
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        border-radius: 4px
+                        border: 1px solid $gray
+                        margin-left: $m16
+
+                        .quantity-icon
+                            font-size: $font14
+                            color: $light_text
+
+                        .minus
+                            margin-right: $m16
+                            margin-left: $m16
+
+                        .plus
+                            margin-left: $m16
+                            margin-right: $m16
+
+                    .available
+                        color: $secondary_text
+                        font-family: Lato
+                        font-size: $font14
+                        font-style: normal
+                        font-weight: 700
+                        line-height: 142.857%
+                        margin-left: $m8
+
+                .price-container
+                    width: 90%
+                    height: auto
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    background-color: #E9E9E9
+                    border-radius: 4px
+                    margin-top: $m32
+
+                    .price-container-content
+                        width: 90%
+                        display: flex
+                        flex-direction: column
+                        margin-top: $m16
+                        margin-bottom: $m16
+
+                        .price
+                            color: $primary_gray
+                            font-family: Lato
+                            font-size: $font18
+                            font-style: normal
+                            font-weight: 700
+                            line-height: 166.667%
+
+                        .separator
+                            width: 100%
+                            height: 1px
+                            margin-top: $m8
+                            margin-bottom: $m8
+                            background-color: $primary_gray
+
+                        .price-tab-lower
+                            width: 100%
+
+                            .plus-icon-c
+                                color: $light_text
+                                font-size: $font20
+
+                            .text
+                                color: $secondary_text
+                                font-family: Lato
+                                font-size: $font14
+                                font-style: normal
+                                font-weight: 700
+                                line-height: 166.667%
+                                margin-left: $m8
+                            .small
+                                font-size: $font12
+
+                .buttons
+                    width: 90% !important
+                    display: flex !important
+                    justify-content: space-between
+                    align-items: center
+                    margin-top: $m32
+
+                    .button
+                        width: clamp(75px,7.812vw,300px)
+                        height: clamp(25.5px,2.65608vw,102px)
+                        border: none
+                        border-radius: 4px
+
+                    .shop
+                        color: $white
+                        text-align: center
+                        font-feature-settings: 'clig' off, 'liga' off
+                        font-family: Lato
+                        font-size: $font16
+                        font-style: normal
+                        font-weight: 500
+                        line-height: 142.857%
+                        text-transform: uppercase
+                        background-color: $button_blue
+                        margin-right: $m16
+
+                    .basket
+                        color: $primary_gray
+                        text-align: center
+                        font-feature-settings: 'clig' off, 'liga' off
+                        font-family: Lato
+                        font-size: $font16
+                        font-style: normal
+                        font-weight: 500
+                        line-height: 142.857%
+                        text-transform: uppercase
+                        border-radius: 4px
+                        border: 1px solid $primary_gray
+                        background-color: transparent
+
+        .product-details-container-tab
+            width: 90%
+            height: auto
+            display: flex
+            flex-direction: column
+            margin: auto
+            margin-top: $m64 !important
+
+            .tabs-container
+                width: 100%
+                height: auto
+                display: flex
+                flex-direction: row
+                align-items: center
+                justify-content: space-between
+
+                .product-tab
+                    color: $primary_gray
+                    font-family: Lato
+                    font-size: $font20
+                    font-style: normal
+                    font-weight: 700
+                    line-height: 142.857%
+                    letter-spacing: 0.5px
+                    text-transform: uppercase
+                    background-color: transparent
+                    border: none
+                .inactive
+                    color: $light_text
+
+            .separator
+                width: 100%
+                height: 1px
+                background-color: $light_text
+                margin-top: $m16
+
+            .details-content
+                width: 100%
+                height: auto
+                display: flex
+                align-items: flex-start
+                justify-content: space-between
+                margin-top: $m32
+
+                .details-column
+                    width: auto
+                    height: auto
+                    display: flex
+                    flex-direction: column
+                    justify-content: flex-start
+                    align-items: flex-start
+
+                    .column-section
+                        display: flex
+                        flex-direction: column
+
+                        .section-text
+                            color: $primary_gray
+                            font-family: Lato
+                            font-size: $font24 !important
+                            font-style: normal
+                            font-weight: 700
+                            line-height: 156.25%
+
+                        .paragraph
+                            width: 320px
+                            color: $secondary_text
+                            font-family: Lato
+                            font-size: $font18
+                            font-style: normal
+                            font-weight: 400
+                            line-height: 142.857%
+                            margin-top: $m16
+
+                        .description-list
+                            display: flex
+                            flex-direction: column
+
+                            .list-elem
+                                color: $secondary_text
+                                font-feature-settings: 'clig' off, 'liga' off
+                                font-family: Lato
+                                font-size: $font18
+                                font-style: normal
+                                font-weight: 400
+                                line-height: 142.857%
+
+                            .top
+                                margin-top: $m16
+
+                            .el
+                                margin-top: $m8
+
+                        .care-instruction-list
+                            width: auto
+                            height: auto
+                            display: flex
+                            flex-direction: column
+                            align-items: flex-start
+
+                    .two
+                        display: flex
+                        flex-direction: column
+                        margin-top: $m32
+
+                    .two-s
+                        margin-top: $m32
+                        // margin-left: $m32tab
+
+                .second-column
+                    margin-left: $m32
+
+            .lower-separator-container
+                width: 100%
+                height: auto
+                display: flex
+                align-items: center
+                justify-content: space-between
+                margin-top: $m64
+
+                .separator-l
+                    width: 35%
+                    height: 1px
+                    background-color: $gray
+
+                .show-less
+                    width: auto
+                    display: flex
+                    align-items: center
+                    color: $primary_gray
+                    text-align: right
+                    font-feature-settings: 'clig' off, 'liga' off
+                    font-family: Lato
+                    font-size: $font20
+                    font-style: normal
+                    font-weight: 500
+                    line-height: 142.857%
+                    text-transform: uppercase
+                    margin-left: $m16
+                    margin-right: $m16
+
+                    .arrow-icon
+                        margin-right: $m8
+
+            .also-like
+                width: 100%
+                height: auto
+                display: flex
+                flex-direction: column
+                align-items: flex-start
+                margin-top: $m32
+
+                .heading-buttons-container
+                    width: 100%
+                    height: auto
+                    display: flex
+                    align-items: center
+                    justify-content: space-between
+
+                    .section-heading-like
+                        color: $primary_gray
+                        font-family: Lato
+                        font-size: $font20
+                        font-style: normal
+                        font-weight: 700
+                        line-height: 142.857%
+                        letter-spacing: 0.5px
+                        text-transform: uppercase
+
+                    .arrow-buttons
+                        width: auto
+                        height: auto
+                        display: flex
+                        align-items: center
+                        border: 1px solid $light_text
+                        border-radius: 4px
+
+                        .left-btn, .right-btn
+                            border: none
+                            background-color: transparent
+
+                        .left-btn
+                            width: clamp(10px,4.6728vw,40px)
+                            margin-top: $m8
+                            margin-left: $m16
+                            margin-right: $m8
+                            margin-bottom: $m8
+                            color: $light_text
+
+                        .right-btn
+                            width: clamp(10px,4.6728vw,40px)
+                            margin-top: $m8
+                            margin-right: $m16
+                            margin-left: $m8
+                            margin-bottom: $m8
+
+                        .separator-btn
+                            width: 1px
+                            height: $m16
+                            background: $light_text
+
+                .similar-products
+                    width: 100%
+                    height: auto
+                    display: flex
+                    flex-direction: row !important
+                    align-items: flex-start !important
+                    justify-content: space-between
+                    margin-top: $m16
+
+                    .specific-card
+                        width: 100%
+                        height: auto
+                        display: flex
+                        align-items: flex-start
+                        margin-top: $m16
+
+                        .specific-card-img
+                            width: clamp(45px,4.6872vw,180px)
+                            height: clamp(67.5px,7.0308vw,270px)
+
+                        .card-container
+                            width: auto
+                            height: auto
+                            display: flex
+                            flex-direction: column
+                            margin-left: $m32
+
+                            .specific-card-heading
+                                color: $primary_gray
+                                font-family: Lato
+                                font-size: $font18
+                                font-style: normal
+                                font-weight: 400
+                                line-height: 142.857%
+                                margin-top: $m8
+
+                            .prices-container
+                                display: flex
+                                align-items: center
+                                margin-top: clamp(6px,1.5625vw,24px)
+
+                                .price
+                                    color: $discount
+                                    font-family: Lato
+                                    font-size: $font18
+                                    font-style: normal
+                                    font-weight: 700
+                                    line-height: 142.857%
+
+                                .original-price
+                                    color: $secondary_text
+                                    font-family: Lato
+                                    font-size: $font14
+                                    font-style: normal
+                                    font-weight: 400
+                                    line-height: 166.667%
+                                    text-decoration: line-through
+                                    text-decoration-line: strikethrough
+                                    margin-left: $m8
+
+                                .discount
+                                    width: auto
+                                    height: auto
+                                    display: flex
+                                    align-items: center
+                                    justify-content: center
+                                    background-color: $discount
+                                    border-radius: 2px
+                                    margin-left: clamp(6px,1.5625vw,24px)
+
+                                    .discount-percent
+                                        color: $white
+                                        font-family: Inter
+                                        font-size: $font12
+                                        font-style: normal
+                                        font-weight: 600
+                                        line-height: normal
+                                        margin-top: clamp(2px,0.5208333333333334vw,8px)
+                                        margin-bottom: clamp(2px,0.5208333333333334vw,8px)
+                                        margin-left: clamp(2px,0.5208333333333334vw,8px)
+                                        margin-right: clamp(2px,0.5208333333333334vw,8px)
+
+                            .specific-card-btn
+                                width: auto
+                                height: auto
+                                display: flex
+                                justify-content: center
+                                align-items: center
+                                color: $secondary_text
+                                font-family: Lato
+                                font-size: $font14
+                                font-style: normal
+                                font-weight: 400
+                                line-height: 142.857%
+                                background-color: transparent
+                                border: 1px solid $secondary_text
+                                border-radius: 4px
+                                margin-top: clamp(6px, 1.5625vw,24px)
+                                margin-bottom: clamp(6px, 1.5625vw,24px)
+
+                                .price-btn
+                                    margin-top: $m8
+                                    margin-bottom: $m8
+                                    margin-left: $m32
+
+                                .btn-text
+                                    margin-top: $m8
+                                    margin-left: $m8
+                                    margin-bottom: $m8
+                                    margin-right: $m32

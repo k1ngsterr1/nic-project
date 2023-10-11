@@ -47,4 +47,107 @@
   font-weight: 700;
   margin-top: clamp(8px, 3.73824vw, 32px);
   margin-bottom: clamp(16px, 7.47648vw, 64px);
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .popup-window, .popup-window-content, .popup-content {
+    width: clamp(212.5px, 55.3385416667vw, 850px) !important;
+    height: auto;
+    background-color: white;
+    border-radius: 8px;
+  }
+  .popup-window .window-container, .popup-window-content .window-container, .popup-content .window-container {
+    width: 79.2941176471%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+  }
+  .popup-window .window-container .vector, .popup-window-content .window-container .vector, .popup-content .window-container .vector {
+    width: clamp(45px, 11.71875vw, 180px);
+    height: clamp(45px, 11.71875vw, 180px);
+    margin-top: clamp(16px, 1.66656vw, 64px);
+  }
+  .popup-window .window-container .window-heading, .popup-window-content .window-container .window-heading, .popup-content .window-container .window-heading {
+    color: #262626;
+    text-align: center;
+    font-family: Lato;
+    font-size: clamp(14px, 3.007518797vw, 56px);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 125%;
+    margin-top: clamp(8px, 1.7185821697vw, 32px);
+  }
+  .popup-window .window-container .window-paragraph, .popup-window-content .window-container .window-paragraph, .popup-content .window-container .window-paragraph {
+    color: #262626;
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Lato;
+    font-size: clamp(10px, 2.1482277121vw, 40px);
+    font-style: normal;
+    font-weight: 400;
+    margin-top: clamp(8px, 1.7185821697vw, 32px);
+  }
+  .popup-window .window-container .email-text, .popup-window-content .window-container .email-text, .popup-content .window-container .email-text {
+    color: black;
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Lato;
+    font-size: clamp(10px, 2.1482277121vw, 40px);
+    font-style: normal;
+    font-weight: 700;
+    margin-top: clamp(8px, 1.7185821697vw, 32px);
+    margin-bottom: clamp(16px, 3.4371643394vw, 64px);
+  }
+}
+@media (min-width: 1024px) {
+  .popup-window, .popup-window-content, .popup-content {
+    width: clamp(212.5px, 22.134vw, 850px) !important;
+    height: auto;
+    background-color: white;
+    border-radius: 8px;
+  }
+  .popup-window .window-container, .popup-window-content .window-container, .popup-content .window-container {
+    width: 79.2941176471%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+  }
+  .popup-window .window-container .vector, .popup-window-content .window-container .vector, .popup-content .window-container .vector {
+    width: clamp(45px, 4.6872vw, 180px);
+    height: clamp(45px, 4.6872vw, 180px);
+    margin-top: clamp(16px, 1.66656vw, 64px);
+  }
+  .popup-window .window-container .window-heading, .popup-window-content .window-container .window-heading, .popup-content .window-container .window-heading {
+    color: #262626;
+    text-align: center;
+    font-family: Lato;
+    font-size: clamp(14px, 1.45824vw, 56px);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 125%;
+    margin-top: clamp(8px, 0.83328vw, 32px);
+  }
+  .popup-window .window-container .window-paragraph, .popup-window-content .window-container .window-paragraph, .popup-content .window-container .window-paragraph {
+    color: #262626;
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Lato;
+    font-size: clamp(10px, 1.0416vw, 40px);
+    font-style: normal;
+    font-weight: 400;
+    margin-top: clamp(8px, 0.83328vw, 32px);
+  }
+  .popup-window .window-container .email-text, .popup-window-content .window-container .email-text, .popup-content .window-container .email-text {
+    color: black;
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Lato;
+    font-size: clamp(10px, 1.0416vw, 40px);
+    font-style: normal;
+    font-weight: 700;
+    margin-top: clamp(8px, 0.83328vw, 32px);
+    margin-bottom: clamp(16px, 1.66656vw, 64px);
+  }
 }/*# sourceMappingURL=popup.css.map */

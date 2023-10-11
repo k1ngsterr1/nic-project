@@ -48,3 +48,105 @@
             font-weight: 700
             margin-top: $m16mob
             margin-bottom: $m32mob
+
+@media (min-width: 768px) and (max-width: 1024px)
+
+    .popup-window, .popup-window-content, .popup-content
+        width: clamp(212.5px,55.338541666666664vw,850px) !important
+        height: auto
+        background-color: $white
+        border-radius: 8px
+
+        .window-container
+            width: 79.29411764705883%
+            height: auto
+            display: flex
+            flex-direction: column
+            align-items: center
+            text-align: center
+            margin: auto
+
+            .vector
+                width: clamp(45px, 11.71875vw,180px)
+                height: clamp(45px, 11.71875vw,180px)
+                margin-top: $m32
+
+            .window-heading
+                color: $primary_gray
+                text-align: center
+                font-family: Lato
+                font-size: $font28tab
+                font-style: normal
+                font-weight: 700
+                line-height: 125%
+                margin-top: $m16tab
+
+            .window-paragraph
+                color: $primary_gray
+                font-feature-settings: 'clig' off, 'liga' off
+                font-family: Lato
+                font-size: $font20tab
+                font-style: normal
+                font-weight: 400
+                margin-top: $m16tab
+
+            .email-text
+                color: $black
+                font-feature-settings: 'clig' off, 'liga' off
+                font-family: Lato
+                font-size: $font20tab
+                font-style: normal
+                font-weight: 700
+                margin-top: $m16tab
+                margin-bottom: $m32tab
+
+@media (min-width: 1024px)
+
+    .popup-window, .popup-window-content, .popup-content
+        width: clamp(212.5px,22.134vw,850px) !important
+        height: auto
+        background-color: $white
+        border-radius: 8px
+
+        .window-container
+            width: 79.29411764705883%
+            height: auto
+            display: flex
+            flex-direction: column
+            align-items: center
+            text-align: center
+            margin: auto
+
+            .vector
+                width: clamp(45px,4.6872vw,180px)
+                height: clamp(45px,4.6872vw,180px)
+                margin-top: $m32
+
+            .window-heading
+                color: $primary_gray
+                text-align: center
+                font-family: Lato
+                font-size: $font28
+                font-style: normal
+                font-weight: 700
+                line-height: 125%
+                margin-top: $m16
+
+            .window-paragraph
+                color: $primary_gray
+                font-feature-settings: 'clig' off, 'liga' off
+                font-family: Lato
+                font-size: $font20
+                font-style: normal
+                font-weight: 400
+                margin-top: $m16
+
+            .email-text
+                color: $black
+                font-feature-settings: 'clig' off, 'liga' off
+                font-family: Lato
+                font-size: $font20
+                font-style: normal
+                font-weight: 700
+                margin-top: $m16
+                margin-bottom: $m32

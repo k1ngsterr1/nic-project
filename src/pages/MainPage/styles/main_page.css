@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
-.spotlight-row {
+.spotlight-row, .spotlight-row-pc {
   display: none;
 }
 
@@ -120,12 +120,68 @@
 }
 @media (min-width: 1024px) {
   .spotlight-row {
+    display: none;
+  }
+  .spotlight-row-pc {
     width: 90%;
     display: flex;
     flex-direction: row !important;
     align-items: center;
     justify-content: space-between;
     margin: auto;
-    margin-top: clamp(32px, 6.8743286788vw, 128px) !important;
+    margin-top: clamp(32px, 3.33312vw, 128px) !important;
+    margin-bottom: clamp(32px, 3.33312vw, 128px) !important;
+  }
+  .advertisment-row-pc {
+    width: 100%;
+    background-color: #F7DDD0;
+    display: flex !important;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .advertisment-row-pc .centered-container {
+    width: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: clamp(8px, 0.83328vw, 32px);
+    margin-bottom: clamp(8px, 0.83328vw, 32px);
+  }
+  .advertisment-row-pc .centered-container .text-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .advertisment-row-pc .centered-container .text-content .ad-heading {
+    color: #465D6B;
+    font-family: Lato;
+    font-size: clamp(12px, 1.24992vw, 48px);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 83.333%;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+  .advertisment-row-pc .centered-container .text-content .text {
+    width: 60%;
+    color: #555555;
+    font-family: Lato;
+    font-size: clamp(10px, 1.0416vw, 40px);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    margin-top: clamp(8px, 0.83328vw, 32px);
+  }
+  .advertisment-row-pc .centered-container .iphone-img {
+    width: 300px;
+    height: 100%;
+  }
+  .advertisment-row-pc .left {
+    margin-left: clamp(32px, 3.33312vw, 128px);
+  }
+  .advertisment-row-pc .right {
+    margin-right: clamp(32px, 3.33312vw, 128px);
   }
 }/*# sourceMappingURL=main_page.css.map */

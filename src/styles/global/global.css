@@ -171,6 +171,9 @@
 * body .tablet-container, * body .tablet-top-list, * body .trending-list-tablet, * body .advertisment-row {
   display: none;
 }
+* body .advertisment-row-pc {
+  display: none;
+}
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .tablet-container, .tablet-top-list, .trending-list-tablet, .advertisment-row {
@@ -234,5 +237,8 @@
   }
   .view {
     font-size: clamp(8px, 0.83328vw, 32px) !important;
+  }
+  .advertisment-row {
+    display: none !important;
   }
 }/*# sourceMappingURL=global.css.map */

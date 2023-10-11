@@ -182,12 +182,11 @@ const ProductsList = () => {
         </div>
       </div>
       <div className="pc-container">
-        {" "}
         <Swiper
           className="product-swiper-2"
           direction="horizontal"
-          slidesPerView={1}
-          spaceBetween={-900}
+          slidesPerView={4}
+          spaceBetween={64}
         >
           {products
             .filter((product) => product.title !== "")

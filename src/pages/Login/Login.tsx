@@ -658,6 +658,29 @@ const Login = () => {
             </div>
           </div>
         </main>
+        <main className="pc-content">
+          {" "}
+          <div className="back-heading">
+            <span className="text" onClick={navigateBack}>
+              <FontAwesomeIcon
+                className="chevron"
+                icon={faChevronLeft}
+              ></FontAwesomeIcon>
+              Back to the website
+            </span>
+          </div>
+          <div className="forms">
+            <div className="sign-in-content">
+              <span className="sign-in-heading">Sign in</span>
+              <LoginForm />
+            </div>
+            <figure className="separator-line"></figure>
+            <div className="sign-up-content">
+              <span className="sign-in-heading">Sign up</span>
+              <RegistrationForm setPopupOpen={setPopupOpen} />
+            </div>
+          </div>
+        </main>
       </div>
       <PopupWindow
         vector={confetti}
