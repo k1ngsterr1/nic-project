@@ -181,6 +181,43 @@ const ProductsList = () => {
             ))}
         </div>
       </div>
+      <div className="pc-container">
+        {" "}
+        <Swiper
+          className="product-swiper-2"
+          direction="horizontal"
+          slidesPerView={1}
+          spaceBetween={-900}
+        >
+          {products
+            .filter((product) => product.title !== "")
+            .map((product) => (
+              <SwiperSlide key={product.id}>
+                <ProductCard
+                  productName={
+                    product.title.length > maxLengthTitle
+                      ? product.title.substring(0, maxLengthTitle - 3) + "..."
+                      : product.title
+                  }
+                  fullProductName={product.title}
+                  imageUrl={product.image}
+                  rating={renderRating(product.rating.rate)}
+                  ratingQuantity={product.rating.count}
+                  description={
+                    product.description.length > maxLengthDescription
+                      ? product.description.substring(
+                          0,
+                          maxLengthDescription - 3
+                        ) + "..."
+                      : product.description
+                  }
+                  currentPrice={product.price}
+                  id={product.id}
+                />
+              </SwiperSlide>
+            ))}
+        </Swiper>
+      </div>
     </div>
   );
 };

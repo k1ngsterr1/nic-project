@@ -11,6 +11,9 @@
     background-color: #7CA8EA;
     margin-top: clamp(8px, 1.7185821697vw, 32px);
   }
+  .banner .sales-banner {
+    display: none;
+  }
   .banner .banner-img {
     width: 50%;
     height: auto;
@@ -68,5 +71,121 @@
   }
   .banner .banner-content .banner-btn .icon {
     margin-right: clamp(4px, 0.8592910849vw, 16px);
+  }
+}
+@media (min-width: 1024px) {
+  .banner {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #7CA8EA;
+    margin-top: clamp(8px, 0.83328vw, 32px);
+  }
+  .banner .sales-banner {
+    position: absolute;
+    top: 45%;
+    left: 35%;
+    width: clamp(135px, 14.0616vw, 540px);
+    height: clamp(80px, 8.3328vw, 320px);
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    background-color: white;
+  }
+  .banner .sales-banner .sales-heading-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+  .banner .sales-banner .sales-heading-container .sales-heading {
+    color: #262626;
+    text-align: right;
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Lato;
+    font-size: clamp(12px, 1.24992vw, 48px);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    margin-top: clamp(16px, 1.66656vw, 64px);
+  }
+  .banner .sales-banner .sales-heading-container .sale {
+    color: #FF2E00;
+    margin-top: clamp(8px, 0.83328vw, 32px);
+  }
+  .banner .sales-banner .lower-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #262626;
+  }
+  .banner .sales-banner .lower-container .text {
+    color: white;
+    font-size: clamp(8px, 0.83328vw, 32px);
+    margin-top: clamp(4px, 0.41664vw, 16px);
+    margin-bottom: clamp(4px, 0.41664vw, 16px);
+  }
+  .banner .banner-img {
+    width: 50%;
+    height: auto;
+  }
+  .banner .banner-content {
+    width: 68.4782608696%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+  }
+  .banner .banner-content .banner-heading {
+    color: white;
+    text-align: center;
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Lato;
+    font-size: clamp(24px, 2.49984vw, 96px);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 156.25%;
+    text-transform: uppercase;
+  }
+  .banner .banner-content .banner-paragraph {
+    width: 60%;
+    color: white;
+    text-align: center;
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Lato;
+    font-size: clamp(14px, 1.45824vw, 56px);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 178.571%;
+    margin-top: clamp(16px, 1.66656vw, 64px);
+  }
+  .banner .banner-content .banner-btn {
+    width: clamp(150px, 15.624vw, 600px);
+    height: clamp(40px, 4.1664vw, 160px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: right;
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Lato;
+    font-size: clamp(10px, 1.0416vw, 40px);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 142.857%;
+    text-transform: uppercase;
+    background-color: #4172DC;
+    border: none;
+    border-radius: 4px;
+    margin-top: clamp(16px, 1.66656vw, 64px);
+  }
+  .banner .banner-content .banner-btn .icon {
+    margin-right: clamp(4px, 0.41664vw, 16px);
   }
 }/*# sourceMappingURL=banner.css.map */

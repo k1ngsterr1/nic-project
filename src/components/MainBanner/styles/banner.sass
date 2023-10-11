@@ -12,6 +12,9 @@
         background-color: #7CA8EA
         margin-top: $m16tab
 
+        .sales-banner
+            display: none
+
         .banner-img
             width: 50%
             height: auto
@@ -69,3 +72,120 @@
 
                 .icon
                     margin-right: $m8tab
+
+@media (min-width: 1024px)
+
+    .banner
+        position: relative
+        width: 100%
+        display: flex
+        justify-content: space-between
+        background-color: #7CA8EA
+        margin-top: $m16
+
+        .sales-banner
+            position: absolute
+            top: 45%
+            left: 35%
+            width: clamp(135px,14.0616vw,540px)
+            height: clamp(80px,8.3328vw,320px)
+            display: flex !important
+            flex-direction: column
+            align-items: center
+            justify-content: space-between
+            text-align: center
+
+            background-color: $white
+
+            .sales-heading-container
+                display: flex
+                flex-direction: column
+                text-align: center
+                align-items: center
+
+                .sales-heading
+                    color: $primary_gray
+                    text-align: right
+                    font-feature-settings: 'clig' off, 'liga' off
+                    font-family: Lato
+                    font-size: $font24
+                    font-style: normal
+                    font-weight: 700
+                    line-height: 100%
+                    margin-top: $m32
+
+                .sale
+                    color: $discount
+                    margin-top: $m16
+
+            .lower-container
+                width: 100%
+                height: auto
+                display: flex
+                justify-content: center
+                align-items: center
+                background-color: $primary_gray
+
+                .text
+                    color: $white
+                    font-size: $font16
+                    margin-top: $m8
+                    margin-bottom: $m8
+
+        .banner-img
+            width: 50%
+            height: auto
+
+        .banner-content
+            width: 68.47826086956522%
+            height: auto
+            display: flex
+            flex-direction: column
+            align-items: center
+            margin: auto
+
+            .banner-heading
+                color: $white
+                text-align: center
+                font-feature-settings: 'clig' off, 'liga' off
+                font-family: Lato
+                font-size: clamp(24px,2.49984vw,96px)
+                font-style: normal
+                font-weight: 700
+                line-height: 156.25%
+                text-transform: uppercase
+
+            .banner-paragraph
+                width: 60%
+                color: $white
+                text-align: center
+                font-feature-settings: 'clig' off, 'liga' off
+                font-family: Lato
+                font-size: $font28
+                font-style: normal
+                font-weight: 500
+                line-height: 178.571%
+                margin-top: $m32
+
+            .banner-btn
+                width: clamp(150px,15.624vw,600px)
+                height: clamp(40px,4.1664vw,160px)
+                display: flex
+                align-items: center
+                justify-content: center
+                color: $white
+                text-align: right
+                font-feature-settings: 'clig' off, 'liga' off
+                font-family: Lato
+                font-size: $font20
+                font-style: normal
+                font-weight: 500
+                line-height: 142.857%
+                text-transform: uppercase
+                background-color: $button_blue
+                border: none
+                border-radius: 4px
+                margin-top: $m32
+
+                .icon
+                    margin-right: $m8

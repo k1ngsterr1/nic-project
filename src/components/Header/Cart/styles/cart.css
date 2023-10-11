@@ -49,4 +49,28 @@
     border-radius: 50px;
     margin-left: clamp(4px, 0.8592910849vw, 16px);
   }
+}
+@media (min-width: 1024px) {
+  .cart-container .bag-icon {
+    font-size: clamp(12px, 1.24992vw, 48px);
+    color: white;
+  }
+  .cart-container .cart-quantity {
+    width: clamp(9px, 0.93744vw, 36px);
+    height: clamp(9px, 0.93744vw, 36px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: right;
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Lato;
+    font-size: clamp(6px, 0.62496vw, 24px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 142.857%;
+    background-color: #00A95D;
+    border-radius: 50px;
+    margin-left: clamp(4px, 0.41664vw, 16px);
+  }
 }/*# sourceMappingURL=cart.css.map */

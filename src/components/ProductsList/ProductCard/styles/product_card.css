@@ -112,6 +112,9 @@
   line-height: normal;
   padding: clamp(2px, 0.93456vw, 8px);
 }
+.product-card .product-card-content-tablet {
+  display: none;
+}
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .product-card {
@@ -248,5 +251,131 @@
     padding-right: 6px;
     padding-top: 6px;
     padding-bottom: 6px;
+  }
+}
+@media (min-width: 1024px) {
+  .product-card {
+    width: 300px;
+    height: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+  }
+  .product-card .deal {
+    color: #9D9D9D;
+    text-align: center;
+    font-family: Lato;
+    font-size: clamp(7px, 0.72912vw, 28px);
+    font-style: normal;
+    font-weight: 800;
+    line-height: 142.857%;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: clamp(8px, 0.83328vw, 32px);
+  }
+  .product-card .product-image {
+    width: clamp(130px, 13.5408vw, 520px);
+    height: clamp(95px, 9.8952vw, 380px);
+    margin-top: clamp(16px, 1.66656vw, 64px);
+  }
+  .product-card .product-card-content {
+    width: 85%;
+    height: auto;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: clamp(16px, 1.66656vw, 64px);
+  }
+  .product-card .product-card-content .product-name {
+    color: #434343;
+    font-family: Lato;
+    font-size: clamp(12px, 1.24992vw, 48px);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 156.25%;
+    margin-top: clamp(16px, 1.66656vw, 64px);
+  }
+  .product-card .product-card-content .description {
+    color: #555555;
+    font-family: Lato;
+    font-size: clamp(10px, 1.0416vw, 40px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 208.333%;
+  }
+  .product-card .product-card-content .rating-container {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: clamp(8px, 0.83328vw, 32px);
+    margin-bottom: clamp(8px, 0.83328vw, 32px);
+  }
+  .product-card .product-card-content .rating-container .rating {
+    color: #FFC000;
+    font-size: clamp(9px, 0.93744vw, 36px);
+  }
+  .product-card .product-card-content .rating-container .rating-quantity {
+    color: #555555;
+    text-align: center;
+    font-family: Lato;
+    font-size: clamp(8px, 0.83328vw, 32px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 208.333%;
+    margin-left: clamp(4px, 0.41664vw, 16px);
+  }
+  .product-card .product-card-content .price-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: clamp(6px, 0.62496vw, 24px);
+  }
+  .product-card .product-card-content .price-container .current-price {
+    color: #FF2E00;
+    font-family: Lato;
+    font-size: clamp(12px, 1.24992vw, 48px);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 142.857%;
+  }
+  .product-card .product-card-content .price-container .original-price {
+    color: #555555;
+    font-family: Lato;
+    font-size: clamp(9px, 0.93744vw, 36px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 166.667%;
+    text-decoration: line-through;
+    text-decoration-line: strikethrough;
+  }
+  .product-card .product-card-content .price-container .discount {
+    width: clamp(21.5px, 2.23944vw, 86px);
+    height: auto;
+    background-color: #FF2E00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2.057px;
+  }
+  .product-card .product-card-content .price-container .discount .percentage {
+    color: white;
+    font-family: Inter;
+    font-size: clamp(6px, 0.62496vw, 24px);
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    padding: 8px;
+  }
+  .product-card .product-card-content .product-card-content-tablet {
+    display: none;
   }
 }/*# sourceMappingURL=product_card.css.map */

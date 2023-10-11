@@ -79,6 +79,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch, categories }) => {
       <div className="select-search-container">
         <Select
           className="select-list"
+          classNamePrefix="my-select"
           value={selectedCategory}
           onChange={(selectedOption) =>
             setSelectedCategory(selectedOption as OptionType)

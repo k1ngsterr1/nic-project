@@ -38,6 +38,9 @@
             width: 100%
             height: auto
 
+        .tablet-container, .pc-container
+            display: none
+
         .container
             width: 90%
             height: auto
@@ -166,7 +169,13 @@
             flex-direction: column
             align-items: center
 
+        .tablet-container, .tablet-top-list, .trending-list-tablet, .advertisment-row
+            display: none
+
 @media (min-width: 768px) and (max-width: 1024px)
+
+    .tablet-container, .tablet-top-list, .trending-list-tablet, .advertisment-row
+        display: flex !important
 
     .heading-container
         width: 100%
@@ -205,3 +214,23 @@
 
     .main-content
         display: none !important
+
+@media (min-width: 1024px)
+
+    .main-content
+        display: none !important
+
+    .tablet-container
+        display: none
+
+    .pc-container
+        display: flex
+
+    .chevron-icon
+        font-size: $font16 !important
+
+    .section-heading
+        font-size: $font28 !important
+
+    .view
+        font-size: $font16 !important

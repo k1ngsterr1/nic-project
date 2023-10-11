@@ -39,4 +39,16 @@
     align-items: center;
     margin-top: clamp(24px, 6.25vw, 96px);
   }
+}
+@media (min-width: 1024px) {
+  .products-list .pc-container {
+    width: 100%;
+    display: flex;
+  }
+  .products-list .product-swiper-2 {
+    width: 100%;
+  }
+  .product-swiper {
+    display: none !important;
+  }
 }/*# sourceMappingURL=products_list.css.map */

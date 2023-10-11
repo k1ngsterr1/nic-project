@@ -113,6 +113,9 @@
                     line-height: normal
                     padding: clamp(2px,0.93456vw,8px)
 
+    .product-card-content-tablet
+        display: none
+
 @media (min-width: 768px) and (max-width: 1024px)
 
     .product-card
@@ -249,3 +252,129 @@
                             padding-right: 6px
                             padding-top: 6px
                             padding-bottom: 6px
+
+@media (min-width: 1024px)
+
+    .product-card
+        width: 300px
+        height: auto
+        height: auto
+        display: flex
+        align-items: center
+        text-align: center
+        flex-direction: column
+        background: $white
+        border-radius: 8px
+        box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.10)
+
+        .deal
+            color: $light_text
+            text-align: center
+            font-family: Lato
+            font-size: $font14
+            font-style: normal
+            font-weight: 800
+            line-height: 142.857%
+            letter-spacing: 0.5px
+            text-transform: uppercase
+            margin-bottom: $m16
+
+        .product-image
+            width: clamp(130px,13.5408vw,520px)
+            height: clamp(95px,9.8952vw,380px)
+            margin-top: $m32
+
+        .product-card-content
+            width: 85%
+            height: auto
+            margin: auto
+            display: flex
+            flex-direction: column
+            align-items: center
+            text-align: center
+            margin-bottom: $m32
+
+            .product-name
+                color: $gray_dark
+                font-family: Lato
+                font-size: $font24
+                font-style: normal
+                font-weight: 700
+                line-height: 156.25%
+                margin-top: $m32
+
+            .description
+                color: $secondary_text
+                font-family: Lato
+                font-size: $font20
+                font-style: normal
+                font-weight: 400
+                line-height: 208.333%
+
+            .rating-container
+                width: 70%
+                display: flex
+                align-items: center
+                justify-content: flex-start
+                margin-top: $m16
+                margin-bottom: $m16
+
+                .rating
+                    color: $star
+                    font-size: $font18
+
+                .rating-quantity
+                    color: $secondary_text
+                    text-align: center
+                    font-family: Lato
+                    font-size: $font16
+                    font-style: normal
+                    font-weight: 400
+                    line-height: 208.333%
+                    margin-left: $m8
+
+            .price-container
+                width: 100%
+                display: flex
+                align-items: center
+                justify-content: space-between
+                margin-bottom: clamp(6px,0.62496vw,24px)
+
+                .current-price
+                    color: $discount
+                    font-family: Lato
+                    font-size: $font24
+                    font-style: normal
+                    font-weight: 700
+                    line-height: 142.857%
+
+                .original-price
+                    color: $secondary_text
+                    font-family: Lato
+                    font-size: $font18
+                    font-style: normal
+                    font-weight: 400
+                    line-height: 166.667%
+                    text-decoration: line-through
+                    text-decoration-line: strikethrough
+
+                .discount
+                    width: clamp(21.5px,2.23944vw,86px)
+                    height: auto
+                    background-color: $discount
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    border-radius: 2.057px
+
+                    .percentage
+                        color: $white
+                        font-family: Inter
+                        font-size: $font12
+                        font-style: normal
+                        font-weight: 600
+                        line-height: normal
+                        padding: 8px
+
+            .product-card-content-tablet
+                display: none

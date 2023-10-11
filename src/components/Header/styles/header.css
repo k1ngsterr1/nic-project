@@ -34,6 +34,9 @@ body header .mobile-header .lower-content {
 body header .tablet-header {
   display: none;
 }
+body header .pc-header {
+  display: none;
+}
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .mobile-header {
@@ -176,6 +179,193 @@ body header .tablet-header {
     text-decoration: none;
   }
   .tablet-header .lower-navigation .nav-links-container .active {
+    color: #FF7A00;
+  }
+  .pc-header {
+    display: none;
+  }
+}
+@media (min-width: 1024px) {
+  .mobile-header {
+    display: none !important;
+  }
+  .tablet-header {
+    display: none !important;
+  }
+  .pc-header {
+    width: 100%;
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    margin-top: clamp(8px, 0.83328vw, 32px);
+  }
+  .pc-header .upper-content {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: clamp(16px, 1.66656vw, 64px);
+  }
+  .pc-header .upper-content .logo-search {
+    width: auto;
+    display: flex;
+    align-items: center;
+  }
+  .pc-header .upper-content .logo-search .logo {
+    width: clamp(110px, 11.4576vw, 440px);
+    height: clamp(25px, 2.604vw, 100px);
+    margin-right: clamp(32px, 3.33312vw, 128px);
+  }
+  .pc-header .upper-content .nav-links {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .pc-header .upper-content .nav-links .link {
+    color: #555555;
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Lato;
+    font-size: clamp(8px, 0.83328vw, 32px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 142.857%;
+    text-decoration: none;
+  }
+  .pc-header .upper-content .social {
+    width: 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .pc-header .upper-content .social .social-link {
+    color: #555555;
+    font-size: clamp(14px, 1.45824vw, 56px);
+  }
+  .pc-header .lower-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    background-color: #262626;
+    margin-top: clamp(16px, 1.66656vw, 64px);
+  }
+  .pc-header .lower-container .lower-content {
+    width: 90%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: clamp(8px, 0.83328vw, 32px);
+    margin-bottom: clamp(8px, 0.83328vw, 32px);
+  }
+  .pc-header .lower-container .lower-content .categories-logo {
+    width: clamp(110px, 11.4576vw, 440px);
+    height: clamp(16px, 1.66656vw, 64px);
+  }
+  .pc-header .lower-container .lower-content .selects {
+    display: flex;
+    align-items: center;
+  }
+  .pc-header .lower-container .lower-content .selects .currency-list {
+    color: white;
+    background: transparent;
+    background-color: transparent;
+    margin-right: clamp(8px, 0.83328vw, 32px);
+    font-size: clamp(8px, 0.83328vw, 32px);
+  }
+  .pc-header .lower-container .lower-content .separator {
+    width: 1px;
+    height: clamp(32px, 3.33312vw, 128px);
+    background-color: #7B7B7B;
+  }
+  .pc-header .lower-container .lower-content .advertisment {
+    display: flex;
+    align-items: center;
+  }
+  .pc-header .lower-container .lower-content .advertisment .razor {
+    width: clamp(32px, 3.33312vw, 128px);
+    height: clamp(32px, 3.33312vw, 128px);
+  }
+  .pc-header .lower-container .lower-content .advertisment .text-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: clamp(8px, 0.83328vw, 32px);
+  }
+  .pc-header .lower-container .lower-content .advertisment .text-container .text {
+    color: white;
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Lato;
+    font-size: clamp(6px, 0.62496vw, 24px);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 166.667%;
+  }
+  .pc-header .lower-container .lower-content .advertisment .text-container .text-lower {
+    color: white;
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Lato;
+    font-size: clamp(6px, 0.62496vw, 24px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 166.667%;
+  }
+  .pc-header .lower-container .lower-content .buttons-container {
+    width: 21%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .pc-header .lower-container .lower-content .buttons-container .sign-in-btn {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: clamp(8px, 0.83328vw, 32px);
+    background-color: transparent;
+    border: none;
+  }
+  .pc-header .lower-container .lower-content .buttons-container .sign-in-btn .user-icon {
+    font-size: clamp(9px, 0.93744vw, 36px);
+    margin-right: clamp(2.5px, 0.2604vw, 10px);
+  }
+  .pc-header .lower-container .lower-content .buttons-container .favourite-btn {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: clamp(8px, 0.83328vw, 32px);
+    background-color: transparent;
+    border: none;
+  }
+  .pc-header .lower-container .lower-content .buttons-container .favourite-btn .heart-icon {
+    font-size: clamp(9px, 0.93744vw, 36px);
+    margin-right: clamp(2.5px, 0.2604vw, 10px);
+  }
+  .pc-header .lower-navigation {
+    width: 90%;
+    height: auto;
+    margin: auto;
+    margin-top: clamp(32px, 3.33312vw, 128px);
+    margin-bottom: clamp(16px, 1.66656vw, 64px);
+  }
+  .pc-header .lower-navigation .nav-links-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .pc-header .lower-navigation .nav-links-container .link {
+    color: #262626;
+    text-align: right;
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Lato;
+    font-size: clamp(8px, 0.83328vw, 32px);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 142.857%;
+    text-decoration: none;
+  }
+  .pc-header .lower-navigation .nav-links-container .active {
     color: #FF7A00;
   }
 }/*# sourceMappingURL=header.css.map */

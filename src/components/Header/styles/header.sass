@@ -37,6 +37,9 @@ body
         .tablet-header
             display: none
 
+        .pc-header
+            display: none
+
 @media (min-width: 768px) and (max-width: 1024px)
 
     .mobile-header
@@ -173,6 +176,193 @@ body
                     font-feature-settings: 'clig' off, 'liga' off
                     font-family: Lato
                     font-size: $font14tab
+                    font-style: normal
+                    font-weight: 700
+                    line-height: 142.857%
+                    text-decoration: none
+
+                .active
+                    color: $selected
+
+    .pc-header
+        display: none
+
+@media (min-width: 1024px)
+
+    .mobile-header
+        display: none !important
+
+    .tablet-header
+        display: none !important
+
+    .pc-header
+        width: 100%
+        display: flex !important
+        flex-direction: column
+        align-items: center
+        margin-top: $m16
+
+        .upper-content
+            width: 90%
+            display: flex
+            align-items: center
+            justify-content: space-between
+            margin-top: $m32
+
+            .logo-search
+                width: auto
+                display: flex
+                align-items: center
+
+                .logo
+                    width: clamp(110px,11.457600000000001vw,440px)
+                    height: clamp(25px,2.604vw,100px)
+                    margin-right: $m64
+
+            .nav-links
+                width: 30%
+                display: flex
+                align-items: center
+                justify-content: space-between
+
+                .link
+                    color: $secondary_text
+                    font-feature-settings: 'clig' off, 'liga' off
+                    font-family: Lato
+                    font-size: $font16
+                    font-style: normal
+                    font-weight: 400
+                    line-height: 142.857%
+                    text-decoration: none
+
+            .social
+                width: 8%
+                display: flex
+                justify-content: space-between
+                align-items: center
+
+                .social-link
+                    color: $secondary_text
+                    font-size: $font28
+
+        .lower-container
+            width: 100%
+            height: auto
+            display: flex
+            background-color: $primary_gray
+            margin-top: $m32
+
+            .lower-content
+                width: 90%
+                height: auto
+                display: flex
+                align-items: center
+                justify-content: space-between
+                margin: auto
+                margin-top: $m16
+                margin-bottom: $m16
+
+                .categories-logo
+                    width: clamp(110px,11.457600000000001vw,440px)
+                    height: clamp(16px,1.66656vw,64px)
+
+                .selects
+                    display: flex
+                    align-items: center
+
+                    .currency-list
+                        color: $white
+                        background: transparent
+                        background-color: transparent
+                        margin-right: $m16
+                        font-size: $m16
+
+                .separator
+                    width: 1px
+                    height: $m64
+                    background-color: #7B7B7B
+
+                .advertisment
+                    display: flex
+                    align-items: center
+
+                    .razor
+                        width: $m64
+                        height: $m64
+
+                    .text-container
+                        display: flex
+                        flex-direction: column
+                        margin-left: $m16
+
+                        .text
+                            color: $white
+                            font-feature-settings: 'clig' off, 'liga' off
+                            font-family: Lato
+                            font-size: $font12
+                            font-style: normal
+                            font-weight: 700
+                            line-height: 166.667%
+
+                        .text-lower
+                            color: $white
+                            font-feature-settings: 'clig' off, 'liga' off
+                            font-family: Lato
+                            font-size: $font12
+                            font-style: normal
+                            font-weight: 400
+                            line-height: 166.667%
+
+                .buttons-container
+                    width: 21%
+                    display: flex
+                    align-items: center
+                    justify-content: space-between
+
+                    .sign-in-btn
+                        display: flex
+                        align-items: center
+                        color: $white
+                        font-size: $font16
+                        background-color: transparent
+                        border: none
+
+                        .user-icon
+                            font-size: $font18
+                            margin-right: clamp(2.5px,0.2604vw,10px)
+
+                    .favourite-btn
+                        display: flex
+                        align-items: center
+                        color: $white
+                        font-size: $font16
+                        background-color: transparent
+                        border: none
+
+                        .heart-icon
+                            font-size: $font18
+                            margin-right: clamp(2.5px,0.2604vw,10px)
+
+        .lower-navigation
+            width: 90%
+            height: auto
+            margin: auto
+            margin-top: $m64
+            margin-bottom: $m32
+
+            .nav-links-container
+                width: 100%
+                height: auto
+                display: flex
+                align-items: center
+                justify-content: space-between
+
+                .link
+                    color: $primary_gray
+                    text-align: right
+                    font-feature-settings: 'clig' off, 'liga' off
+                    font-family: Lato
+                    font-size: $font16
                     font-style: normal
                     font-weight: 700
                     line-height: 142.857%

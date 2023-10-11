@@ -118,3 +118,49 @@
 
         .search-button
             font-size: $font18tab !important
+
+@media (min-width: 1024px)
+
+    .search-bar
+        width: clamp(172.5px,17.9676vw,690px)
+        height: clamp(20px,2.0832vw,80px)
+        margin-top: 0px !important
+
+        .search-bar-input
+            width: 50%
+            height: auto
+            font-size: $font14
+            display: flex
+            align-items: center
+            padding-left: $m16
+
+        .select-search-container
+            margin-right: $m16
+            display: flex
+
+            .select-list
+                width: 70%
+                height: 15px
+                color: $primary_gray
+                font-feature-settings: 'clig' off, 'liga' off
+                font-family: Lato
+                font-size: $font14
+                font-style: normal
+                font-weight: 400
+                line-height: 142.857%
+                margin-bottom: 10px
+                border: none!important
+                outline: none !important
+                box-shadow: none !important
+                &:focus
+                    outline: none !important
+
+        .separator
+            width: 1px
+            height: $m32 !important
+            margin-right: clamp(6px,0.62496vw,24px) !important
+            margin-left: clamp(6px,0.62496vw,24px)!important
+            background-color: $light_text
+
+        .search-button
+            font-size: $font18 !important
