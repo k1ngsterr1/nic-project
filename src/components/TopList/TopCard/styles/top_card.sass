@@ -170,3 +170,125 @@
 
                 .discount
                     font-size: $font18tab !important
+
+@media (min-width: 1024px)
+
+.top-card
+    width: 300px
+    height: auto
+    background: $white
+    border-radius: 8px
+    box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.10)
+
+    .top-image
+        width: 100%
+        height: auto
+
+    .top-card-container
+        width: 78.57142857142857%
+        height: auto
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        margin: auto
+        margin-top: clamp(10px,4.6728vw,40px)
+        margin-bottom: clamp(10px,4.6728vw,40px)
+
+        .upper-content
+            width: 100%
+            height: auto
+            display: flex
+            align-items: center
+            justify-content: space-between
+
+            .text-content
+                width: auto
+                height: auto
+                display: flex
+                flex-direction: column
+                align-items: flex-start
+
+                .top-name
+                    color: $primary_gray
+                    font-feature-settings: 'clig' off, 'liga' off
+                    font-family: Lato
+                    font-size: clamp(6px,2.80368vw,24px)
+                    font-style: normal
+                    font-weight: 700
+                    line-height: 166.667%
+
+                .description
+                    color: $secondary_text
+                    font-feature-settings: 'clig' off, 'liga' off
+                    font-family: Lato
+                    font-size: clamp(5px,2.3364vw,20px)
+                    font-style: normal
+                    font-weight: 400
+                    line-height: 200%
+
+            .heart-button
+                font-size: $font24mob
+                color: #28303F
+                border: none
+                background-color: transparent
+
+            .heart-button-active
+                font-size: $font24mob
+                color: #FF477E
+                border: none
+                background-color: transparent
+
+        .rating-container
+            display: flex
+            align-items: center
+            margin-top: clamp(6px,2.80368vw,24px)
+
+            .rating
+                color: $star
+                font-size: $font20mob
+
+            .rating-quantity
+                color: $secondary_text
+                text-align: center
+                font-feature-settings: 'clig' off, 'liga' off
+                font-family: Lato
+                font-size: $font12mob
+                font-style: normal
+                font-weight: 400
+                line-height: 208.333%
+                margin-left: clamp(6px,2.80368vw,24px)
+
+        .price-container
+            display: flex
+            align-items: center
+            margin-top: clamp(6px,2.80368vw,24px)
+            margin-bottom: clamp(6px,2.80368vw,24px)
+
+            .current-price
+                color: $discount
+                font-family: Lato
+                font-size: $font14mob
+                font-style: normal
+                font-weight: 700
+                line-height: 142.857%
+
+            .original-price
+                color: $secondary_text
+                font-family: Lato
+                font-size: $font12mob
+                font-style: normal
+                font-weight: 400
+                line-height: 166.667%
+                text-decoration: line-through
+                text-decoration-line: strikethrough
+                margin-left: clamp(6px,2.80368vw,24px)
+
+            .discount
+                color: $discount
+                font-feature-settings: 'clig' off, 'liga' off
+                font-family: Lato
+                font-size: $font12mob
+                font-style: normal
+                font-weight: 400
+                line-height: 166.667%
+                margin-left: clamp(6px,2.80368vw,24px)

@@ -168,4 +168,134 @@
     font-size: clamp(7px, 1.5037593985vw, 28px);
     margin-left: clamp(4px, 0.8592910849vw, 16px);
   }
+}
+@media (min-width: 1024px) {
+  .trending-card {
+    position: relative;
+    width: clamp(253px, 26.35248vw, 1012px);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+  }
+  .trending-card .label {
+    position: absolute;
+    top: clamp(10px, 1.0416vw, 40px);
+    left: clamp(10px, 1.0416vw, 40px);
+    width: clamp(75px, 7.812vw, 300px);
+    height: auto;
+    background-color: #00A95D;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+  }
+  .trending-card .label .label-content {
+    width: 85.8823529412%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: clamp(4px, 0.41664vw, 16px);
+    margin-bottom: clamp(4px, 0.41664vw, 16px);
+  }
+  .trending-card .label .label-content .dolly-icon {
+    color: white;
+    font-size: clamp(10px, 1.0416vw, 40px);
+    margin-left: 4px;
+  }
+  .trending-card .label .label-content .label-text {
+    color: white;
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Lato;
+    font-size: clamp(8px, 0.83328vw, 32px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 200%;
+  }
+  .trending-card .card-image {
+    width: 100%;
+    height: clamp(250px, 26.04vw, 1000px);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  .trending-card .card-lower-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    background-color: #262626;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  .trending-card .card-lower-container .lower-content {
+    width: 90%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: clamp(16px, 1.66656vw, 64px);
+    margin-bottom: clamp(16px, 1.66656vw, 64px);
+  }
+  .trending-card .card-lower-container .lower-content .title-description {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .trending-card .card-lower-container .lower-content .title-description .title {
+    color: white;
+    font-family: Lato;
+    font-size: clamp(12px, 1.24992vw, 48px);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 178.571%;
+  }
+  .trending-card .card-lower-container .lower-content .title-description .description {
+    color: #C4C4C4;
+    font-family: Lato;
+    font-size: clamp(10px, 1.0416vw, 40px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 142.857%;
+  }
+  .trending-card .card-lower-container .lower-content .shop-btn {
+    width: 146px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white;
+    border-radius: 6px;
+    background-color: transparent;
+    transition: 0.3s all;
+  }
+  .trending-card .card-lower-container .lower-content .shop-btn:hover {
+    background-color: white;
+  }
+  .trending-card .card-lower-container .lower-content .shop-btn:hover .btn-content .price, .trending-card .card-lower-container .lower-content .shop-btn:hover .btn-content .text {
+    color: #262626;
+  }
+  .trending-card .card-lower-container .lower-content .shop-btn .btn-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .trending-card .card-lower-container .lower-content .shop-btn .btn-content .price {
+    color: white;
+    font-family: Lato;
+    font-size: clamp(10px, 1.0416vw, 40px);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 142.857%;
+  }
+  .trending-card .card-lower-container .lower-content .shop-btn .btn-content .text {
+    color: #FFF;
+    text-align: right;
+    font-family: Lato;
+    font-size: clamp(10px, 1.0416vw, 40px);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 142.857%;
+    margin-left: clamp(4px, 0.41664vw, 16px);
+  }
 }/*# sourceMappingURL=trending_card.css.map */

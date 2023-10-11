@@ -255,7 +255,12 @@ const Header = () => {
       <div className="pc-header">
         <div className="upper-content">
           <div className="logo-search">
-            <img className="logo" src={logo} alt="logo"></img>
+            <img
+              className="logo"
+              src={logo}
+              alt="logo"
+              onClick={mainNavigate}
+            ></img>
             <SearchBar onSearch={handleSearch} categories={categories} />
           </div>
           <nav className="nav-links">

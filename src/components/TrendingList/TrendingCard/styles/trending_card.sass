@@ -173,3 +173,134 @@
                         .text
                             font-size: $font14tab
                             margin-left: $m8tab
+
+@media (min-width: 1024px)
+
+    .trending-card
+        position: relative
+        width: clamp(253px,26.35248vw,1012px)
+        height: auto
+        display: flex
+        flex-direction: column
+        border-radius: 10px
+
+        .label
+            position: absolute
+            top: clamp(10px,1.0416vw,40px)
+            left: clamp(10px,1.0416vw,40px)
+            width: clamp(75px,7.812vw,300px)
+            height: auto
+            background-color: $notification
+            display: flex
+            align-items: center
+            justify-content: center
+            border-radius: 4px
+
+            .label-content
+                width: 85.88235294117646%
+                height: auto
+                display: flex
+                justify-content: space-between
+                align-items: center
+                margin-top: $m8
+                margin-bottom: $m8
+
+                .dolly-icon
+                    color: $white
+                    font-size: $font20
+                    margin-left: 4px
+
+                .label-text
+                    color: $white
+                    font-feature-settings: 'clig' off, 'liga' off
+                    font-family: Lato
+                    font-size: $font16
+                    font-style: normal
+                    font-weight: 400
+                    line-height: 200%
+
+        .card-image
+            width: 100%
+            height: clamp(250px,26.04vw,1000px)
+            border-top-left-radius: 10px
+            border-top-right-radius: 10px
+
+        .card-lower-container
+            width: 100%
+            height: auto
+            display: flex
+            justify-content: center
+            background-color: $primary_gray
+            border-bottom-left-radius: 10px
+            border-bottom-right-radius: 10px
+
+            .lower-content
+                width: 90%
+                height: auto
+                display: flex
+                align-items: center
+                justify-content: space-between
+                margin-top: $m32
+                margin-bottom: $m32
+
+                .title-description
+                    display: flex
+                    flex-direction: column
+                    align-items: flex-start
+
+                    .title
+                        color: $white
+                        font-family: Lato
+                        font-size: $font24
+                        font-style: normal
+                        font-weight: 700
+                        line-height: 178.571%
+
+                    .description
+                        color: $gray
+                        font-family: Lato
+                        font-size: $font20
+                        font-style: normal
+                        font-weight: 400
+                        line-height: 142.857%
+
+                .shop-btn
+                    width: 146px
+                    height: 44px
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    border: 2px solid $white
+                    border-radius: 6px
+                    background-color: transparent
+                    transition: 0.3s all
+                    &:hover
+                        background-color: $white
+
+                        .btn-content
+
+                            .price, .text
+                                color: $primary_gray
+
+                    .btn-content
+                        display: flex
+                        align-items: center
+                        justify-content: center
+
+                        .price
+                            color: $white
+                            font-family: Lato
+                            font-size: $font20
+                            font-style: normal
+                            font-weight: 700
+                            line-height: 142.857%
+
+                        .text
+                            color: #FFF
+                            text-align: right
+                            font-family: Lato
+                            font-size: $font20
+                            font-style: normal
+                            font-weight: 600
+                            line-height: 142.857%
+                            margin-left: $m8

@@ -224,7 +224,7 @@
     display: none;
   }
   .pc-container {
-    display: flex;
+    display: flex !important;
   }
   .chevron-icon {
     font-size: clamp(8px, 0.83328vw, 32px) !important;

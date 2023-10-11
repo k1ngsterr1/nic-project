@@ -6,9 +6,12 @@
   flex-direction: column;
   margin-top: clamp(24px, 11.21472vw, 96px);
 }
+.trending-list .trending-list-tablet, .trending-list .trending-list-pc {
+  display: none;
+}
 .trending-list .trending-swiper {
   width: 100%;
-  display: flex;
+  display: flex !important;
   align-items: center;
   margin-top: clamp(12px, 5.60736vw, 48px);
 }
@@ -26,5 +29,16 @@
     display: flex;
     flex-direction: column;
     margin-top: clamp(32px, 6.8743286788vw, 128px);
+  }
+}
+@media (min-width: 1024px) {
+  .trending-list .trending-list-tablet, .trending-list .trending-swiper {
+    display: none !important;
+  }
+  .trending-list .trending-list-pc {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: clamp(16px, 1.66656vw, 64px);
   }
 }/*# sourceMappingURL=trending_list.css.map */

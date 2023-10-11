@@ -90,6 +90,26 @@ const TrendingList = () => {
           price="$102"
         />
       </div>
+      <div className="trending-list-pc">
+        <TrendingCard
+          imageUrl={card01}
+          title="Cool & Sexy Gucci"
+          description="Fashionable sportwear"
+          price="$89"
+        />
+        <TrendingCard
+          imageUrl={card02}
+          title="Cool & Sexy Gucci"
+          description="Fashionable sportwear"
+          price="$89"
+        />
+        <TrendingCard
+          imageUrl={card03}
+          title="Cool & Sexy Gucci"
+          description="Fashionable sportwear"
+          price="$89"
+        />
+      </div>
     </div>
   );
 };
