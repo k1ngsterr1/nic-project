@@ -364,6 +364,10 @@ body header .pc-header {
     font-weight: 700;
     line-height: 142.857%;
     text-decoration: none;
+    transition: 0.3s all;
+  }
+  .pc-header .lower-navigation .nav-links-container .link:hover {
+    color: #FF7A00;
   }
   .pc-header .lower-navigation .nav-links-container .active {
     color: #FF7A00;

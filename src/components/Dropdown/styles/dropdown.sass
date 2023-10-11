@@ -1,0 +1,128 @@
+@import "../../../styles/variables/variables"
+
+@media (min-width: 768px) and (max-width: 1024px)
+
+    .dropdown
+        top: clamp(62.5px,24.739583333333332vw,250px)
+        left: 50px
+        z-index: 1000
+        width: clamp(350px, 75.18796992481202vw,1400px)
+        background-color: $white
+        position: absolute
+        display: flex
+        align-items: center
+        justify-content: center
+
+        .dropdown-container
+            width: 90%
+            height: auto
+            display: flex
+            justify-content: space-between
+            margin: auto
+
+            .column
+                display: flex
+                flex-direction: column
+                margin-bottom: $m32
+
+                .tab
+                    width: auto
+                    display: flex
+                    flex-direction: column
+                    align-items: flex-start
+                    margin-top: $m16tab
+                    margin-bottom: $m16tab
+
+                    .tab-heading
+                        color: $primary_gray
+                        font-family: Lato
+                        font-size: $font14tab
+                        font-style: normal
+                        font-weight: 700
+                        line-height: 142.857%
+                        letter-spacing: 0.5px
+                        text-transform: uppercase
+
+                        margin-bottom: $m8tab
+
+                    .link
+                        color: $secondary_text
+                        font-family: Lato
+                        font-size: $font14tab
+                        font-style: normal
+                        font-weight: 400
+                        line-height: 142.857%
+                        margin-top: $m8tab
+                        transition: 0.3s all
+                        &:hover
+                            color: $selected
+
+        .dropdown-pc
+            display: none
+
+@media (min-width: 1024px)
+
+    .dropdown
+        top: clamp(160px,16.6656vw,640px)
+        left: clamp(40px,4.1664vw,160px)
+        z-index: 1000
+        width: clamp(500px,52.08vw,2000px)
+        background-color: $white
+        position: absolute
+        display: flex
+        align-items: center
+        justify-content: center
+        border-radius: 8px
+        box-shadow: 0px 4px 66px 0px rgba(0, 0, 0, 0.25)
+
+        .dropdown-container
+            display: none
+
+        .dropdown-pc
+            width: 90%
+            height: auto
+            display: flex
+            justify-content: space-between
+            margin: auto
+            margin-top: $m32
+
+            .column
+                display: flex
+                flex-direction: column
+                margin-bottom: $m32
+
+                .tab
+                    width: auto
+                    display: flex
+                    flex-direction: column
+                    align-items: flex-start
+                    margin-top: $m16
+                    margin-bottom: $m16
+
+                    .tab-heading
+                        color: $primary_gray
+                        font-family: Lato
+                        font-size: $font14
+                        font-style: normal
+                        font-weight: 700
+                        line-height: 142.857%
+                        letter-spacing: 0.5px
+                        text-transform: uppercase
+
+                        margin-bottom: $m8
+
+                    .link
+                        color: $secondary_text
+                        font-family: Lato
+                        font-size: $font14
+                        font-style: normal
+                        font-weight: 400
+                        line-height: 142.857%
+                        margin-top: $m8
+                        transition: 0.3s all
+                        &:hover
+                            color: $selected
+
+            .pc-menu-img
+                margin-right: $m32
+                margin-bottom: $m32

@@ -17,6 +17,7 @@ import { useNavigate } from "react-router-dom";
 import Select from "react-select";
 
 import "./styles/header.css";
+import Dropdown from "../Dropdown/Dropdown";
 
 const razor = require("../../assets/razor.png");
 const logo = require("../../assets/Logo.svg").default;
@@ -26,10 +27,6 @@ interface OptionType {
   value: string;
   label: string;
 }
-
-// interface HeaderProps {
-//   c: OptionType[];
-// }
 
 const Header = () => {
   const categories = [
@@ -51,6 +48,7 @@ const Header = () => {
   ];
 
   const navigate = useNavigate();
+  const [isDropdownVisible, setIsDropdownVisible] = useState(false);
   const [selectedCurrency, setSelectedCurrency] = useState<OptionType | null>(
     optionsCurrency[0]
   );
@@ -219,9 +217,15 @@ const Header = () => {
         </div>
         <div className="lower-navigation">
           <nav className="nav-links-container">
-            <a href="/" className="link active">
+            <a
+              href="/"
+              className="link"
+              onMouseEnter={() => setIsDropdownVisible(!isDropdownVisible)}
+              style={{ position: "relative" }}
+            >
               Woman
             </a>
+            {isDropdownVisible && <Dropdown />}
             <a href="/" className="link">
               Male
             </a>
@@ -390,9 +394,14 @@ const Header = () => {
         </div>
         <div className="lower-navigation">
           <nav className="nav-links-container">
-            <a href="/" className="link active">
+            <a
+              href="/"
+              className="link"
+              onMouseEnter={() => setIsDropdownVisible(!isDropdownVisible)}
+            >
               Woman
             </a>
+            {isDropdownVisible && <Dropdown />}
             <a href="/" className="link">
               Male
             </a>
